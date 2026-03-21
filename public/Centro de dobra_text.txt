@@ -1,0 +1,1606 @@
+FILE: Centro de dobra | PAGES: 25
+
+--- PAGE 1 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Laudo de apreciação de riscos e 
+conformidades CNC Panel Bender FBA-2030 
+ 
+NR-12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MONTENEGRO INDUSTRIA E COMERCIO 
+LTDA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+00 
+05/02/2026 
+Emissão Inicial e Entrega 
+Bruno C. 
+ 
+ 
+ 
+ 
+Rev. 
+Data 
+Descrição 
+Responsável 
+ 
+ 
+
+--- PAGE 2 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+Sumário 
+1 INTRODUÇÃO ................................................................................................................................. 3 
+2 OBJETIVO ........................................................................................................................................ 3 
+3 NORMAS E DOCUMENTOS APLICÁVEIS .......................................................................................... 3 
+4 METODOLOGIA ............................................................................................................................... 4 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES ................................................................................. 7 
+5.1 Equipamento: CNC Panel Bender FBA-2030................................................................................. 8 
+5.1.1 Sistemas de segurança atuais ..................................................................................................11 
+6 DEFINIÇÃO DE CATEGORIA REQUERIDA ........................................................................................22 
+7 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E LIMPEZA .......................................23 
+8ARRANJOS FÍSICOS E SINALIZAÇÃO ................................................................................................23 
+9 MANUAL DE OPERAÇÃO ................................................................................................................23 
+10 PROCEDIMENTOS DE TRABALHO E SEGURANÇA .........................................................................24 
+11 TREINAMENTO E CAPACITAÇÃO ..................................................................................................24 
+12 CONCLUSÃO ................................................................................................................................25 
+13 RESPONSÁVEL TÉCNICO ...............................................................................................................25 
+14 ANEXOS .......................................................................................................................................25 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 3 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+1 INTRODUÇÃO 
+ 
+A Norma Regulamentadora NR-12 –– da Portaria 3.214, de 8 de junho de 1978 
+do Ministério do Trabalho e Emprego e suas revisões, estabelecem requisitos mínimos 
+para a Segurança em Máquinas e equipamentos. Esta visa à prevenção de acidentes 
+e doenças do trabalho desde a fase de projeto, construção, venda até a sua utilização 
+ou operação, definindo referências técnicas, princípios fundamentais e medidas de 
+proteção que devem ser observados para garantir a saúde e a integridade física dos 
+trabalhadores. As disposições contidas na presente Norma Regulamentadora se 
+referem indistintamente a máquinas e equipamentos novos e usados, exceto aqueles 
+itens em que houver menção específica quanto à sua aplicabilidade. São 
+consideradas medidas de proteção, a serem adotadas nessa ordem de prioridade:  
+ 
+ 
+a) Medidas de proteção coletivas;  
+ 
+ 
+b) Medidas administrativas ou de organização do trabalho; e 
+ 
+ 
+c) Medidas de proteção individuais. 
+ 
+Este laudo reflete em última análise as condições de segurança do 
+equipamento, em referência ao estabelecido nas normas. 
+2 OBJETIVO 
+ 
+Documentar com Laudo Técnico as condições de segurança, análise e 
+avaliação dos riscos em referência aos requisitos legais aplicáveis na Norma 
+Regulamentadora NR-12, confirmando sua devida adequação ao proposto em norma. 
+3 NORMAS E DOCUMENTOS APLICÁVEIS 
+ ABNT NBR ISO 12100:2013  
+ Segurança de máquinas — Princípios gerais de projeto - Apreciação e redução 
+de riscos. 
+ ABNT ISO/TR 14121-2:2018  
+Segurança de máquinas - Apreciação e riscos  
+Parte 2: Guia prático e exemplos de métodos. 
+ ABNT NBR 14153:2013 
+Segurança de Máquinas  
+Partes de sistemas de comando relacionados à segurança – Princípios gerais 
+para o projeto. 
+
+--- PAGE 4 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ ABNT NBR ISO 13849-1:2019  
+Partes de sistemas de comando relacionados à segurança  
+Parte 1: Princípios gerais para o projeto. 
+ ABNT NBR ISO 13849-2:2019 
+Partes de sistemas de comando relacionados à segurança  
+Parte 2: Validação. 
+ NR-12 - Segurança no Trabalho em Máquinas e Equipamentos. 
+4 METODOLOGIA 
+ 
+ 
+A metodologia para a realização do laudo consiste em três etapas: 
+ 
+Avaliação no posto de trabalho: onde a equipe acompanhará no local de 
+trabalho a rotina das equipes de operação e manutenção junto a máquina. Esta etapa 
+tem como objetivo realizar a análise de risco. Neste momento serão realizadas 
+entrevistas com os operadores e mantenedores para poder aprofundar as informações 
+com relação à exposição em suas atividades.  
+ 
+Neste momento serão coletadas informações técnicas para o relatório, assim 
+como fotos que serão anexadas no laudo, requisitos necessários para a realização da 
+análise prévia do atendimento a norma.  
+ 
+Análise dos itens da norma: Com a avaliação in loco realizada, a equipe 
+passará a montagem do relatório e os apontamentos dos itens não conformes em 
+acordo com as Normas e documentos aplicáveis, oferecendo ato contínuo as 
+recomendações para atendimento dos requisitos aplicáveis na organização além da 
+realização da análise de risco através de metodologia específica. 
+ 
+Recomendações Técnicas: As medidas e recomendações de que fazem parte 
+este relatório constitui-se de sugestões às quais são de responsabilidade e decisão 
+da empresa aplica-las ou não em sua unidade de negócio.  
+ 
+O Documento base que se constitui no Laudo Técnico apresenta os seguintes 
+grupos de Informações:  
+  
+- Atendimento aos requisitos das normas aplicáveis;  
+- Recomendações;  
+- Análise dos riscos; 
+ 
+ 
+- Categorização da máquina;  
+
+--- PAGE 5 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+ 
+Estimativa dos riscos pela metodologia HRN (Hazard Rating Number). A 
+fórmula aplicada para encontrar o nível de risco é: HRN = LO x FE x DPH x NP 
+ 
+ 
+Tabela 1 
+ 
+ 
+Tabela 2 
+ 
+ 
+Tabela 3 
+ 
+ 
+Tabela 4 
+ 
+
+--- PAGE 6 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 
+ 
+Tabela 5 
+ 
+- O quadro anterior deve ser utilizado para priorizar a tomada de ações, é bastante 
+salutar definir o tempo para a tomada de ação de reduzir cada faixa de resultado. Por 
+saber disto, é proposto o seguinte: 
+ 
+-   Para a faixa que vai do resultado 0 a 5, buscar a melhoria sem um prazo definido; 
+-   Para o resultado que vai de 5 a 50, dentro de 4 meses deve-se atuar na redução 
+dos riscos; 
+-   Para a faixa que vai de 50 a 1000, em no máximo uma semana; 
+-   Para a faixa maior que 1000 se deve interromper as atividades imediatamente. 
+ 
+Categoria de Riscos conforme a ABNT NBR 14153: 
+ 
+ 
+Figura 1- Gráfico de Riscos NBR 14153 
+ 
+ 
+
+--- PAGE 7 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES 
+ 
+IDENTIFICAÇÃO DA EMPRESA 
+Empresa: MONTENEGRO INDUSTRIA E COMERCIO LTDA 
+Data de abertura: 07/02/2023 
+Endereço: AV DEPUTADO LUIS EDUARDO MAGALHAES, SN, LIMOEIRO, FEIRA 
+DE SANTANA SC – 44.097-324 
+CNPJ: 49.510.155/0001-67 
+Data do Laudo: fevereiro de 2026 
+Natureza Jurídica: 206-2- Sociedade Empresária Limitada 
+Status da empresa: ATIVA 
+Atividade econômica principal: 1.02-1-00 - Fabricação de móveis com 
+predominância de metal 
+ 
+Fotografia da Placa da máquina 
+ 
+
+--- PAGE 8 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 
+5.1 Equipamento: CNC Panel Bender FBA-2030 
+ 
+Figura 01: CNC Panel Bender FBA-2030– Visão Geral 
+Identificação (TAG / Série): NC / FBA203022408140 
+Setor: Corte e Dobra 
+Descrição Geral 
+Função: A CNC Panel Bender FBA-2030 é uma máquina industrial destinada à 
+dobra e conformação automatizada de chapas metálicas, utilizada na fabricação de 
+painéis, caixas, gabinetes e componentes metálicos conformados, conforme 
+requisitos dimensionais definidos em projeto. 
+A máquina opera por meio de sistemas eletromecânicos e servoacionados, 
+controlados por Controle Numérico Computadorizado (CNC), responsáveis pela 
+movimentação coordenada das ferramentas de dobra e dos dispositivos de 
+posicionamento e fixação da chapa. O processo de conformação ocorre de forma 
+programada, repetitiva e controlada, permitindo a execução de dobras sequenciais 
+e multidirecionais, sem a necessidade de reposicionamento manual da peça durante 
+o ciclo automático. 
+Os parâmetros operacionais, tais como sequência de dobras, ângulos, posições e 
+dimensões finais, são definidos previamente pelo operador a partir de desenhos 
+técnicos ou arquivos digitais, sendo executados automaticamente pelo sistema 
+CNC, garantindo precisão, repetibilidade e padronização do processo produtivo. 
+O abastecimento das chapas é realizado de forma manual ou por sistemas 
+auxiliares de automação, com posicionamento na área de trabalho da máquina. O 
+operador atua a partir de estação de comando e supervisão, localizada na parte 
+frontal do equipamento, onde realiza a programação, o acionamento e o 
+
+--- PAGE 9 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+acompanhamento do processo, permanecendo fora da zona de risco durante o ciclo 
+automático, conforme requisitos de segurança da NR-12. 
+A máquina é destinada ao uso industrial contínuo e controlado, sendo amplamente 
+aplicada nos setores metalúrgico, elétrico, eletrônico, moveleiro e automotivo, 
+integrando linhas de produção que exigem eficiência operacional, qualidade 
+dimensional e segurança no processo de dobra de chapas metálicas. 
+Fabricante: Yawei Machine-Tool Co., LTD 
+Modelo: FBA-2030 
+Ano de Fabricação: 2024 
+Energia: 380V 
+Produtividade: 30kVA 
+Operadores Envolvidos: 1 - 2 
+ 
+LIMITES DA MÁQUINA 
+  
+USO 
+USO PRETENDIDO 
+Realizar a dobra de chapas de aço de maneira automatizada 
+através de processo com programação. 
+ 
+MODO DE OPERAÇÃO 
+A CNC Panel Bender FBE-2520 opera de forma automatizada 
+por sistema CNC, no qual o operador seleciona e programa o 
+ciclo de dobra a partir da estação de comando, localizada fora da 
+zona de risco. A chapa metálica é posicionada manualmente ou 
+por sistema auxiliar de automação e, após o acionamento do 
+ciclo, é fixada automaticamente pela máquina. 
+As dobras são executadas de forma sequencial e controlada, 
+sem necessidade de intervenção manual durante o processo. O 
+operador acompanha a operação pela interface CNC, podendo 
+interromper o ciclo por meio dos dispositivos de comando ou 
+parada de emergência, quando necessário. 
+Após a conclusão do ciclo, a máquina retorna à posição segura 
+para liberação e retirada da peça. As atividades de ajuste, setup 
+e manutenção são realizadas apenas com o equipamento em 
+condição segura, conforme os requisitos da NR-12. 
+ 
+USO DO EQUIPAMENTO 
+X INDUSTRIAL 
+- NÃO INDUSTRIAL 
+- 
+DOMÉSTICO 
+ 
+X 
+SEM 
+RESTRIÇÃO 
+MOTORA 
+- RESTRIÇÃO 
+MOTORA  
+X 
+SEM 
+RESTRIÇÃO 
+DE SEXO 
+ 
+NÍVEL DE TREINAMENTO 
+X Capacitação conforme subseção 12.16 e Anexo II da NR-12 
+para os trabalhadores envolvidos com a máquina. 
+X NR-10 para eletricistas 
+- NR-11 para operadores de máquinas autopropelidas 
+
+--- PAGE 10 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+10 
+- NR-33 para acessos a espaço confinado 
+- NR-35 para trabalhadores que realizam trabalhos em altura 
+ 
+OUTRAS PESSOAS 
+X 
+Pessoas que provavelmente possuem uma boa noção dos 
+perigos 
+específicos, 
+como 
+operadores 
+de 
+máquinas 
+adjacentes 
+- 
+Pessoas que provavelmente possuem uma pouca noção dos 
+perigos 
+específicos, 
+mas 
+que 
+provavelmente 
+tem 
+conhecimento dos procedimentos de segurança do local, 
+rotas autorizadas etc., como o pessoal da administração. 
+- 
+Pessoas que possuem uma noção muito pequena dos perigos 
+da máquina ou dos procedimentos de segurança, como 
+visitantes ou pessoas do público em geral, incluindo crianças 
+ 
+  
+ESPAÇO 
+MOVIMENTOS 
+Tamanho da máq. 4600x2800x3200(Comprimento × Largura 
+× Altura) 
+Curso 
+Movimentação 
+do 
+sistema 
+de 
+dobra 
+realizada 
+por 
+servomotores 
+eletromecânicos, 
+com 
+curso 
+efetivo 
+aproximado de 2000 mm de comprimento 
+de dobra, permitindo a conformação de 
+chapas com altura de dobra de até 300 mm 
+Espaço interação 
+Existe posto de operação na parte lateral 
+do equipamento próximo a retirada de 
+materiais e também na parte frontal do 
+equipamento onde é feita a programação. 
+IHM 
+Em ambos os postos de operação e 
+programação existe comando via IHM 
+touchscreen com diversos acionamentos e 
+monitoramentos 
+e 
+acionamento 
+de 
+emergência. 
+Conexão energia 
+Ligação via estrutura direto nos painéis de 
+comando, de maneira adequada. 
+OUTROS 
+MATÉRIA PRIMA 
+Chapas de aço para corte 
+LIMPEZA E ORGANIZAÇÃO Máquina não possui materiais em local inadequado. 
+MEIO AMBIENTE 
+Máquina opera em ambiente interno, em condições normais de 
+uso e operação. 
+ 
+ 
+ 
+
+--- PAGE 11 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11 
+5.1.1 Sistemas de segurança atuais 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Acionamento de emergência no posto de 
+operação fixo da parte frontal do 
+equipamento - IHM. 
+Botão 
+de 
+emergência 
+está 
+sendo 
+monitorado por dispositivo de segurança 
+– relé de segurança. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com os requisitos da NR-12, 
+especialmente nos itens 12.38 a 12.41, 
+todas as proteções móveis de máquinas 
+e equipamentos que permitam o acesso 
+à zona de risco devem ser dotadas de 
+dispositivos de intertravamento que 
+garantam a interrupção automática dos 
+movimentos perigosos quando houver 
+abertura das proteções. 
+A máquina está equipada com sensores 
+de intertravamento instalados em todas 
+as portas de acesso as áreas de risco da 
+máquina e que são móveis. 
+Os sensores utilizados apresentam 
+instalação adequada e fixação segura, 
+conforme previsto na norma ABNT NBR 
+ISO 
+14119, 
+garantindo 
+que 
+o 
+acionamento ou o desligamento do 
+circuito de segurança ocorra de forma 
+
+--- PAGE 12 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+ 
+confiável. O sistema de intertravamento 
+é integrado ao circuito de comando da 
+máquina, 
+de 
+modo 
+que 
+qualquer 
+violação ou abertura não autorizada das 
+proteções interrompe imediatamente o 
+funcionamento. 
+Além 
+disso, 
+o 
+sistema 
+de 
+intertravamento atende aos critérios de 
+categoria de segurança e nível de 
+performance 
+(PL 
+“d” 
+ou 
+superior) 
+estabelecidos pela norma ABNT NBR 
+ISO 13849-1, conforme exigido pela NR-
+12, assegurando a confiabilidade do 
+sistema de parada e a proteção dos 
+operadores. 
+Monitoramento da porta frontal através 
+de sensor magnético monitorado por relé 
+de segurança. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 13 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ De acordo com os requisitos da NR-12, 
+especialmente nos itens 12.38 a 12.41, 
+todas as proteções móveis de máquinas 
+e equipamentos que permitam o acesso 
+à zona de risco devem ser dotadas de 
+dispositivos de intertravamento que 
+garantam a interrupção automática dos 
+movimentos perigosos quando houver 
+abertura das proteções. 
+A porta que foi destacada está sem o 
+dispositivo de intertravamento, o mesmo 
+deverá ser instalado ou então fazer com 
+que esta porta de acesso se torne 
+proteção fixa, colocando parafusos de 
+fixação. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 14 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+14 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+De acordo com os itens 12.111 e 12.112 
+da Norma Regulamentadora NR-12, as 
+máquinas devem dispor de sistemas de 
+indicação e sinalização que permitam ao 
+operador identificar claramente o estado 
+de funcionamento do equipamento, 
+contribuindo para a prevenção de 
+acidentes e para a tomada de decisões 
+seguras durante a operação. 
+A máquina possui indicadores luminosos 
+instalados 
+em 
+posição 
+de 
+fácil 
+visualização, que informam o status 
+operacional da máquina, tais como: 
+equipamento 
+ligado, 
+em 
+operação, 
+parado, em alarme ou condição de falha. 
+Esses dispositivos atendem ao requisito 
+da norma, ao fornecerem sinalização 
+clara, contínua e de rápida interpretação, 
+alinhada com as condições de risco 
+presentes no processo. 
+Conforme o item 12.112, os sistemas de 
+indicação são integrados ao CLP do 
+equipamento, assegurando que os sinais 
+luminosos correspondam fielmente às 
+condições 
+reais 
+de 
+operação, 
+contribuindo 
+para 
+o 
+monitoramento 
+seguro e reduzindo a probabilidade de 
+erro humano. 
+ 
+ 
+ 
+
+--- PAGE 15 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+15 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+De acordo com os itens 12.5, 12.6 e 
+12.14 da Norma Regulamentadora NR-
+12, todas as máquinas e equipamentos 
+devem possuir sinalização de segurança 
+visível e permanentemente afixada, 
+alertando 
+sobre 
+riscos 
+existentes, 
+instruções 
+de 
+operação 
+segura 
+e 
+orientações de emergência. 
+A 
+máquina 
+possui 
+adesivos 
+de 
+sinalização de segurança distribuídos 
+em pontos estratégicos, indicando riscos 
+específicos como: partes móveis, risco 
+de 
+queimadura, 
+radiação 
+laser, 
+necessidade de uso de EPIs e restrições 
+de acesso. 
+Conforme o item 12.14, as sinalizações 
+devem ser claras, de fácil compreensão 
+e permanecer legíveis durante toda a 
+vida útil da máquina. Os adesivos 
+instalados atendem a essa exigência, 
+sendo produzidos em material resistente 
+ao desgaste e posicionados de forma a 
+garantir sua visualização antes da 
+exposição ao risco. 
+Os 
+pictogramas 
+permitem 
+que 
+operadores e demais trabalhadores 
+identifiquem rapidamente as situações 
+perigosas 
+e 
+adotem 
+condutas 
+preventivas, contribuindo diretamente 
+para a redução de acidentes. 
+ 
+
+--- PAGE 16 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+16 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+De acordo com o item 12.38 da Norma 
+Regulamentadora NR-12, dispositivos 
+de segurança utilizados para interromper 
+movimentos 
+perigosos 
+devem 
+ser 
+capazes de atuar de forma automática e 
+imediata quando houver violação da 
+zona de detecção. As barreiras de luz 
+são reconhecidas pela norma como 
+dispositivos de segurança adequados 
+para proteção de áreas de risco com 
+acesso frequente. 
+Conforme 
+o 
+item 
+12.39, 
+esses 
+dispositivos devem ser selecionados e 
+instalados de acordo com o nível de 
+performance 
+requerido 
+(PLr) 
+e 
+compatíveis com o risco da aplicação, 
+integrados ao sistema de comando de 
+forma 
+que, 
+quando 
+interrompidos, 
+promovam 
+a 
+parada 
+segura 
+do 
+movimento perigoso. 
+A máquina não conta com barreiras de 
+luz instaladas nas áreas de acesso ao 
+campo de dobra, cuja função é impedir a 
+aproximação do operador durante o 
+funcionamento. Quando qualquer feixe 
+da barreira é interrompido, ocorre a 
+parada imediata do processo, atendendo 
+à exigência de ação automática prevista 
+na NR-12. 
+Sugerimos a instalação de barreiras de 
+luz para evitar o acesso do operador a 
+área de prensagem e dobra. Podemos 
+ver que o operador consegue acesso 
+com as mãos e braços na área. 
+
+--- PAGE 17 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+Sugere-se a instalação de cortinas de luz ao redor da máquina, posicionadas 
+conforme o perímetro atualmente delimitado pelos corrimões de proteção, 
+respeitando-se um afastamento mínimo de 1,0 metro em todas as direções. 
+O afastamento proposto justifica-se pela dinâmica do processo de operação do 
+equipamento, uma vez que, durante o ciclo automático, a chapa metálica pode 
+realizar movimentos de giro e projeção acima da mesa de trabalho. Dependendo 
+das dimensões da chapa processada, há a possibilidade de sua ultrapassagem 
+temporária do perímetro da mesa, podendo alcançar áreas adjacentes. 
+Dessa forma, o distanciamento recomendado visa garantir a integridade física dos 
+trabalhadores, prevenindo o acesso involuntário à zona de risco durante a operação 
+da 
+máquina, 
+em 
+conformidade 
+com 
+os 
+requisitos 
+da 
+NR-12. 
+Poderá ser instalado também barreira de luz apenas na parte de cima da máquina, 
+na altura da mesa, pois esse é o acesso perigoso. 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+De 
+acordo 
+com 
+os 
+requisitos 
+estabelecidos na NR-12, especialmente 
+nos itens 12.38 a 12.55, todas as partes 
+móveis de máquinas que apresentem 
+riscos de esmagamento, cisalhamento, 
+impacto ou aprisionamento devem ser 
+dotadas de proteções que impeçam o 
+acesso às zonas de perigo durante a 
+operação. 
+A CNC Panel Bender possui proteções 
+fixas e enclausuramentos perimetrais ao 
+redor das áreas de movimentação dos 
+sistemas de dobra, alimentação e 
+acionamentos 
+eletromecânicos, 
+confeccionados em estruturas metálicas 
+
+--- PAGE 18 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+18 
+e painéis de proteção, rigidamente 
+fixados à estrutura da máquina. Essas 
+proteções não permitem remoção ou 
+abertura sem o uso de ferramentas, 
+impedindo o acesso às partes móveis e 
+componentes 
+internos 
+durante 
+o 
+funcionamento 
+automático 
+do 
+equipamento. 
+Adicionalmente, o equipamento conta 
+com 
+dispositivos 
+de 
+proteção 
+intertravados 
+e/ou 
+sistemas 
+optoeletrônicos, quando aplicável, que 
+interrompem o ciclo de operação em 
+caso de acesso indevido à zona de risco, 
+garantindo a segurança do operador e 
+de 
+terceiros 
+durante 
+o 
+processo 
+produtivo. 
+As 
+dimensões, 
+posicionamento 
+e 
+aberturas das proteções atendem aos 
+critérios de distância de segurança e 
+limites 
+máximos 
+de 
+abertura 
+estabelecidos pelas normas ABNT NBR 
+ISO 13857 e NR-12, assegurando que 
+não haja possibilidade de contato 
+acidental com partes perigosas da 
+máquina durante sua operação normal. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 19 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+19 
+ 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.26, 12.27 e 12.28, todas as 
+partes metálicas não energizadas de 
+máquinas e equipamentos que possam 
+se tornar condutoras em caso de falha 
+de isolamento devem ser aterradas 
+eletricamente, de modo a garantir a 
+proteção contra choques elétricos e o 
+correto escoamento de correntes de 
+fuga. 
+A 
+máquina 
+possui 
+sistema 
+de 
+aterramento 
+elétrico 
+devidamente 
+instalado, 
+com 
+conexão 
+entre 
+o 
+barramento de proteção (PE) e a 
+estrutura metálica do equipamento. O 
+ponto de aterramento está identificado 
+por símbolo padronizado e fixado de 
+forma 
+permanente, 
+assegurando 
+o 
+contato elétrico eficiente e contínuo. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+  
+De acordo com o disposto na Norma 
+Regulamentadora NR-12, os sistemas 
+de comando relacionados à segurança 
+devem 
+atender 
+aos 
+princípios 
+de 
+prevenção de falhas, redundância e 
+monitoramento contínuo. Conforme o 
+item 12.38, qualquer parte do sistema de 
+comando 
+utilizada 
+para 
+fins 
+de 
+segurança — como as barreiras de luz 
+— 
+deve 
+seguir 
+normas 
+técnicas 
+reconhecidas e manter desempenho 
+seguro mesmo em condições de falha 
+previsível. 
+O item 12.39 estabelece que os sistemas 
+de segurança devem ser projetados de 
+maneira que falhas ou defeitos não 
+resultem na perda da função de 
+segurança. Para esse fim, o relé de 
+segurança é implementado para realizar 
+o monitoramento redundante e seguro 
+
+--- PAGE 20 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+20 
+das barreiras de luz, garantindo o 
+bloqueio imediato 
+da 
+máquina 
+ao 
+detectar a interrupção do feixe ou 
+qualquer anomalia nos canais. 
+Ainda, o item 12.40 determina que o 
+sistema impeça o rearme automático da 
+máquina após a atuação de um 
+dispositivo de segurança. Assim, o relé 
+de segurança, dedicado exclusivamente 
+às barreiras de luz, exige reset manual 
+seguro após a obstrução do feixe, 
+evitando religamento involuntário do 
+equipamento. 
+Dessa forma, o relé de segurança 
+cumpre 
+integralmente 
+as 
+funções 
+previstas na NR-12 ao supervisionar 
+exclusivamente as barreiras de luz, 
+assegurando que qualquer violação da 
+zona de risco resulte na interrupção 
+segura e imediata das funções perigosas 
+da máquina. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.24 a 12.31, os sistemas 
+elétricos das máquinas devem ser 
+projetados de forma a eliminar ou reduzir 
+os riscos elétricos, utilizando-se, sempre 
+que possível, tensões de segurança em 
+circuitos de comando, sinalização e 
+controle. 
+A 
+máquina possui uma fonte de 
+alimentação 
+de 
+extra-baixa 
+tensão 
+(SELV/PELV) destinada à alimentação 
+dos circuitos de comando, botoeiras, 
+sensores 
+e 
+dispositivos 
+de 
+intertravamento. Essa fonte realiza a 
+redução da tensão de alimentação 
+principal (trifásica) para níveis de 24 Vcc, 
+garantindo maior segurança ao operador 
+
+--- PAGE 21 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+21 
+ 
+e 
+à integridade 
+dos 
+componentes 
+elétricos. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o disposto no item 12.25 
+da Norma Regulamentadora NR-12, as 
+máquinas 
+e 
+equipamentos 
+devem 
+possuir dispositivo de seccionamento de 
+energia elétrica, com possibilidade de 
+bloqueio (travamento), de forma a 
+garantir que não haja reenergização 
+acidental 
+durante 
+intervenções 
+de 
+manutenção, 
+limpeza, 
+ajuste 
+ou 
+inspeção. 
+Chave seccionadora com dispositivo 
+passível de trava no painel principal do 
+equipamento. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 22 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+22 
+ 
+De acordo com o item 12.40 da NR-12, o 
+sistema de segurança da máquina não 
+pode 
+permitir 
+rearme 
+automático, 
+exigindo um reset manual seguro após a 
+atuação de qualquer dispositivo de 
+proteção. O botão de reset garante que 
+o religamento só ocorra mediante ação 
+consciente do operador, após verificação 
+de que não há pessoas na zona de risco. 
+Conforme os itens 12.38 e 12.39, o botão 
+de reset deve fazer parte do sistema de 
+comando seguro, supervisionado pelo 
+CLP de segurança ou relé de segurança, 
+evitando religamento em condições 
+inseguras e assegurando que falhas 
+previsíveis não comprometam a função 
+de segurança. 
+Reset manual, realizado diretamente no 
+IHM e nas mesas de controle aonde o 
+operador estará monitorando todo o 
+processo. 
+ 
+ 
+6 DEFINIÇÃO DE CATEGORIA REQUERIDA 
+ 
+Conforme os riscos existentes (pior caso): 
+Gravidade da lesão: 
+S2 – Lesão Grave, irreversível ou morte. 
+Frequência e/ou duração da exposição ao perigo: 
+F2 – Frequente até contínuo. 
+Possibilidade de se evitar o perigo: 
+P1 – Sob determinadas condições. 
+
+--- PAGE 23 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+23 
+ 
+CONCLUSÃO: CATEGORIA DE PROTEÇÃO REQUERIDA É 3. 
+7 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E LIMPEZA 
+ 
+A empresa deverá ter as suas máquinas e equipamentos submetidos à 
+atividade de manutenção preventiva e corretiva, na forma e periodicidade determinada 
+pelo fabricante, conforme as normas técnicas oficiais nacionais vigentes e, na falta 
+destas, as normas técnicas internacionais. 
+ 
+A empresa possui livro de manutenção e controla suas intervenções de acordo 
+com os itens da norma. 
+ 
+As intervenções são executadas por profissionais capacitados, qualificados ou 
+legalmente habilitados, formalmente autorizados pelo empregador e com as máquinas 
+e equipamentos parados com adoção dos procedimentos contidos em norma. 
+8ARRANJOS FÍSICOS E SINALIZAÇÃO 
+ 
+A empresa deverá garantir a organização geral das áreas deixando os 
+Equipamentos de Proteção Coletiva (EPC’s), Extintores e Painéis Elétricos, 
+desobstruídos e com livre acesso. Identificar as máquinas referente aos seus riscos, 
+através de adesivos, bem como os painéis elétricos e demais locais que representem 
+algum risco. 
+9 MANUAL DE OPERAÇÃO 
+ 
+As máquinas e equipamentos devem possuir manual de instruções fornecido 
+pelo fabricante ou importador, com informações relativas à segurança em todas as 
+fases de utilização. Estes deverão estar localizados e mantidos para consulta na área 
+de manutenção da empresa. Quando inexistente ou extraviado, o manual de 
+
+--- PAGE 24 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+24 
+máquinas ou equipamentos que apresentem riscos deve ser solicitado ao fornecedor 
+ou ser elaborado pela empresa uma ficha de informação contendo os seguintes itens.  
+a) tipo, modelo e capacidade;  
+b) descrição da utilização prevista para a máquina ou equipamento;  
+c) indicação das medidas de segurança existentes;  
+d) instruções para utilização segura da máquina ou equipamento;  
+e) periodicidade e instruções quanto às inspeções e manutenção;  
+f) procedimentos a serem adotados em emergências, quando aplicável. 
+Esta ficha pode ser elaborada pelo empregador ou pessoa designada por este. 
+10 PROCEDIMENTOS DE TRABALHO E SEGURANÇA 
+ 
+A empresa possui instrução de trabalho para o Processo de Operação da 
+máquina/equipamento e deverá estar anexo a este laudo. Esta instrução de trabalho 
+identifica os procedimentos de segurança, operação e demais, necessárias para 
+operação correta e segura do equipamento. 
+11 TREINAMENTO E CAPACITAÇÃO 
+ 
+A operação, manutenção, inspeção e demais intervenções em máquinas e 
+equipamentos devem ser realizadas por trabalhadores habilitados ou qualificados ou 
+capacitados, e autorizados para este fim. 
+ 
+A operação deve seguir as instruções da norma e possuir seu conteúdo 
+conforme ANEXO II da NR-12. 
+ 
+Todos os trabalhadores envolvidos na operação, manutenção, inspeção e 
+demais intervenções em máquinas e equipamentos conforme determina a Norma 
+Regulamentadora deverão passar por treinamento e capacitação incluindo a 
+reciclagem do trabalhador sempre que ocorrerem modificações significativas nas 
+instalações e na operação de máquinas ou troca de métodos, processos e 
+organização do trabalho ou não ocorrendo estas alterações, a cada ano. 
+ 
+O conteúdo programático da capacitação para reciclagem deve atender às 
+necessidades da situação que a motivou, com carga horária mínima que garanta aos 
+trabalhadores executarem suas atividades com segurança, sendo distribuída em no 
+máximo oito horas diárias e realizada durante o horário normal de trabalho. 
+
+--- PAGE 25 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina CNC Panel Bender FBA-2030 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+12 CONCLUSÃO 
+Para a elaboração e emissão do Laudo de NR-12, faz-se necessária a prévia 
+adequação da máquina aos requisitos de segurança estabelecidos na norma. As 
+adequações devem contemplar a implementação, correção ou complementação dos 
+sistemas de proteção atuais, conforme mencionado acima. 
+Somente após a conclusão e validação dessas adequações, garantindo que a 
+máquina atenda integralmente aos dispositivos aplicáveis da NR-12 e às normas 
+técnicas correlatas, será possível realizar a avaliação final e emitir o respectivo laudo, 
+assegurando a conformidade legal e a segurança dos operadores e demais 
+envolvidos. 
+13 RESPONSÁVEL TÉCNICO 
+ 
+ 
+Garante as informações supracitadas neste laudo e assinam abaixo: 
+ 
+ 
+ 
+ 
+ 
+ 
+_______________________________ 
+Bruno Cardoso 
+Engenheiro Eletricista 
+Eng. De Segurança do Trabalho 
+CREA/SC 108.955-2 
+ 
+14 ANEXOS 
+ 
+1 – ART do Laudo n° 10272514-6 
+2 – Manual da máquina em português 
+ 
+ 

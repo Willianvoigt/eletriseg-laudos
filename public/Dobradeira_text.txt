@@ -1,0 +1,2259 @@
+FILE: Dobradeira | PAGES: 36
+
+--- PAGE 1 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Laudo de apreciação de riscos e 
+conformidades DOBRADEIRA PBE-60/2050 
+ 
+NR-12 
+ 
+ 
+ 
+ 
+ 
+ 
+HEAT INDUSTRIA E COMERCIO LTDA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+00 
+27/01/2026 
+Emissão Inicial e Entrega 
+Bruno C. 
+Rev. 
+Data 
+Descrição 
+Responsável 
+ 
+ 
+
+--- PAGE 2 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+Sumário 
+1 INTRODUÇÃO 
+3 
+2 OBJETIVO 
+3 
+3 NORMAS E DOCUMENTOS APLICÁVEIS 
+3 
+4 METODOLOGIA 
+4 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES 
+7 
+5.1 Equipamento: Dobradeira CNC PBE-60/2050 
+8 
+5.1.1 Sistemas de segurança atuais 
+11 
+5.1.2 Análise de Riscos 
+20 
+6 DEFINIÇÃO DE CATEGORIA REQUERIDA 
+27 
+7 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E LIMPEZA 
+27 
+8 ARRANJOS FÍSICOS E SINALIZAÇÃO 
+28 
+9 MANUAL DE OPERAÇÃO 
+28 
+10 PROCEDIMENTOS DE TRABALHO E SEGURANÇA 
+28 
+11 TREINAMENTO E CAPACITAÇÃO 
+28 
+12 CONCLUSÃO 
+29 
+13 RESPONSÁVEL TÉCNICO 
+30 
+ANEXOS 
+31 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 3 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+ 
+1 INTRODUÇÃO 
+ 
+A Norma Regulamentadora NR-12 –– da Portaria 3.214, de 8 de junho de 1978 
+do Ministério do Trabalho e Emprego e suas revisões, estabelecem requisitos mínimos 
+para a Segurança em Máquinas e equipamentos. Esta visa à prevenção de acidentes 
+e doenças do trabalho desde a fase de projeto, construção, venda até a sua utilização 
+ou operação, definindo referências técnicas, princípios fundamentais e medidas de 
+proteção que devem ser observados para garantir a saúde e a integridade física dos 
+trabalhadores. As disposições contidas na presente Norma Regulamentadora se 
+referem indistintamente a máquinas e equipamentos novos e usados, exceto aqueles 
+itens em que houver menção específica quanto à sua aplicabilidade. São 
+consideradas medidas de proteção, a serem adotadas nessa ordem de prioridade:  
+ 
+ 
+a) Medidas de proteção coletivas;  
+ 
+ 
+b) Medidas administrativas ou de organização do trabalho; e 
+ 
+ 
+c) Medidas de proteção individuais. 
+ 
+Este laudo reflete em última análise as condições de segurança do 
+equipamento, em referência ao estabelecido nas normas. 
+2 OBJETIVO 
+ 
+Documentar com Laudo Técnico as condições de segurança, análise e 
+avaliação dos riscos em referência aos requisitos legais aplicáveis na Norma 
+Regulamentadora NR-12, confirmando sua devida adequação ao proposto em norma. 
+3 NORMAS E DOCUMENTOS APLICÁVEIS 
+❖ Norma regulamentadora NR12 
+❖ NBR ISO 13857 – Segurança de Máquinas — Distâncias de segurança para 
+impedir o acesso a zonas de perigo pelos membros superiores e inferiores 
+
+--- PAGE 4 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+❖ NBR ISO 12100 – Segurança de máquina – Princípios gerais e projeto – 
+Apreciação e redução de risco 
+❖ ABNT NBR ISO 12100:2013 - Segurança de máquinas- Princípios gerais de 
+projeto - Apreciação e redução de riscos. 
+❖ ANBT-NBR 14153:2013 Segurança de máquinas — Partes de sistemas de 
+comando relacionados à segurança — Princípios gerais para projeto. 
+❖ ISO/TR 14121-2:2012. Safety of machinery. Risk assessment. Part 2: Practical 
+guidance and examples of methods. 
+ 
+❖ ABNT NBR NM ISO 13852:2003 - Segurança de máquinas - Distâncias de 
+segurança para impedir o acesso a zonas de perigo pelos membros superiores. 
+❖ ABNT NBR 14154:1998 - Segurança de máquinas - Prevenção de partida 
+inesperada. 
+❖ ABNT NBR NM ISO 13854:2003 - Segurança de máquinas - Folgas mínimas 
+para evitar esmagamento de partes do corpo humano. 
+❖ ABNT NBR NM ISO 13853:2003 - Segurança de máquinas - Distâncias de 
+segurança para impedir o acesso a zonas de perigo pelos membros inferiores 
+❖ ABNT NBR ISO 13855:2013 - Segurança de máquinas — Posicionamento dos 
+equipamentos de proteção com referência à aproximação de partes do corpo 
+humano. 
+❖ ABNT NBR 13759:1996 - Segurança de máquinas - Equipamentos de parada 
+de emergência - Aspectos funcionais - Princípios para projeto. 
+❖ ABNT NBR NM 273:2002 - Segurança de máquinas - Dispositivos de 
+intertravamento associados a proteções - Princípios para projeto e seleção. 
+❖ ABNT NBR NM 272:2002 - Segurança de máquinas - Proteções - Requisitos 
+gerais para o projeto e construção de proteções fixas e móveis. 
+
+--- PAGE 5 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5 
+❖ ABNT NBR 14152:1998 - Segurança de máquinas - Dispositivos de comando 
+bimanuais - Aspectos funcionais e princípios para projeto. 
+❖ Demais normas cabíveis 
+4 METODOLOGIA 
+ 
+ 
+A metodologia para a realização do laudo consiste em três etapas: 
+ 
+Avaliação no posto de trabalho: onde a equipe acompanhará no local de 
+trabalho a rotina das equipes de operação e manutenção junto a máquina. Esta etapa 
+tem como objetivo realizar a análise de risco. Neste momento serão realizadas 
+entrevistas com os operadores e mantenedores para poder aprofundar as informações 
+com relação à exposição em suas atividades.  
+ 
+Neste momento serão coletadas informações técnicas para o relatório, assim 
+como fotos que serão anexadas no laudo, requisitos necessários para a realização da 
+análise prévia do atendimento a norma.  
+ 
+Análise dos itens da norma: Com a avaliação in loco realizada, a equipe 
+passará a montagem do relatório e os apontamentos dos itens não conformes em 
+acordo com as Normas e documentos aplicáveis, oferecendo ato contínuo as 
+recomendações para atendimento dos requisitos aplicáveis na organização além da 
+realização da análise de risco através de metodologia específica. 
+ 
+Recomendações Técnicas: As medidas e recomendações de que fazem parte 
+este relatório constitui-se de sugestões às quais são de responsabilidade e decisão 
+da empresa aplica-las ou não em sua unidade de negócio.  
+ 
+O Documento base que se constitui no Laudo Técnico apresenta os seguintes 
+grupos de Informações:  
+ - Atendimento aos requisitos das normas aplicáveis;  
+- Recomendações;  
+- Análise dos riscos; 
+ 
+ 
+- Categorização da máquina;  
+ 
+Estimativa dos riscos pela metodologia HRN (Hazard Rating Number). A 
+fórmula aplicada para encontrar o nível de risco é: HRN = LO x FE x DPH x NP 
+
+--- PAGE 6 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 
+ 
+Tabela 1 
+ 
+Tabela 2 
+ 
+Tabela 3 
+ 
+Tabela 4 
+ 
+Tabela 5 
+
+--- PAGE 7 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+- O quadro anterior deve ser utilizado para priorizar a tomada de ações, é bastante 
+salutar definir o tempo para a tomada de ação de reduzir cada faixa de resultado. Por 
+saber disto, é proposto o seguinte: 
+-   Para a faixa que vai do resultado 0 a 5, buscar a melhoria sem um prazo definido; 
+-   Para o resultado que vai de 5 a 50, dentro de 4 meses deve-se atuar na redução 
+dos riscos; 
+-   Para a faixa que vai de 50 a 1000, em no máximo uma semana; 
+-   Para a faixa maior que 1000 se deve interromper as atividades imediatamente. 
+Categoria de Riscos conforme a ABNT NBR 14153: 
+ 
+ 
+Figura 1- Gráfico de Riscos NBR 14153 
+ 
+ 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES 
+ 
+IDENTIFICAÇÃO DA EMPRESA 
+Empresa: HEAT INDUSTRIA E COMERCIO LTDA 
+Data de abertura: 21/12/1995 
+Endereço: R RICHARD SAUR, 250 – DISTRITO INDUSTRIAL – PANAMBI - RS 
+CNPJ: 00.996.152/0001-96 
+Data do Laudo: janeiro de 2026 
+Natureza Jurídica: 206-2 - Sociedade Empresária Limitada 
+
+--- PAGE 8 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 
+Status da empresa: ATIVA 
+Atividade econômica principal: 28.29-1-99 - Fabricação de outras máquinas e 
+equipamentos de uso geral não especificados anteriormente, peças e acess[orios. 
+ 
+Fotografia da Placa da máquina 
+ 
+ 
+
+--- PAGE 9 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+5.1 Equipamento: 0 
+ 
+Figura 01: Dobradeira CNC PBE-60/2050 – Visão Geral 
+Identificação (TAG / Série): NC / PBE0B0225051222 
+Setor: DOBRA CNC 
+Descrição Geral 
+Função: A dobradeira tem como função principal executar dobras precisas em chapas 
+metálicas por meio da aplicação de força controlada entre um punção (superior) e uma 
+matriz (inferior). 
+Durante o processo, a chapa é posicionada manualmente pelo operador sobre a 
+matriz, e o sistema de comando realiza a movimentação do punção, aplicando 
+pressão até que a chapa atinja o ângulo de dobra programado. 
+O equipamento permite ajustes de curso, pressão e posicionamento do batente 
+traseiro, possibilitando a execução de dobras simples ou múltiplas em diferentes 
+ângulos e dimensões, de acordo com o tipo de peça e o projeto especificado. 
+
+--- PAGE 10 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+10 
+Por ser controlada por sistema CNC, a dobradeira garante alta precisão, 
+repetibilidade e produtividade, sendo amplamente utilizada em processos de 
+fabricação de componentes metálicos, estruturas, painéis e peças industriais que 
+demandam conformação de chapas com qualidade e uniformidade. 
+Fabricante: Yawei Machine-Tool Co., LTD 
+Modelo: PBE-60/2050 
+Ano de Fabricação: 2025 
+Energia: 380V 
+Produtividade: 600kN 
+Operadores Envolvidos: 1 - 2 
+ 
+LIMITES DA MÁQUINA 
+  
+USO 
+USO PRETENDIDO 
+Realizar a dobra de chapas metálicas de maneira automatizada 
+através de ferramentas, utilizando ajustes manuais. 
+ 
+MODO DE OPERAÇÃO 
+O equipamento realiza o processo de dobra de chapas metálicas 
+com abastecimento manual e ciclo automático controlado 
+eletronicamente. O operador realiza a alimentação do material 
+pela parte frontal, posicionando a peça com o auxílio de batentes 
+e gabaritos ajustáveis, garantindo precisão e repetibilidade 
+durante o processo. 
+A movimentação do punção e da mesa é feita de forma 
+automática e controlada pelo sistema CNC Yawei, que monitora 
+os parâmetros de velocidade, curso e pressão de trabalho, 
+assegurando a qualidade da dobra e a segurança operacional. 
+O equipamento é dotado de sensores e chaves de segurança que 
+interrompem o ciclo em caso de qualquer irregularidade. O 
+operador tem acesso aos acionamentos bimanual, painel de 
+controle touchscreen e botões de emergência estrategicamente 
+posicionados na parte frontal e lateral da máquina, permitindo a 
+interrupção imediata do ciclo sempre que necessário. 
+ 
+USO DO EQUIPAMENTO 
+X INDUSTRIAL 
+- NÃO INDUSTRIAL 
+- 
+DOMÉSTICO 
+ 
+X 
+SEM 
+RESTRIÇÃO 
+MOTORA 
+- RESTRIÇÃO 
+MOTORA  
+X 
+SEM 
+RESTRIÇÃO 
+DE SEXO 
+ 
+NÍVEL DE 
+TREINAMENTO 
+X Capacitação conforme subseção 12.16 e Anexo II da NR-12 
+para os trabalhadores envolvidos com a máquina. 
+X NR-10 para eletricistas 
+
+--- PAGE 11 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11 
+- NR-11 para operadores de máquinas autopropelidas 
+- NR-33 para acessos a espaço confinado 
+- NR-35 para trabalhadores que realizam trabalhos em altura 
+ 
+OUTRAS PESSOAS 
+X 
+Pessoas que provavelmente possuem uma boa noção dos 
+perigos 
+específicos, 
+como 
+operadores 
+de 
+máquinas 
+adjacentes 
+- 
+Pessoas que provavelmente possuem uma pouca noção dos 
+perigos 
+específicos, 
+mas 
+que 
+provavelmente 
+tem 
+conhecimento dos procedimentos de segurança do local, 
+rotas autorizadas etc., como o pessoal da administração. 
+- 
+Pessoas que possuem uma noção muito pequena dos perigos 
+da máquina ou dos procedimentos de segurança, como 
+visitantes ou pessoas do público em geral, incluindo crianças 
+ 
+ESPA
+ÇO 
+MOVIMENTOS 
+Tamanho da máq. 2600x1500x2300mm 
+Curso 
+Movimentação de punção por sistema 
+hidráulico com curso de aproximadamente 
+120mm e capacidade de até 2050mm de 
+comprimento de chapa 
+Espaço interação 
+Existem dois postos de operação móveis 
+por 
+pedestal 
+na 
+parte 
+frontal 
+do 
+equipamento além de um posto de apoio 
+onde é feita a operação e programação. 
+IHM 
+No posto de apoio e operação frontal, onde 
+é feita a programação, existe comando via 
+IHM 
+touchscreen 
+com 
+diversos 
+acionamentos 
+e 
+monitoramentos 
+e 
+acionamento de emergência. 
+Conexão energia 
+Ligação via tubulação flexível no painel de 
+comando, de maneira adequada. 
+ 
+ 
+OUT
+ROS 
+LIMPEZA E 
+ORGANIZAÇÃO 
+Máquina não possui materiais em local inadequado. 
+MEIO AMBIENTE 
+Máquina opera em ambiente interno, em condições normais de 
+uso e operação. 
+ 
+ 
+ 
+
+--- PAGE 12 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.1.1 Sistemas de segurança atuais 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Acionamento de emergência no pedestal 
+de operação do equipamento. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+De acordo com os requisitos de 
+segurança previstos na NR-12, os 
+dispositivos de comando bimanuais ou 
+por pedal devem ser projetados e 
+instalados 
+de 
+forma 
+a 
+evitar 
+acionamentos involuntários e garantir a 
+segurança do operador durante o ciclo 
+de trabalho. 
+
+--- PAGE 13 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13 
+ 
+ 
+A máquina é equipada com pedal de 
+acionamento elétrico, responsável por 
+iniciar o ciclo de dobra da máquina. Esse 
+pedal é do tipo momentâneo, ou seja, o 
+ciclo 
+somente 
+ocorre 
+enquanto 
+o 
+operador mantém o pedal pressionado, 
+interrompendo 
+imediatamente 
+a 
+operação ao ser liberado. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+De acordo com os requisitos da NR-12, 
+especialmente nos itens que tratam dos 
+sistemas de segurança e dispositivos de 
+detecção de presença (itens 12.38, 
+12.39 e 12.40), as máquinas que 
+apresentam risco de esmagamento, 
+impacto 
+ou 
+corte 
+devem 
+possuir 
+sistemas de proteção que impeçam a 
+exposição do operador à zona de perigo 
+durante o ciclo de trabalho. 
+
+--- PAGE 14 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+14 
+ 
+ 
+ 
+A máquina é equipada com um Sistema 
+a laser com região de controle Fiessler 
+Elektronik AKAS-LC II e AKAS-LC II F. 
+Sistema 
+de 
+proteção 
+da 
+Fiessler 
+Elektronik 
+— 
+possui 
+categoria 
+de 
+segurança 4. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+De 
+acordo 
+com 
+os 
+requisitos 
+estabelecidos na NR-12, especialmente 
+nos itens 12.38 a 12.55, todas as partes 
+móveis de máquinas que ofereçam risco 
+de esmagamento, corte, impacto ou 
+aprisionamento 
+devem 
+possuir 
+proteções fixas ou móveis que impedem 
+o acesso do operador ou de terceiros à 
+zona de perigo. 
+A máquina possui proteções fixas 
+laterais confeccionadas em chapas 
+metálicas 
+perfuradas, 
+rigidamente 
+fixadas à estrutura da máquina, sem 
+possibilidade de remoção ou abertura 
+sem o uso de ferramentas. Essas 
+proteções têm a função de impedir o 
+acesso às partes móveis e componentes 
+internos durante o funcionamento, como 
+
+--- PAGE 15 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+15 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+o conjunto hidráulico e mecanismos de 
+movimentação do eixo do punção. 
+As dimensões e o posicionamento das 
+proteções estão de acordo com os 
+parâmetros de distância de segurança e 
+aberturas máximas permitidas definidos 
+nas normas técnicas ABNT NBR ISO 
+13857 e NR-12, garantindo que não haja 
+risco de contato acidental com partes 
+perigosas da máquina. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Possui botoeiras de emergência na parte 
+superior das proteções fixas direita e 
+
+--- PAGE 16 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+16 
+ 
+esquerda 
+com 
+monitoramento 
+por 
+sistema Fiessler Elektronik. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+De 
+acordo 
+com 
+os 
+requisitos 
+estabelecidos na NR-12, especialmente 
+nos itens 12.38 a 12.55, todas as partes 
+móveis de máquinas que ofereçam risco 
+de esmagamento, corte, impacto ou 
+aprisionamento 
+devem 
+possuir 
+proteções fixas ou móveis que impedem 
+o acesso do operador ou de terceiros à 
+zona de perigo. 
+A máquina possui proteção fixa traseira 
+confeccionadas em chapas metálicas 
+perfuradas, 
+rigidamente 
+fixadas 
+à 
+estrutura da máquina, sem possibilidade 
+de remoção ou abertura sem o uso de 
+ferramentas. Essas proteções têm a 
+função de impedir o acesso às partes 
+móveis e componentes internos durante 
+o funcionamento, como o conjunto 
+hidráulico 
+e 
+mecanismos 
+de 
+movimentação do eixo do punção. 
+
+--- PAGE 17 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+As dimensões e o posicionamento das 
+proteções estão de acordo com os 
+parâmetros de distância de segurança e 
+aberturas máximas permitidas definidos 
+nas normas técnicas ABNT NBR ISO 
+13857 e NR-12, garantindo que não haja 
+risco de contato acidental com partes 
+perigosas da máquina. 
+ 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com os requisitos da NR-12, 
+especialmente nos itens 12.38 a 12.41, 
+todas as proteções móveis de máquinas 
+e equipamentos que permitam o acesso 
+à zona de risco devem ser dotadas de 
+dispositivos de intertravamento que 
+garantam a interrupção automática dos 
+movimentos perigosos quando houver 
+abertura das proteções. 
+A máquina está equipada com sensores 
+de intertravamento instalados nas portas 
+
+--- PAGE 18 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+18 
+ 
+ 
+ 
+ 
+ 
+ 
+laterais e nas tampas de acesso às áreas 
+internas da máquina. 
+Os sensores utilizados apresentam 
+instalação adequada e fixação segura, 
+conforme previsto na norma ABNT NBR 
+ISO 
+14119, 
+garantindo 
+que 
+o 
+acionamento ou o desligamento do 
+circuito de segurança ocorra de forma 
+confiável. O sistema de intertravamento 
+é integrado ao circuito de comando da 
+máquina, 
+de 
+modo 
+que 
+qualquer 
+violação ou abertura não autorizada das 
+proteções interrompe imediatamente o 
+funcionamento. 
+Além 
+disso, 
+o 
+sistema 
+de 
+intertravamento atende aos critérios de 
+categoria de segurança e nível de 
+performance 
+(PL 
+“d” 
+ou 
+superior) 
+estabelecidos pela norma ABNT NBR 
+ISO 13849-1, conforme exigido pela NR-
+12, assegurando a confiabilidade do 
+sistema de parada e a proteção dos 
+operadores. 
+Está sendo monitorado pelo Sistema 
+Fiessler Elektronik. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 19 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+19 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+De acordo com os requisitos da NR-12, 
+especialmente nos itens 12.38 a 12.41, 
+todas as proteções móveis de máquinas 
+e equipamentos que permitam o acesso 
+à zona de risco devem ser dotadas de 
+dispositivos de intertravamento que 
+garantam a interrupção automática dos 
+movimentos perigosos quando houver 
+abertura das proteções. 
+A máquina está equipada com sensores 
+de intertravamento instalados na porta 
+traseira. 
+O sensor utilizado apresenta instalação 
+adequada e fixação segura, conforme 
+previsto na norma ABNT NBR ISO 
+14119, garantindo que o acionamento ou 
+o desligamento do circuito de segurança 
+ocorra de forma confiável. O sistema de 
+intertravamento é integrado ao circuito 
+de comando da máquina, de modo que 
+qualquer violação ou abertura não 
+autorizada das proteções interrompe 
+imediatamente o funcionamento. 
+Além 
+disso, 
+o 
+sistema 
+de 
+intertravamento atende aos critérios de 
+categoria de segurança e nível de 
+performance 
+(PL 
+“d” 
+ou 
+superior) 
+estabelecidos pela norma ABNT NBR 
+ISO 13849-1, conforme exigido pela NR-
+12, assegurando a confiabilidade do 
+sistema de parada e a proteção dos 
+operadores. 
+Está sendo monitorado pelo Sistema 
+Fiessler Elektronik. 
+ 
+ 
+ 
+
+--- PAGE 20 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+20 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+De 
+acordo 
+com 
+os 
+requisitos 
+estabelecidos na NR-12, especialmente 
+nos itens 12.113 a 12.118, todas as 
+máquinas 
+e 
+equipamentos 
+devem 
+possuir sinalização de segurança visível 
+e durável, indicando riscos existentes, 
+comandos de emergência e demais 
+informações 
+necessárias 
+para 
+a 
+operação segura. 
+A máquina apresenta adesivos de 
+identificação de risco afixados em 
+pontos estratégicos, como nas áreas 
+próximas às partes móveis, nas portas 
+de acesso e na região do conjunto de 
+dobra. Esses adesivos têm a finalidade 
+de 
+alertar 
+operadores 
+e 
+demais 
+trabalhadores 
+sobre 
+riscos 
+de 
+esmagamento, corte, choque elétrico e 
+aprisionamento, conforme a natureza do 
+perigo associado a cada zona da 
+máquina. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 21 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+21 
+ 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o disposto no item 12.25 
+da Norma Regulamentadora NR-12, as 
+máquinas 
+e 
+equipamentos 
+devem 
+possuir dispositivo de seccionamento de 
+energia elétrica, com possibilidade de 
+bloqueio (travamento), de forma a 
+garantir que não haja reenergização 
+acidental 
+durante 
+intervenções 
+de 
+manutenção, 
+limpeza, 
+ajuste 
+ou 
+inspeção. 
+Chave seccionadora com dispositivo 
+passível de trava no painel principal do 
+equipamento. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.26, 12.27 e 12.28, todas as 
+partes metálicas não energizadas de 
+
+--- PAGE 22 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+22 
+ 
+ 
+máquinas e equipamentos que possam 
+se tornar condutoras em caso de falha de 
+isolamento 
+devem 
+ser 
+aterradas 
+eletricamente, de modo a garantir a 
+proteção contra choques elétricos e o 
+correto escoamento de correntes de 
+fuga. 
+A 
+máquina 
+possui 
+sistema 
+de 
+aterramento 
+elétrico 
+devidamente 
+instalado, 
+com 
+conexão 
+entre 
+o 
+barramento de proteção (PE) e a 
+estrutura metálica do equipamento. O 
+ponto de aterramento está identificado 
+por símbolo padronizado e fixado de 
+forma 
+permanente, 
+assegurando 
+o 
+contato elétrico eficiente e contínuo. 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Acionamento de emergência no IHM no 
+posto de operação. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 23 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+23 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.24 a 12.31, os sistemas 
+elétricos das máquinas devem ser 
+projetados de forma a eliminar ou reduzir 
+os riscos elétricos, utilizando-se, sempre 
+que possível, tensões de segurança em 
+circuitos de comando, sinalização e 
+controle. 
+A 
+máquina possui uma fonte de 
+alimentação 
+de 
+extra-baixa 
+tensão 
+(SELV/PELV) destinada à alimentação 
+dos circuitos de comando, botoeiras, 
+sensores 
+e 
+dispositivos 
+de 
+intertravamento. Essa fonte realiza a 
+redução da tensão de alimentação 
+principal (trifásica) para níveis de 24 Vcc, 
+garantindo maior segurança ao operador 
+e 
+à integridade 
+dos 
+componentes 
+elétricos. 
+ 
+5.1.2 Análise de Riscos 
+Ciclo de vida: Operação / produção 
+Identificação  
+Perigo n° 01 
+Tarefa  
+Alimentação e dobra da chapa. 
+
+--- PAGE 24 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+24 
+Descrição do perigo  
+Esmagamento entre o punção e a matriz 
+Situações perigosas  
+Inserção ou ajuste da chapa na zona de prensagem 
+Eventos perigosos  
+Acesso frontal durante o ciclo 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+5 
+4 
+1 
+100 
+Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+2 
+4 
+ 
+Medidas de Engenharia Executadas  
+Instalação de cortina de luz AKAS-LC II F com zona de proteção ajustável e parada de 
+emergência redundante. 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+5 
+4 
+1 
+0,66 
+Aceitável 
+Ciclo de vida: Ajuste e Setup 
+
+--- PAGE 25 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+Identificação  
+Perigo n° 02 
+Tarefa  
+Ajustes no ferramental 
+Descrição do perigo  
+Aprisionamento das mãos entre ferramentas 
+Situações perigosas  
+Troca ou ajuste de punção/matriz 
+Eventos perigosos  
+Movimento inesperado ou queda de ferramenta 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+5 
+4 
+1 
+100 
+Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+2 
+4 
+ 
+Medidas de Engenharia Executadas  
+Instalação de cortina de luz AKAS-LC II F com zona de proteção ajustável e parada de 
+emergência redundante. Acionamento apenas quando pressionado o pedal. 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+
+--- PAGE 26 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+26 
+0,033 
+5 
+4 
+1 
+0,66 
+Aceitável 
+ 
+Ciclo de vida: Limpeza e Manutenção 
+Identificação  
+Perigo n° 03 
+Tarefa  
+Ao executar troca de componentes ou manutenção elétrica na 
+máquina. 
+Descrição do perigo  
+Choque devido ao contato com partes vivas sob condições de falha 
+Situações perigosas  
+Verificação de partes, componentes e dispositivos da máquina 
+Eventos perigosos  
+Contato direto com equipamentos elétricos 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+1,5 
+15 
+1 
+112,5 
+Muito alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+1 
+2 
+3 
+ 
+Medidas de Engenharia Executadas  
+ 
+
+--- PAGE 27 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+27 
+Chave seccionadora com trava, painel elétrico devidamente identificado e aterrado. Possui 
+identificação dos riscos e acesso somente a pessoal autorizado. 
+ 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+1,5 
+15 
+1 
+0,7425 
+Aceitável 
+Ciclo de vida: Operação / Manutenção 
+Identificação  
+Perigo n° 04 
+Tarefa  
+Acesso às laterais. 
+    
+       
+Descrição do perigo  
+Contato com partes móveis internas 
+Situações perigosas  
+Abertura das proteções laterais 
+Eventos perigosos  
+Acionamento com proteção aberta 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+4 
+4 
+1 
+80 
+Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+1 
+3 
+ 
+
+--- PAGE 28 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+28 
+Medidas de Engenharia Executadas  
+ 
+Instalação de sensores de intertravamento nas portas laterais, impedindo operação com 
+portas abertas 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+4 
+4 
+1 
+0,528 
+Aceitável 
+ 
+ 
+ 
+ 
+Ciclo de vida: Operação / Ajuste 
+Identificação  
+Perigo n° 05 
+Tarefa  
+Acionamento dos comandos 
+         
+Descrição do perigo  
+Choque elétrico por comando energizado 
+Situações perigosas  
+Contato com botoeiras e painel 
+
+--- PAGE 29 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+29 
+Eventos perigosos  
+Falha no isolamento 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+4 
+15 
+1 
+300 
+Muito Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+2 
+4 
+ 
+Medidas de Engenharia Executadas  
+ 
+Utilização de fonte SELV 24Vcc para circuitos de comando e interface homem-máquina. 
+ 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+4 
+15 
+1 
+1,98 
+Muito baixo 
+ 
+Ciclo de vida: Operação / Manutenção 
+Identificação  
+Perigo n° 06 
+Tarefa  
+Acesso ao painel e área de risco 
+ 
+Descrição do perigo  
+Ausência ou falha de sinalização 
+
+--- PAGE 30 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+30 
+Situações perigosas  
+Falta de identificação dos riscos 
+Eventos perigosos  
+Operação inadvertida 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+2,5 
+4 
+1 
+50 
+Significante 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+1 
+3 
+ 
+Medidas de Engenharia Executadas  
+ 
+ 
+A fixação de adesivos de segurança conforme NR-12 e NBR ISO 3864-2 em todas as zonas 
+de risco e comandos. 
+ 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+2,5 
+4 
+1 
+0,33 
+Aceitável 
+ 
+ 
+ 
+ 
+Ciclo de vida: Operação 
+Identificação  
+Perigo n° 07 
+Tarefa  
+Durante a operação do equipamento há acesso a zona de risco pela 
+parte traseira. 
+
+--- PAGE 31 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+31 
+Descrição do perigo  
+Perigo de esmagamento 
+Situações perigosas  
+Ajustes na chapa durante o abastecimento 
+Eventos perigosos  
+Queda ou ejeção de objetos 
+Estimativa do risco – HRN Antes 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+2,5 
+10 
+1 
+125 
+Muito alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+2 
+4 
+ 
+Medidas de Engenharia Executadas  
+ 
+Há proteção fixa com monitoramento através do sensor magnético em toda parte traseira do 
+equipamento, há identificação dos riscos ao acessar a área traseira do equipamento. 
+ 
+Estimativa do risco - HRN Depois 
+LO 
+FE 
+DPH 
+NP 
+HRN (LO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+2,5 
+10 
+1 
+0,825 
+Aceitável 
+
+--- PAGE 32 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+32 
+6 DEFINIÇÃO DE CATEGORIA REQUERIDA 
+ 
+Conforme os riscos existentes (pior caso): 
+Gravidade da lesão: 
+S2 – Lesão Grave, irreversível ou morte. 
+Frequência e/ou duração da exposição ao perigo: 
+F2 – Frequente até contínuo. 
+Possibilidade de se evitar o perigo: 
+P2 – Pouco provável. 
+ 
+CONCLUSÃO: CATEGORIA DE PROTEÇÃO REQUERIDA É 4. 
+ 
+7 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E 
+LIMPEZA 
+ 
+A empresa deverá ter as suas máquinas e equipamentos submetidos à 
+atividade de manutenção preventiva e corretiva, na forma e periodicidade determinada 
+pelo fabricante, conforme as normas técnicas oficiais nacionais vigentes e, na falta 
+destas, as normas técnicas internacionais. 
+ 
+A empresa possui livro de manutenção e controla suas intervenções de acordo 
+com os itens da norma. 
+ 
+As intervenções são executadas por profissionais capacitados, qualificados ou 
+legalmente habilitados, formalmente autorizados pelo empregador e com as máquinas 
+e equipamentos parados com adoção dos procedimentos contidos em norma. 
+
+--- PAGE 33 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+33 
+8 ARRANJOS FÍSICOS E SINALIZAÇÃO 
+ 
+A empresa deverá garantir a organização geral das áreas deixando os 
+Equipamentos de Proteção Coletiva (EPC’s), Extintores e Painéis Elétricos, 
+desobstruídos e com livre acesso. Identificar as máquinas referente aos seus riscos, 
+através de adesivos, bem como os painéis elétricos e demais locais que representem 
+algum risco. 
+9 MANUAL DE OPERAÇÃO 
+ 
+As máquinas e equipamentos devem possuir manual de instruções fornecido 
+pelo fabricante ou importador, com informações relativas à segurança em todas as 
+fases de utilização. Estes deverão estar localizados e mantidos para consulta na área 
+de manutenção da empresa. Quando inexistente ou extraviado, o manual de 
+máquinas ou equipamentos que apresentem riscos deve ser solicitado ao fornecedor 
+ou ser elaborado pela empresa uma ficha de informação contendo os seguintes itens.  
+a) tipo, modelo e capacidade;  
+b) descrição da utilização prevista para a máquina ou equipamento;  
+c) indicação das medidas de segurança existentes;  
+d) instruções para utilização segura da máquina ou equipamento;  
+e) periodicidade e instruções quanto às inspeções e manutenção;  
+f) procedimentos a serem adotados em emergências, quando aplicável. 
+Esta ficha pode ser elaborada pelo empregador ou pessoa designada por este. 
+10 PROCEDIMENTOS DE TRABALHO E SEGURANÇA 
+ 
+A empresa possui instrução de trabalho para o Processo de Operação da 
+máquina/equipamento e deverá estar anexo a este laudo. Esta instrução de trabalho 
+identifica os procedimentos de segurança, operação e demais, necessárias para 
+operação correta e segura do equipamento. 
+11 TREINAMENTO E CAPACITAÇÃO 
+ 
+A operação, manutenção, inspeção e demais intervenções em máquinas e 
+equipamentos devem ser realizadas por trabalhadores habilitados ou qualificados ou 
+capacitados, e autorizados para este fim. 
+
+--- PAGE 34 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+34 
+ 
+A operação deve seguir as instruções da norma e possuir seu conteúdo 
+conforme ANEXO II da NR-12. 
+ 
+Todos os trabalhadores envolvidos na operação, manutenção, inspeção e 
+demais intervenções em máquinas e equipamentos conforme determina a Norma 
+Regulamentadora deverão passar por treinamento e capacitação incluindo a 
+reciclagem do trabalhador sempre que ocorrerem modificações significativas nas 
+instalações e na operação de máquinas ou troca de métodos, processos e 
+organização do trabalho ou não ocorrendo estas alterações, a cada ano. 
+ 
+O conteúdo programático da capacitação para reciclagem deve atender às 
+necessidades da situação que a motivou, com carga horária mínima que garanta aos 
+trabalhadores executarem suas atividades com segurança, sendo distribuída em no 
+máximo oito horas diárias e realizada durante o horário normal de trabalho. 
+12 CONCLUSÃO 
+A adequação da máquina em questão às normas estabelecidas pela NR 12 
+representa um avanço significativo na segurança do ambiente de trabalho, garantindo 
+a integridade dos operadores e a conformidade com os requisitos legais. 
+Após uma análise detalhada dos riscos e necessidades específicas, foram 
+implementadas medidas de proteção, incluindo dispositivos de segurança, 
+sinalizações adequadas e treinamentos para os colaboradores. Esses ajustes visam 
+eliminar ou minimizar os perigos existentes, proporcionando um uso mais seguro e 
+eficiente da máquina. 
+A adequação também contribui para a redução de acidentes e cumprimento 
+das exigências dos órgãos reguladores. Dessa forma, a empresa reafirma seu 
+compromisso com a segurança do trabalho e a preservação da saúde dos 
+funcionários. 
+Além da implementação das melhorias, foi estabelecido um plano de 
+manutenção contínua, garantindo que os sistemas de proteção permaneçam eficazes 
+ao longo do tempo. As inspeções periódicas e capacitações constantes reforçam a 
+cultura de segurança dentro da organização. 
+
+--- PAGE 35 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+35 
+Por fim, a conclusão do processo de adequação reforça a importância da NR 
+12 na promoção de um ambiente de trabalho mais seguro e eficiente. Com essas 
+melhorias, a empresa se coloca em conformidade com a legislação, prevenindo 
+incidentes e demonstrando responsabilidade perante seus colaboradores e parceiros. 
+ 
+O equipamento no foco deste trabalho apresenta condições dentro do que a 
+normativa estabelece, os dispositivos de parada de emergência implantados estão 
+disponíveis e operacionais a qualquer tempo, o que propicia condições ideais de 
+segurança e proteção aos trabalhadores diretamente envolvidos com o processo 
+produtivo. 
+13 RESPONSÁVEL TÉCNICO 
+ 
+ 
+Garante as informações supracitadas neste laudo e assina abaixo: 
+ 
+ 
+_______________________________ 
+Bruno Cardoso 
+Engenheiro Eletricista 
+Eng. De Segurança do Trabalho 
+CREA/SC 108.955-2
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 36 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Dobradeira CNC PBE-60/2050Dobradeira CNC PBE-60/205 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+36 
+ 
+ 
+ 
+ 
+ANEXOS 
+ 
+1 – ART do Laudo n° 10343419-3 
+2 – Manual da máquina em português 
+ 
+ 

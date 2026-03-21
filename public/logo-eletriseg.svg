@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Eletri (dark gray) -->
+  <text x="10" y="80" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#505050">Eletri</text>
+
+  <!-- Seg (teal) -->
+  <text x="240" y="80" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#4a9b9e">Seg</text>
+
+  <!-- Subtitle -->
+  <text x="10" y="95" font-family="Arial, sans-serif" font-size="12" fill="#333">ENGENHARIA</text>
+</svg>

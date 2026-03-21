@@ -1,0 +1,117 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Laudo {
+  id        String      @id @default(cuid())
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  userId    String      // Supabase Auth UUID
+  status    LaudoStatus @default(CONCLUIDO)
+
+  // --- TIPO ---
+  tipoLaudo String?
+
+  // --- EMPRESA CLIENTE ---
+  nomeEmpresa        String
+  cnpj               String
+  endereco           String
+  dataAbertura       String?
+  atividadeEconomica String?
+
+  // --- EQUIPAMENTO ---
+  nomeMaquina     String
+  modelo          String?
+  numeroSerie     String?
+  setor           String?
+  descricaoFuncao String? @db.Text
+  fabricante      String?
+  anoFabricacao   String?
+  potenciaValor   String?
+  potenciaUnidade String?
+  dimensoes       String?
+  materiaPrima    String?
+  usoPretendido   String? @db.Text
+  modoOperacao    String? @db.Text
+
+  // --- CHECKBOXES ---
+  tipoUso         String[]
+  restricaoMotora Boolean  @default(false)
+  restricaoSexo   Boolean  @default(false)
+  treinamentos    String[]
+
+  // --- CATEGORIA ---
+  gravidadeLesao      String?
+  frequencia          String?
+  possibilidadeEvitar String?
+  categoriaRequerida  Int?
+
+  // --- DOCUMENTACAO ---
+  numeroArt     String?
+  tipoConclusao String? // "A" | "B"
+
+  // --- FOTOS (URLs Supabase Storage) ---
+  fotoPlacaMaquina String?
+  fotoVisaoGeral   String?
+
+  // --- PDF ---
+  pdfUrl String? // URL do PDF gerado (Supabase Storage)
+
+  // --- RELACOES ---
+  dispositivosSeguranca DispositivoSeguranca[]
+  perigos               Perigo[]
+
+  @@index([userId])
+}
+
+model DispositivoSeguranca {
+  id        String @id @default(cuid())
+  laudoId   String
+  laudo     Laudo  @relation(fields: [laudoId], references: [id], onDelete: Cascade)
+  ordem     Int
+  descricao String @db.Text
+  fotoUrl   String?
+}
+
+model Perigo {
+  id              String @id @default(cuid())
+  laudoId         String
+  laudo           Laudo  @relation(fields: [laudoId], references: [id], onDelete: Cascade)
+  ordem           Int
+  cicloVida       String
+  numeroPerigo    String
+  tarefa          String
+  descricaoPerigo String @db.Text
+
+  // HRN ANTES
+  loAntes            Float
+  feAntes            Float
+  dphAntes           Float
+  npAntes            Float
+  hrnAntes           Float
+  classificacaoAntes String?
+
+  medidasEngenharia String @db.Text
+
+  // HRN DEPOIS
+  loDepois            Float
+  feDepois            Float
+  dphDepois           Float
+  npDepois            Float
+  hrnDepois           Float
+  classificacaoDepois String?
+}
+
+enum LaudoStatus {
+  RASCUNHO
+  CONCLUIDO
+  ARQUIVADO
+}

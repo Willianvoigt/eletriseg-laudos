@@ -1,0 +1,1672 @@
+FILE: Laser tubo | PAGES: 28
+
+--- PAGE 1 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045 
+ 
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Laudo de apreciação de riscos e 
+conformidades CORTE A LASER YTF3-9045 
+ 
+NR-12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EMPRESA CEI INDUSTRIA METALURGICA 
+LTDA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+00 
+11/03/2026 
+Emissão Inicial e Entrega 
+Bruno C. 
+ 
+ 
+ 
+ 
+Rev. 
+Data 
+Descrição 
+Responsável 
+ 
+ 
+
+--- PAGE 2 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+Sumário 
+1 INTRODUÇÃO ................................................................................................................................. 3 
+2 OBJETIVO ........................................................................................................................................ 3 
+3 NORMAS E DOCUMENTOS APLICÁVEIS .......................................................................................... 3 
+4 METODOLOGIA ............................................................................................................................... 4 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES ................................................................................. 7 
+6 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E LIMPEZA .......................................24 
+7 ARRANJOS FÍSICOS E SINALIZAÇÃO ...............................................................................................24 
+8 MANUAL DE OPERAÇÃO ................................................................................................................24 
+9 PROCEDIMENTOS DE TRABALHO E SEGURANÇA ...........................................................................25 
+10 TREINAMENTO E CAPACITAÇÃO ..................................................................................................25 
+11 CONCLUSÃO ................................................................................................................................26 
+12 RESPONSÁVEL TÉCNICO ...............................................................................................................27 
+13 ANEXOS .......................................................................................................................................28 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 3 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+1 INTRODUÇÃO 
+ 
+A Norma Regulamentadora NR-12 –– da Portaria 3.214, de 8 de junho de 1978 
+do Ministério do Trabalho e Emprego e suas revisões, estabelecem requisitos mínimos 
+para a Segurança em Máquinas e equipamentos. Esta visa à prevenção de acidentes 
+e doenças do trabalho desde a fase de projeto, construção, venda até a sua utilização 
+ou operação, definindo referências técnicas, princípios fundamentais e medidas de 
+proteção que devem ser observados para garantir a saúde e a integridade física dos 
+trabalhadores. As disposições contidas na presente Norma Regulamentadora se 
+referem indistintamente a máquinas e equipamentos novos e usados, exceto aqueles 
+itens em que houver menção específica quanto à sua aplicabilidade. São 
+consideradas medidas de proteção, a serem adotadas nessa ordem de prioridade:  
+ 
+ 
+a) Medidas de proteção coletivas;  
+ 
+ 
+b) Medidas administrativas ou de organização do trabalho; e 
+ 
+ 
+c) Medidas de proteção individuais. 
+ 
+Este laudo reflete em última análise as condições de segurança do 
+equipamento, em referência ao estabelecido nas normas. 
+2 OBJETIVO 
+ 
+Documentar com Laudo Técnico as condições de segurança, análise e 
+avaliação dos riscos em referência aos requisitos legais aplicáveis na Norma 
+Regulamentadora NR-12, confirmando sua devida adequação ao proposto em norma. 
+3 NORMAS E DOCUMENTOS APLICÁVEIS 
+ ABNT NBR ISO 12100:2013  
+ Segurança de máquinas — Princípios gerais de projeto - Apreciação e redução 
+de riscos. 
+ ABNT ISO/TR 14121-2:2018  
+Segurança de máquinas - Apreciação e riscos  
+Parte 2: Guia prático e exemplos de métodos. 
+ ABNT NBR 14153:2013 
+Segurança de Máquinas  
+Partes de sistemas de comando relacionados à segurança – Princípios gerais 
+para o projeto. 
+
+--- PAGE 4 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ ABNT NBR ISO 13849-1:2019  
+Partes de sistemas de comando relacionados à segurança  
+Parte 1: Princípios gerais para o projeto. 
+ ABNT NBR ISO 13849-2:2019 
+Partes de sistemas de comando relacionados à segurança  
+Parte 2: Validação. 
+ NR-12 - Segurança no Trabalho em Máquinas e Equipamentos. 
+4 METODOLOGIA 
+ 
+ 
+A metodologia para a realização do laudo consiste em três etapas: 
+ 
+Avaliação no posto de trabalho: onde a equipe acompanhará no local de 
+trabalho a rotina das equipes de operação e manutenção junto a máquina. Esta etapa 
+tem como objetivo realizar a análise de risco. Neste momento serão realizadas 
+entrevistas com os operadores e mantenedores para poder aprofundar as informações 
+com relação à exposição em suas atividades.  
+ 
+Neste momento serão coletadas informações técnicas para o relatório, assim 
+como fotos que serão anexadas no laudo, requisitos necessários para a realização da 
+análise prévia do atendimento a norma.  
+ 
+Análise dos itens da norma: Com a avaliação in loco realizada, a equipe 
+passará a montagem do relatório e os apontamentos dos itens não conformes em 
+acordo com as Normas e documentos aplicáveis, oferecendo ato contínuo as 
+recomendações para atendimento dos requisitos aplicáveis na organização além da 
+realização da análise de risco através de metodologia específica. 
+ 
+Recomendações Técnicas: As medidas e recomendações de que fazem parte 
+este relatório constitui-se de sugestões às quais são de responsabilidade e decisão 
+da empresa aplica-las ou não em sua unidade de negócio.  
+ 
+O Documento base que se constitui no Laudo Técnico apresenta os seguintes 
+grupos de Informações:  
+  
+- Atendimento aos requisitos das normas aplicáveis;  
+- Recomendações;  
+- Análise dos riscos; 
+ 
+ 
+- Categorização da máquina;  
+
+--- PAGE 5 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+ 
+Estimativa dos riscos pela metodologia HRN (Hazard Rating Number). A 
+fórmula aplicada para encontrar o nível de risco é: HRN = LO x FE x DPH x NP 
+ 
+ 
+Tabela 1 
+ 
+ 
+Tabela 2 
+ 
+ 
+Tabela 3 
+ 
+ 
+Tabela 4 
+ 
+
+--- PAGE 6 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6 
+ 
+Tabela 5 
+ 
+- O quadro anterior deve ser utilizado para priorizar a tomada de ações, é bastante 
+salutar definir o tempo para a tomada de ação de reduzir cada faixa de resultado. Por 
+saber disto, é proposto o seguinte: 
+ 
+-   Para a faixa que vai do resultado 0 a 5, buscar a melhoria sem um prazo definido; 
+-   Para o resultado que vai de 5 a 50, dentro de 4 meses deve-se atuar na redução 
+dos riscos; 
+-   Para a faixa que vai de 50 a 1000, em no máximo uma semana; 
+-   Para a faixa maior que 1000 se deve interromper as atividades imediatamente. 
+ 
+Categoria de Riscos conforme a ABNT NBR 14153: 
+ 
+ 
+Figura 1- Gráfico de Riscos NBR 14153 
+ 
+ 
+
+--- PAGE 7 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+5 APRECIAÇÃO DE RISCOS E CONFORMIDADES 
+ 
+IDENTIFICAÇÃO DA EMPRESA 
+Empresa: CEI INDUSTRIA METALURGICA LTDA 
+Data de abertura: 24/08/2010 
+Endereço: R ALESSANDRIA, 340, SÃO GOTARDO, FLORES DA CUNHA - RS - 
+95.270-000 
+CNPJ: 12.454.722/0001-03 
+Data do Laudo: MARÇO 2026 
+Natureza Jurídica: 206-2 Sociedade Empresária Limitada 
+Status da empresa: ATIVA 
+Atividade econômica principal: 28.33-0-00 - Fabricação de máquinas e 
+equipamentos para a agricultura e pecuária, peças e acessórios, exceto para irrigação 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 8 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 
+5.1 Equipamento: Corte a Laser Tubo YTF3-9045 
+ 
+Figura 01: Corte a Laser Tubo YTF3-9045– Visão Geral 
+Identificação (TAG / Série): NC / YTF39045C2505030 
+Setor: CORTE A LASER TUBO 
+Descrição Geral 
+Função: A máquina de corte a laser para tubos é um equipamento automatizado 
+desenvolvido para realizar cortes de alta precisão em tubos metálicos e perfis de 
+diferentes seções (circulares, quadrados, retangulares, ovais e especiais). Utiliza 
+tecnologia de laser de fibra óptica, que proporciona feixe de alta intensidade 
+concentrado, permitindo cortes limpos, rápidos e com mínima zona afetada pelo 
+calor. 
+O sistema é composto por fonte de laser de alta potência, cabeçote de corte com 
+ajuste automático de foco, mesa de suporte rotativa (chuck) para fixação e 
+movimentação 
+do 
+tubo, 
+além 
+de 
+sistemas 
+CNC (Comando 
+Numérico 
+Computadorizado) que controlam a trajetória do feixe e garantem repetibilidade do 
+processo. 
+
+--- PAGE 9 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+9 
+A máquina possibilita cortes retos, chanfrados e contornos complexos, além de 
+executar marcações e gravações superficiais quando necessário. O processo 
+substitui métodos convencionais como serras e puncionamento, oferecendo maior 
+produtividade, precisão dimensional, redução de desperdícios e acabamento 
+superior, dispensando em muitos casos operações secundárias. 
+É 
+amplamente 
+aplicada 
+em 
+indústrias 
+metalúrgicas, 
+automobilísticas, 
+aeroespaciais, de construção civil, fabricação de móveis metálicos e estruturas 
+tubulares, onde a demanda por peças tubulares cortadas com alta qualidade e 
+geometrias complexas é elevada. 
+O Abastecimento do equipamento é feito em uma área de espera na parte traseira 
+do equipamento, onde o abastecimento é realizado de forma manual ou por ponte-
+rolante, desta forma existem barreiras de segurança na parte traseira do 
+equipamento e um comando IHM para o procedimento de abastecimento. Existe 
+uma estação de trabalho com comandos na parte traseira da máquina 
+“Abastecimento” e uma estação de trabalho com comando na parte frontal da 
+máquina “Operacional”, assim o equipamento segui os comandos do operador para 
+o processo produtivo e de carga e descarga do equipamento, a máquina trabalha 
+sobre comandos CNC que atende o programa para o processo de corte. 
+Fabricante: Yawei Machine-Tool Co., LTD 
+Modelo: YTF3-9045 
+Ano de Fabricação: 2025 
+Energia: 380V 
+Produtividade: 6000W 
+Operadores Envolvidos: 1 - 2 
+ 
+LIMITES DA MÁQUINA 
+  
+USO 
+USO PRETENDIDO 
+Executar corte de tubos de aço com sistema automatizado 
+através de processo do corte a laser com programação CNC. 
+ 
+MODO DE OPERAÇÃO 
+O equipamento trabalha com ciclo automático, o abastecimento 
+de tubos é feito manualmente na parte traseira de abastecimento, 
+depois de carregado as cintas movimenta o tubo para o local de 
+corte, onde o tubo é preso automaticamente por placas com 
+garras que abrem e fecha, conforme o processo produtivo, em 
+quanto o cabeçote laser corta, as placas trabalham em 
+
+--- PAGE 10 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+10 
+movimentos rotativos com os tubos. Os ciclos de movimentação 
+são monitorados pelo operador que possui acesso aos 
+acionamentos e controla a sequência de trabalho ele é 
+responsável pelo abastecimento, as peças cortadas e sucatas 
+saem da máquina armazenando em uma bandeja.   
+ 
+USO DO EQUIPAMENTO 
+X INDUSTRIAL 
+- NÃO INDUSTRIAL 
+- 
+DOMÉSTICO 
+ 
+X 
+SEM 
+RESTRIÇÃO 
+MOTORA 
+- RESTRIÇÃO 
+MOTORA  
+X 
+SEM 
+RESTRIÇÃO 
+DE SEXO 
+ 
+NÍVEL DE TREINAMENTO 
+X Capacitação conforme subseção 12.16 e Anexo II da NR-12 
+para os trabalhadores envolvidos com a máquina. 
+X NR-10 para eletricistas 
+- NR-11 para operadores de máquinas autopropelidas 
+- NR-33 para acessos a espaço confinado 
+- NR-35 para trabalhadores que realizam trabalhos em altura 
+ 
+OUTRAS PESSOAS 
+X 
+Pessoas que provavelmente possuem uma boa noção dos 
+perigos 
+específicos, 
+como 
+operadores 
+de 
+máquinas 
+adjacentes 
+- 
+Pessoas que provavelmente possuem uma pouca noção dos 
+perigos 
+específicos, 
+mas 
+que 
+provavelmente 
+tem 
+conhecimento dos procedimentos de segurança do local, 
+rotas autorizadas etc., como o pessoal da administração. 
+- 
+Pessoas que possuem uma noção muito pequena dos perigos 
+da máquina ou dos procedimentos de segurança, como 
+visitantes ou pessoas do público em geral, incluindo crianças 
+ 
+  
+ESPAÇO 
+MOVIMENTOS 
+área de trabalho da 
+máquina 
+Conforme plaqueta 
+Curso rotativo 
+Tubo preso em placas rotativas, para 
+operação do cabeçote laser 
+Espaço interação 
+Existe posto de operação na parte lateral 
+do equipamento próximo a retirada de 
+materiais e também na parte frontal do 
+equipamento onde é feita a programação. 
+IHM 
+Em ambos os postos de operação e 
+programação existe comando via IHM 
+touchscreen com diversos acionamentos e 
+monitoramentos 
+e 
+acionamento 
+de 
+emergência. 
+Conexão energia 
+Ligação via estrutura direto nos painéis de 
+comando, de maneira adequada. 
+
+--- PAGE 11 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11 
+TEMPO 
+Filtro de água porta laser – 3.000 horas 
+Vedações de água porta Laser – semanal 
+Filtro do refrigerados – 3 meses 
+Vazamento de óleo e limpeza de guias – semanal 
+Batentes da mesa de trabalho – diário 
+Verificação cremalheiras - semanal 
+ 
+OUTROS 
+MATÉRIA PRIMA 
+Tubos de Aço até Ø450mm 
+LIMPEZA E ORGANIZAÇÃO Máquina não possui materiais em local inadequado. 
+MEIO AMBIENTE 
+Máquina opera em ambiente interno, em condições normais de 
+uso e operação. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 12 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+5.1.1 Sistemas de segurança atuais 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Acionamento de emergência no pedestal 
+de operação do equipamento. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com o item 12.56 da Norma 
+Regulamentadora NR-12, a máquina 
+deve possuir um ou mais dispositivos de 
+parada de emergência, que possibilitem 
+a interrupção imediata e segura de seu 
+funcionamento em situações de risco. 
+Acionamento de emergência no pedestal 
+de operação do equipamento. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 13 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+13 
+ 
+Monitoramento da porta frontal através 
+de sensor magnético monitorado por 
+dispositivo de segurança – Relé de 
+segurança. 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+Indicadores luminosos no equipamento. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De 
+acordo 
+com 
+os 
+requisitos 
+estabelecidos na NR-12, especialmente 
+nos itens 12.113 a 12.118, todas as 
+máquinas 
+e 
+equipamentos 
+devem 
+possuir sinalização de segurança visível 
+e durável, indicando riscos existentes, 
+comandos de emergência e demais 
+informações 
+necessárias 
+para 
+a 
+operação segura. 
+A máquina apresenta adesivos de 
+identificação de risco afixados em pontos 
+estratégicos, como nas áreas próximas 
+
+--- PAGE 14 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+14 
+  
+às partes móveis, nas portas de acesso 
+e na região do conjunto de dobra. Esses 
+adesivos têm a finalidade de alertar 
+operadores e demais trabalhadores 
+sobre riscos de esmagamento, corte, 
+choque 
+elétrico 
+e 
+aprisionamento, 
+conforme 
+a 
+natureza 
+do 
+perigo 
+associado a cada zona da máquina. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+Proteção por dispositivo de segurança: 
+barreira de luz, na parte de comando da 
+mesa da máquina. 
+Barreira de luz monitorada por relé de 
+segurança (barreira de luz WEG). 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+
+--- PAGE 15 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+15 
+ 
+ 
+Proteção fixa nos fundos da máquina. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+Proteção por dispositivo de segurança: 
+barreira de luz, na parte dos fundos da 
+máquina onde existe movimentação. 
+Barreira de luz monitorada por relé de 
+segurança (barreira de luz WEG). 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+Proteção fixa em todos os acessos 
+laterais e frontais onde pode ter acesso 
+a máquina. Em locais onde é necessário 
+a entrada de pessoas, proteção é pela 
+cortina de luz. 
+ 
+
+--- PAGE 16 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+16 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.26, 12.27 e 12.28, todas as 
+partes metálicas não energizadas de 
+máquinas e equipamentos que possam 
+se tornar condutoras em caso de falha 
+de isolamento devem ser aterradas 
+eletricamente, de modo a garantir a 
+proteção contra choques elétricos e o 
+correto escoamento de correntes de 
+fuga. 
+A 
+máquina 
+possui 
+sistema 
+de 
+aterramento 
+elétrico 
+devidamente 
+instalado, 
+com 
+conexão 
+entre 
+o 
+
+--- PAGE 17 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+barramento de proteção (PE) e a 
+estrutura metálica do equipamento. O 
+ponto de aterramento está identificado 
+por símbolo padronizado e fixado de 
+forma 
+permanente, 
+assegurando 
+o 
+contato elétrico eficiente e contínuo. 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+  
+Relés 
+de 
+segurança 
+realizando 
+o 
+monitoramento e controlando Botões de 
+emergência e sensor magnético da porta 
+frontal. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+Relés 
+
+--- PAGE 18 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+18 
+ 
+De acordo com o disposto no item 12.25 
+da Norma Regulamentadora NR-12, as 
+máquinas 
+e 
+equipamentos 
+devem 
+possuir dispositivo de seccionamento de 
+energia elétrica, com possibilidade de 
+bloqueio (travamento), de forma a 
+garantir que não haja reenergização 
+acidental 
+durante 
+intervenções 
+de 
+manutenção, 
+limpeza, 
+ajuste 
+ou 
+inspeção. 
+Chave seccionadora com dispositivo 
+passível de trava no painel principal do 
+equipamento. 
+ 
+ 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+Reset manual, realizado diretamente no 
+IHM e nas mesas de controle aonde o 
+operador estará monitorando todo o 
+processo.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 19 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+19 
+ILUSTRAÇÃO 
+DESCRIÇÃO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+De acordo com a NR-12, especialmente 
+nos itens 12.24 a 12.31, os sistemas 
+elétricos das máquinas devem ser 
+projetados de forma a eliminar ou reduzir 
+os riscos elétricos, utilizando-se, sempre 
+que possível, tensões de segurança em 
+circuitos de comando, sinalização e 
+controle. 
+A 
+máquina possui uma fonte de 
+alimentação 
+de 
+extra-baixa 
+tensão 
+(SELV/PELV) destinada à alimentação 
+dos circuitos de comando, botoeiras, 
+sensores 
+e 
+dispositivos 
+de 
+intertravamento. Essa fonte realiza a 
+redução da tensão de alimentação 
+principal (trifásica) para níveis de 24 Vcc, 
+garantindo maior segurança ao operador 
+e 
+à integridade 
+dos 
+componentes 
+elétricos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 20 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+20 
+5.1.2 Análise de Riscos 
+Ciclo de vida: Operação 
+Identificação  
+Perigo n° 01 
+Tarefa  
+Ao realizar o abastecimento das chapas na parte traseira do 
+equipamento com auxílio de equipamento. 
+ 
+Descrição do perigo  
+Perigo de esmagamento 
+Situações perigosas  
+Ajustes no tubo de aço durante o abastecimento 
+Eventos perigosos  
+Queda ou ejeção de objetos 
+Estimativa do risco – HRN Antes 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+2 
+4 
+8 
+1 
+64 
+Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+1 
+3 
+ 
+Medidas de Engenharia Executadas  
+Monitoramento da entrada através de barreira de luz e acionamento de reset para 
+movimentação da mesa de abastecimento, além de acionamento de emergência em mais 
+de um local acessível por terceiros. 
+Estimativa do risco - HRN Depois 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+4 
+8 
+1 
+1,056 
+Muito Baixo 
+ 
+
+--- PAGE 21 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+21 
+Ciclo de vida: Operação 
+Identificação  
+Perigo n° 02 
+Tarefa  
+Manutenções, ajustes e outros que se façam necessários na 
+máquina. 
+Descrição do perigo  
+Perigos de cortes e escoriações 
+Situações perigosas  
+Ajustes, trocas de componentes ou manutenções com máquina 
+ligada 
+Eventos perigosos  
+Abertura da porta de acesso principal – frontal. 
+Estimativa do risco – HRN Antes 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+2 
+4 
+8 
+1 
+64 
+Alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+1 
+3 
+ 
+Medidas de Engenharia Executadas  
+ 
+Porta de acesso frontal possui sensor magnético monitorado pelo sistema de segurança da 
+máquina evitando que a máquina funcione com a porta aberta. 
+ 
+Estimativa do risco - HRN Depois 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+4 
+8 
+1 
+1,056 
+Muito baixo 
+
+--- PAGE 22 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+22 
+Ciclo de vida: Limpeza e Manutenção 
+Identificação  
+Perigo n° 03 
+Tarefa  
+Ao executar troca de componentes ou manutenção elétrica na 
+máquina. 
+Descrição do perigo  
+Choque devido ao contato com partes vivas sob condições de falha 
+Situações perigosas  
+Verificação de partes, componentes e dispositivos da máquina 
+Eventos perigosos  
+Contato direto com equipamentos elétricos 
+Estimativa do risco – HRN Antes 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+1,5 
+15 
+1 
+112,5 
+Muito alto 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+1 
+2 
+3 
+ 
+Medidas de Engenharia Executadas  
+ 
+Chave seccionadora com trava, painel elétrico devidamente identificado e aterrado. Possui 
+identificação dos riscos e acesso somente a pessoal autorizado. 
+ 
+Estimativa do risco - HRN Depois 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+1,5 
+15 
+1 
+0,7425 
+Aceitável 
+
+--- PAGE 23 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+23 
+Ciclo de vida: Limpeza e Manutenção 
+Identificação  
+Perigo n° 04 
+Tarefa  
+Ao executar troca de componentes ou manutenção mecânica na 
+máquina. 
+Descrição do perigo  
+Perigo de enroscar em elementos rotativos 
+Situações perigosas  
+Verificação de partes, componentes e dispositivos da máquina 
+Eventos perigosos  
+Contato com partes móveis ou extremidades rotativas expostas 
+Estimativa do risco – HRN Antes 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+5 
+1,5 
+4 
+1 
+30 
+Significante 
+Categoria de Risco – 
+Conforme NBR 
+14153:2022 
+S – Severidade; F – Frequência; P – Probabilidade 
+S 
+F 
+P 
+Categoria 
+2 
+2 
+1 
+3 
+ 
+Medidas de Engenharia Executadas  
+ 
+Chave seccionadora com trava para isolar a fonte de energia perigosa e realizar bloqueio. 
+ 
+Estimativa do risco - HRN Depois 
+PO 
+FE 
+DPH 
+NP 
+HRN (PO x FE x 
+DPH x NP) 
+Classificação de 
+risco 
+0,033 
+1,5 
+4 
+1 
+0,198 
+Aceitável 
+
+--- PAGE 24 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+24 
+ 
+ 
+Conclusão: Categoria de proteção requerida é 3. 
+6 MANUTENÇÃO, INSPEÇÃO, PREPARAÇÃO, AJUSTE, REPARO E LIMPEZA 
+ 
+A empresa deverá ter as suas máquinas e equipamentos submetidos à 
+atividade de manutenção preventiva e corretiva, na forma e periodicidade determinada 
+pelo fabricante, conforme as normas técnicas oficiais nacionais vigentes e, na falta 
+destas, as normas técnicas internacionais. 
+ 
+A empresa possui livro de manutenção e controla suas intervenções de acordo 
+com os itens da norma. 
+ 
+As intervenções são executadas por profissionais capacitados, qualificados ou 
+legalmente habilitados, formalmente autorizados pelo empregador e com as máquinas 
+e equipamentos parados com adoção dos procedimentos contidos em norma. 
+7 ARRANJOS FÍSICOS E SINALIZAÇÃO 
+ 
+A empresa deverá garantir a organização geral das áreas deixando os 
+Equipamentos de Proteção Coletiva (EPC’s), Extintores e Painéis Elétricos, 
+desobstruídos e com livre acesso. Identificar as máquinas referente aos seus riscos, 
+através de adesivos, bem como os painéis elétricos e demais locais que representem 
+algum risco. 
+8 MANUAL DE OPERAÇÃO 
+ 
+As máquinas e equipamentos devem possuir manual de instruções fornecido 
+pelo fabricante ou importador, com informações relativas à segurança em todas as 
+fases de utilização. Estes deverão estar localizados e mantidos para consulta na área 
+de manutenção da empresa. Quando inexistente ou extraviado, o manual de 
+
+--- PAGE 25 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25 
+máquinas ou equipamentos que apresentem riscos deve ser solicitado ao fornecedor 
+ou ser elaborado pela empresa uma ficha de informação contendo os seguintes itens.  
+a) tipo, modelo e capacidade;  
+b) descrição da utilização prevista para a máquina ou equipamento;  
+c) indicação das medidas de segurança existentes;  
+d) instruções para utilização segura da máquina ou equipamento;  
+e) periodicidade e instruções quanto às inspeções e manutenção;  
+f) procedimentos a serem adotados em emergências, quando aplicável. 
+Esta ficha pode ser elaborada pelo empregador ou pessoa designada por este. 
+9 PROCEDIMENTOS DE TRABALHO E SEGURANÇA 
+ 
+A empresa possui instrução de trabalho para o Processo de Operação da 
+máquina/equipamento e deverá estar anexo a este laudo. Esta instrução de trabalho 
+identifica os procedimentos de segurança, operação e demais, necessárias para 
+operação correta e segura do equipamento. 
+10 TREINAMENTO E CAPACITAÇÃO 
+ 
+A operação, manutenção, inspeção e demais intervenções em máquinas e 
+equipamentos devem ser realizadas por trabalhadores habilitados ou qualificados ou 
+capacitados, e autorizados para este fim. 
+ 
+A operação deve seguir as instruções da norma e possuir seu conteúdo 
+conforme ANEXO II da NR-12. 
+ 
+Todos os trabalhadores envolvidos na operação, manutenção, inspeção e 
+demais intervenções em máquinas e equipamentos conforme determina a Norma 
+Regulamentadora deverão passar por treinamento e capacitação incluindo a 
+reciclagem do trabalhador sempre que ocorrerem modificações significativas nas 
+instalações e na operação de máquinas ou troca de métodos, processos e 
+organização do trabalho ou não ocorrendo estas alterações, a cada ano. 
+ 
+O conteúdo programático da capacitação para reciclagem deve atender às 
+necessidades da situação que a motivou, com carga horária mínima que garanta aos 
+trabalhadores executarem suas atividades com segurança, sendo distribuída em no 
+máximo oito horas diárias e realizada durante o horário normal de trabalho. 
+
+--- PAGE 26 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+26 
+11 CONCLUSÃO 
+A adequação da máquina em questão às normas estabelecidas pela NR 12 
+representa um avanço significativo na segurança do ambiente de trabalho, garantindo 
+a integridade dos operadores e a conformidade com os requisitos legais. 
+Após uma análise detalhada dos riscos e necessidades específicas, foram 
+implementadas medidas de proteção, incluindo dispositivos de segurança, 
+sinalizações adequadas e treinamentos para os colaboradores. Esses ajustes visam 
+eliminar ou minimizar os perigos existentes, proporcionando um uso mais seguro e 
+eficiente da máquina. 
+A adequação também contribui para a redução de acidentes e cumprimento 
+das exigências dos órgãos reguladores. Dessa forma, a empresa reafirma seu 
+compromisso com a segurança do trabalho e a preservação da saúde dos 
+funcionários. 
+Além da implementação das melhorias, foi estabelecido um plano de 
+manutenção contínua, garantindo que os sistemas de proteção permaneçam eficazes 
+ao longo do tempo. As inspeções periódicas e capacitações constantes reforçam a 
+cultura de segurança dentro da organização. 
+Por fim, a conclusão do processo de adequação reforça a importância da NR 
+12 na promoção de um ambiente de trabalho mais seguro e eficiente. Com essas 
+melhorias, a empresa se coloca em conformidade com a legislação, prevenindo 
+incidentes e demonstrando responsabilidade perante seus colaboradores e parceiros. 
+ 
+O equipamento no foco deste trabalho apresenta condições dentro do que a 
+normativa estabelece, os dispositivos de parada de emergência implantados estão 
+disponíveis e operacionais a qualquer tempo, o que propicia condições ideais de 
+segurança e proteção aos trabalhadores diretamente envolvidos com o processo 
+produtivo. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 27 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+27 
+12 RESPONSÁVEL TÉCNICO 
+ 
+ 
+Garante as informações supracitadas neste laudo e assinam abaixo: 
+ 
+ 
+ 
+ 
+ 
+ 
+_______________________________ 
+Bruno Cardoso 
+Engenheiro Eletricista 
+Eng. De Segurança do Trabalho 
+CREA/SC 108.955-2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 28 ---
+LAUDO TÉCNICO NR12 – YAWEI BRASIL COMERCIO DE MÁQUINAS LTDA 
+Máquina Corte a Laser YTF3-9045  
+__________________________________________________________________________________ 
+__________________________________________________________________________________ 
+Engenharia Elétrica 
+Eng. de Segurança do Trabalho 
+ 
+EletriSeg Engenharia LTDA 
+CREA-SC: 128.716-3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+28 
+13 ANEXOS 
+ 
+1 – ART do Laudo n° 10385963-1 
+2 – Manual em português 
+ 
+ 
