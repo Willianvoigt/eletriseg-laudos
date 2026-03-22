@@ -3,7 +3,6 @@
 /.pnp
 .pnp.js
 /yarn.lock
-package-lock.json
 
 # testing
 /coverage
@@ -38,4 +37,4 @@ yarn-error.log*
 *.swo
 
 # Prisma
-/prisma/migrations/
+# /prisma/migrations/

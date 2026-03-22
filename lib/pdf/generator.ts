@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
 import { gerarLaudoHTML } from './templates/laudo-html'
 
 export interface LaudoData {
@@ -59,17 +59,34 @@ export interface LaudoData {
   artNumero?: string
 }
 
+async function getBrowser() {
+  if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    // Serverless (Vercel)
+    const chromium = await import('@sparticuz/chromium')
+    return puppeteer.launch({
+      args: chromium.default.args,
+      defaultViewport: chromium.default.defaultViewport,
+      executablePath: await chromium.default.executablePath(),
+      headless: true,
+    })
+  } else {
+    // Local development
+    return puppeteer.launch({
+      headless: true,
+      channel: 'chrome',
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'],
+    })
+  }
+}
+
 export async function gerarPDF(data: LaudoData): Promise<Uint8Array> {
   let browser = null
   try {
     // Gerar HTML do laudo
     const html = gerarLaudoHTML(data)
 
-    // Iniciar browser Puppeteer
-    browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'],
-    })
+    // Iniciar browser
+    browser = await getBrowser()
 
     const page = await browser.newPage()
 
