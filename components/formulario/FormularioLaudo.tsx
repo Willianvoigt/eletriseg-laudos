@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { StepIndicator } from './StepIndicator'
 import { StepEmpresa } from './StepEmpresa'
@@ -302,6 +303,27 @@ export function FormularioLaudo() {
   }
 
   return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Link href="/dashboard" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <div className="w-8 h-8 bg-brand-400 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">E</span>
+              </div>
+              <span className="text-lg font-bold text-gray-900">EletriSeg</span>
+            </Link>
+          </div>
+          <Link
+            href="/dashboard"
+            className="px-4 py-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            ← Voltar ao Dashboard
+          </Link>
+        </div>
+      </header>
+
     <div className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex items-center gap-3 mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Novo Laudo NR-12</h1>
@@ -348,6 +370,7 @@ export function FormularioLaudo() {
       <p className="text-center text-xs text-gray-400 mt-4">
         Etapa {currentStep} de {STEP_NAMES.length}
       </p>
+    </div>
     </div>
   )
 }
