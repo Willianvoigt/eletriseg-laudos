@@ -11,10 +11,10 @@ const TIPO_LABELS: Record<string, string> = {
   'laser-tubo': 'Laser Tubo',
 }
 
-const STATUS_LABELS: Record<string, { label: string; cor: string; bg: string }> = {
-  CONCLUIDO: { label: 'Concluído', cor: '#155724', bg: '#d4edda' },
-  RASCUNHO: { label: 'Rascunho', cor: '#856404', bg: '#fff3cd' },
-  ARQUIVADO: { label: 'Arquivado', cor: '#383d41', bg: '#e2e3e5' },
+const STATUS_STYLES: Record<string, { label: string; classes: string }> = {
+  CONCLUIDO: { label: 'Concluído', classes: 'bg-green-50 text-green-700 border-green-100' },
+  RASCUNHO: { label: 'Rascunho', classes: 'bg-amber-50 text-amber-700 border-amber-100' },
+  ARQUIVADO: { label: 'Arquivado', classes: 'bg-gray-50 text-gray-600 border-gray-200' },
 }
 
 interface LaudoItem {
@@ -93,32 +93,33 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div style={{ padding: '2rem', textAlign: 'center' }}>
-        <p>Carregando...</p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="flex items-center gap-3 text-gray-400">
+          <div className="w-5 h-5 border-2 border-brand-400 border-t-transparent rounded-full animate-spin"></div>
+          Carregando...
+        </div>
       </div>
     )
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-      <header style={{ backgroundColor: 'white', padding: '1.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ fontSize: '24px', fontWeight: 'bold', color: '#4a9b9e' }}>EletriSeg</h1>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <span style={{ fontSize: '14px', color: '#666' }}>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-brand-400 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">E</span>
+            </div>
+            <span className="text-lg font-bold text-gray-900">EletriSeg</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-gray-500 hidden sm:block">
               {user?.email}
             </span>
             <button
               onClick={handleLogout}
-              style={{
-                padding: '8px 16px',
-                backgroundColor: '#dc3545',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '14px',
-              }}
+              className="px-4 py-2 text-sm text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
             >
               Sair
             </button>
@@ -126,132 +127,99 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
-        {/* Header da seção */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+      <main className="max-w-6xl mx-auto px-6 py-8">
+        {/* Stats + Action */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
-            <h2 style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '4px' }}>Meus Laudos</h2>
-            <p style={{ fontSize: '14px', color: '#888' }}>
+            <h1 className="text-2xl font-bold text-gray-900 mb-1">Meus Laudos</h1>
+            <p className="text-sm text-gray-500">
               {laudos.length} {laudos.length === 1 ? 'laudo gerado' : 'laudos gerados'}
             </p>
           </div>
           <button
             onClick={() => router.push('/dashboard/laudos/selecionar')}
-            style={{
-              padding: '10px 24px',
-              backgroundColor: '#4a9b9e',
-              color: 'white',
-              border: 'none',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}
+            className="px-5 py-2.5 bg-brand-400 text-white text-sm font-medium rounded-xl hover:bg-brand-500 transition-all hover:shadow-lg hover:shadow-brand-400/20"
           >
             + Novo Laudo
           </button>
         </div>
 
-        {/* Lista de laudos */}
+        {/* Lista */}
         {loadingLaudos ? (
-          <div style={{ backgroundColor: 'white', padding: '3rem', borderRadius: '8px', textAlign: 'center', color: '#888' }}>
-            Carregando laudos...
+          <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">
+            <div className="flex items-center justify-center gap-3 text-gray-400">
+              <div className="w-5 h-5 border-2 border-brand-400 border-t-transparent rounded-full animate-spin"></div>
+              Carregando laudos...
+            </div>
           </div>
         ) : laudos.length === 0 ? (
-          <div style={{
-            backgroundColor: 'white',
-            padding: '3rem',
-            borderRadius: '8px',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-            textAlign: 'center',
-          }}>
-            <div style={{ fontSize: '48px', marginBottom: '12px' }}>📋</div>
-            <p style={{ color: '#666', marginBottom: '8px', fontSize: '16px' }}>Nenhum laudo criado ainda.</p>
-            <p style={{ color: '#999', fontSize: '13px' }}>Clique em "+ Novo Laudo" para começar.</p>
+          <div className="bg-white rounded-2xl border border-gray-100 p-16 text-center">
+            <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <p className="text-gray-600 font-medium mb-1">Nenhum laudo criado ainda</p>
+            <p className="text-sm text-gray-400 mb-6">Clique em "+ Novo Laudo" para começar</p>
+            <button
+              onClick={() => router.push('/dashboard/laudos/selecionar')}
+              className="px-6 py-2.5 bg-brand-400 text-white text-sm font-medium rounded-xl hover:bg-brand-500 transition-colors"
+            >
+              Criar Primeiro Laudo
+            </button>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div className="space-y-3">
             {laudos.map(laudo => {
-              const statusInfo = STATUS_LABELS[laudo.status] || STATUS_LABELS.CONCLUIDO
+              const statusInfo = STATUS_STYLES[laudo.status] || STATUS_STYLES.CONCLUIDO
               const tipoLabel = laudo.tipoLaudo ? TIPO_LABELS[laudo.tipoLaudo] || laudo.tipoLaudo : '—'
 
               return (
                 <div
                   key={laudo.id}
-                  style={{
-                    backgroundColor: 'white',
-                    borderRadius: '8px',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-                    padding: '20px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
+                  className="bg-white rounded-xl border border-gray-100 p-5 hover:border-brand-200 hover:shadow-sm transition-all flex flex-col sm:flex-row justify-between gap-4"
                 >
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-                      <span style={{ fontWeight: '600', fontSize: '16px' }}>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2.5 mb-2 flex-wrap">
+                      <h3 className="font-semibold text-gray-900 truncate">
                         {laudo.nomeMaquina}{laudo.modelo ? ` ${laudo.modelo}` : ''}
-                      </span>
-                      <span style={{
-                        fontSize: '11px',
-                        padding: '2px 8px',
-                        borderRadius: '12px',
-                        backgroundColor: statusInfo.bg,
-                        color: statusInfo.cor,
-                        fontWeight: '500',
-                      }}>
+                      </h3>
+                      <span className={`text-xs px-2 py-0.5 rounded-full border font-medium ${statusInfo.classes}`}>
                         {statusInfo.label}
                       </span>
                       {laudo.tipoConclusao && (
-                        <span style={{
-                          fontSize: '11px',
-                          padding: '2px 8px',
-                          borderRadius: '12px',
-                          backgroundColor: laudo.tipoConclusao === 'A' ? '#d4edda' : '#fff3cd',
-                          color: laudo.tipoConclusao === 'A' ? '#155724' : '#856404',
-                          fontWeight: '500',
-                        }}>
+                        <span className={`text-xs px-2 py-0.5 rounded-full border font-medium ${
+                          laudo.tipoConclusao === 'A'
+                            ? 'bg-green-50 text-green-700 border-green-100'
+                            : 'bg-amber-50 text-amber-700 border-amber-100'
+                        }`}>
                           Tipo {laudo.tipoConclusao}
                         </span>
                       )}
                     </div>
-                    <div style={{ fontSize: '13px', color: '#666', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                    <div className="flex items-center gap-3 text-xs text-gray-500 flex-wrap">
                       <span>{laudo.nomeEmpresa}</span>
-                      <span>|</span>
+                      <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
                       <span>{tipoLabel}</span>
-                      <span>|</span>
-                      <span>{laudo._count.dispositivosSeguranca} dispositivos</span>
-                      <span>|</span>
-                      <span>{laudo._count.perigos} perigos</span>
-                      <span>|</span>
+                      <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+                      <span>{laudo._count.dispositivosSeguranca} disp. | {laudo._count.perigos} perigos</span>
+                      <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
                       <span>{formatDate(laudo.createdAt)}</span>
                     </div>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    {laudo.pdfUrl && (
+                  {laudo.pdfUrl && (
+                    <div className="flex items-center">
                       <a
                         href={laudo.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                          padding: '8px 16px',
-                          backgroundColor: '#4a9b9e',
-                          color: 'white',
-                          border: 'none',
-                          borderRadius: '6px',
-                          cursor: 'pointer',
-                          fontSize: '13px',
-                          fontWeight: '500',
-                          textDecoration: 'none',
-                          display: 'inline-block',
-                        }}
+                        className="px-4 py-2 bg-brand-50 text-brand-600 text-sm font-medium rounded-lg hover:bg-brand-100 transition-colors whitespace-nowrap"
                       >
                         Baixar PDF
                       </a>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               )
             })}

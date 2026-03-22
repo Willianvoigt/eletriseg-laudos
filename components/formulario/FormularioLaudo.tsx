@@ -302,49 +302,27 @@ export function FormularioLaudo() {
   }
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <h1 style={{ fontSize: '28px', fontWeight: 'bold' }}>Novo Laudo NR-12</h1>
-          {formData.tipoLaudo && TIPO_LAUDO_MAP[formData.tipoLaudo] && (
-            <span
-              style={{
-                display: 'inline-block',
-                padding: '4px 12px',
-                backgroundColor: '#4a9b9e',
-                color: 'white',
-                borderRadius: '12px',
-                fontSize: '13px',
-                fontWeight: '500',
-              }}
-            >
-              {TIPO_LAUDO_MAP[formData.tipoLaudo]}
-            </span>
-          )}
-        </div>
+    <div className="max-w-3xl mx-auto px-4 py-8">
+      <div className="flex items-center gap-3 mb-8">
+        <h1 className="text-2xl font-bold text-gray-900">Novo Laudo NR-12</h1>
+        {formData.tipoLaudo && TIPO_LAUDO_MAP[formData.tipoLaudo] && (
+          <span className="px-3 py-1 bg-brand-400 text-white text-xs font-medium rounded-full">
+            {TIPO_LAUDO_MAP[formData.tipoLaudo]}
+          </span>
+        )}
       </div>
 
       <StepIndicator currentStep={currentStep} totalSteps={STEP_NAMES.length} stepNames={STEP_NAMES} />
 
-      <div style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '8px', marginBottom: '2rem', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
+      <div className="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 mb-6 shadow-sm">
         {renderStep()}
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
+      <div className="flex gap-3">
         <button
           onClick={handlePrev}
           disabled={currentStep === 1}
-          style={{
-            flex: 1,
-            padding: '12px',
-            backgroundColor: currentStep === 1 ? '#ccc' : '#6c757d',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: currentStep === 1 ? 'not-allowed' : 'pointer',
-            fontSize: '14px',
-            fontWeight: '500',
-          }}
+          className="flex-1 py-3 text-sm font-medium rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-gray-100 text-gray-600 hover:bg-gray-200"
         >
           ← Anterior
         </button>
@@ -352,17 +330,7 @@ export function FormularioLaudo() {
         {currentStep < STEP_NAMES.length ? (
           <button
             onClick={handleNext}
-            style={{
-              flex: 1,
-              padding: '12px',
-              backgroundColor: '#0066cc',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}
+            className="flex-1 py-3 text-sm font-medium rounded-xl bg-brand-400 text-white hover:bg-brand-500 transition-colors"
           >
             Próximo →
           </button>
@@ -370,24 +338,14 @@ export function FormularioLaudo() {
           <button
             onClick={handleSubmit}
             disabled={saving}
-            style={{
-              flex: 1,
-              padding: '12px',
-              backgroundColor: saving ? '#ccc' : '#28a745',
-              color: 'white',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: saving ? 'not-allowed' : 'pointer',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}
+            className="flex-1 py-3 text-sm font-medium rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {saving ? 'Salvando...' : '✓ Gerar PDF'}
+            {saving ? 'Gerando PDF...' : 'Gerar PDF'}
           </button>
         )}
       </div>
 
-      <p style={{ textAlign: 'center', fontSize: '12px', color: '#999', marginTop: '1rem' }}>
+      <p className="text-center text-xs text-gray-400 mt-4">
         Etapa {currentStep} de {STEP_NAMES.length}
       </p>
     </div>

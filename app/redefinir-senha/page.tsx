@@ -13,11 +13,10 @@ export default function RedefinirSenhaPage() {
   const router = useRouter()
   const supabase = createClient()
 
-  // Supabase envia o token via hash na URL, o client JS lida automaticamente
   useEffect(() => {
     supabase.auth.onAuthStateChange((event) => {
       if (event === 'PASSWORD_RECOVERY') {
-        // Usuário clicou no link de recuperação, está autenticado temporariamente
+        // Usuário autenticado temporariamente via link
       }
     })
   }, [supabase.auth])
@@ -39,9 +38,7 @@ export default function RedefinirSenhaPage() {
     setLoading(true)
 
     try {
-      const { error } = await supabase.auth.updateUser({
-        password,
-      })
+      const { error } = await supabase.auth.updateUser({ password })
 
       if (error) {
         setError(error.message)
@@ -49,9 +46,7 @@ export default function RedefinirSenhaPage() {
       }
 
       setSucesso(true)
-      setTimeout(() => {
-        router.push('/dashboard')
-      }, 3000)
+      setTimeout(() => router.push('/dashboard'), 3000)
     } catch (err) {
       setError('Erro ao redefinir senha')
     } finally {
@@ -60,84 +55,65 @@ export default function RedefinirSenhaPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f5f5f5' }}>
-      <div style={{ width: '100%', maxWidth: '400px', padding: '2rem', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '0.5rem', fontSize: '28px', fontWeight: 'bold', color: '#4a9b9e' }}>EletriSeg</h1>
-        <p style={{ textAlign: 'center', marginBottom: '2rem', color: '#666', fontSize: '14px' }}>Redefinir Senha</p>
-
-        {sucesso ? (
-          <div>
-            <div style={{ padding: '16px', backgroundColor: '#d4edda', color: '#155724', borderRadius: '6px', marginBottom: '1rem', fontSize: '14px', lineHeight: '1.5' }}>
-              Senha redefinida com sucesso! Redirecionando para o dashboard...
-            </div>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+      <div className="w-full max-w-sm">
+        {/* Logo */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-400 rounded-xl mb-4">
+            <span className="text-white font-bold text-xl">E</span>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '14px' }}>
-                Nova Senha
-              </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mínimo 6 caracteres"
-                required
-                style={{
-                  width: '100%',
-                  padding: '10px',
-                  border: '1px solid #ddd',
-                  borderRadius: '4px',
-                  fontSize: '14px',
-                }}
-              />
-            </div>
+          <h1 className="text-2xl font-bold text-gray-900">Redefinir Senha</h1>
+          <p className="text-sm text-gray-500 mt-1">Escolha sua nova senha</p>
+        </div>
 
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '14px' }}>
-                Confirmar Nova Senha
-              </label>
-              <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="Repita a senha"
-                required
-                style={{
-                  width: '100%',
-                  padding: '10px',
-                  border: '1px solid #ddd',
-                  borderRadius: '4px',
-                  fontSize: '14px',
-                }}
-              />
+        {/* Card */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+          {sucesso ? (
+            <div className="p-4 bg-green-50 text-green-700 text-sm rounded-lg border border-green-100 leading-relaxed">
+              Senha redefinida com sucesso! Redirecionando...
             </div>
-
-            {error && (
-              <div style={{ marginBottom: '1rem', padding: '10px', backgroundColor: '#fee', color: '#c33', borderRadius: '4px', fontSize: '14px' }}>
-                {error}
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">Nova Senha</label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Mínimo 6 caracteres"
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400/20 focus:border-brand-400 transition-colors"
+                />
               </div>
-            )}
 
-            <button
-              type="submit"
-              disabled={loading}
-              style={{
-                width: '100%',
-                padding: '10px',
-                backgroundColor: loading ? '#ccc' : '#4a9b9e',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                fontSize: '16px',
-                fontWeight: '500',
-                cursor: loading ? 'not-allowed' : 'pointer',
-              }}
-            >
-              {loading ? 'Redefinindo...' : 'Redefinir Senha'}
-            </button>
-          </form>
-        )}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">Confirmar Senha</label>
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Repita a senha"
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400/20 focus:border-brand-400 transition-colors"
+                />
+              </div>
+
+              {error && (
+                <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-100">
+                  {error}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-2.5 bg-brand-400 text-white font-medium rounded-lg hover:bg-brand-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? 'Redefinindo...' : 'Redefinir Senha'}
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   )
