@@ -62,11 +62,10 @@ export interface LaudoData {
 async function getBrowser() {
   if (process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME) {
     // Serverless (Vercel)
-    const chromium = await import('@sparticuz/chromium')
+    const chromium = (await import('@sparticuz/chromium')).default
     return puppeteer.launch({
-      args: chromium.default.args,
-      defaultViewport: chromium.default.defaultViewport,
-      executablePath: await chromium.default.executablePath(),
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
       headless: true,
     })
   } else {
