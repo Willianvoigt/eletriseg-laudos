@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 
 export default function LoginPage() {
@@ -107,6 +108,13 @@ export default function LoginPage() {
             {loading ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
+
+        <Link
+          href="/recuperar-senha"
+          style={{ display: 'block', textAlign: 'center', marginTop: '1rem', fontSize: '13px', color: '#4a9b9e', textDecoration: 'none' }}
+        >
+          Esqueci minha senha
+        </Link>
 
         <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '12px', color: '#999' }}>
           © 2026 EletriSeg Engenharia LTDA
