@@ -29,7 +29,7 @@ export function ParticleNetwork() {
 
     const resize = () => {
       canvas.width = window.innerWidth
-      canvas.height = document.documentElement.scrollHeight || window.innerHeight
+      canvas.height = window.innerHeight
     }
 
     const createParticles = () => {
