@@ -251,19 +251,29 @@ export function FormularioLaudo() {
       await gerarPDFCliente(laudoData as any)
 
       // 2. Salvar dados no banco (sem gerar PDF no servidor)
-      await fetch('/api/laudos/salvar', {
+      console.log('Enviando laudo para servidor...', laudoData)
+      const saveResponse = await fetch('/api/laudos/salvar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(laudoData),
       })
+
+      if (!saveResponse.ok) {
+        const errorData = await saveResponse.json()
+        throw new Error(`Erro ao salvar: ${errorData.error} - ${errorData.details}`)
+      }
+
+      const savedLaudo = await saveResponse.json()
+      console.log('Laudo salvo com sucesso:', savedLaudo)
 
       // Limpar e redirecionar
       localStorage.removeItem('laudo-draft')
       setSaving(false)
       router.push(`/dashboard`)
     } catch (err) {
-      console.error(err)
-      alert('Erro ao gerar laudo')
+      console.error('Erro ao gerar/salvar laudo:', err)
+      const errorMsg = err instanceof Error ? err.message : String(err)
+      alert(`Erro ao gerar laudo: ${errorMsg}`)
       setSaving(false)
     }
   }
