@@ -989,6 +989,12 @@ ${data.perigos && data.perigos.length > 0 ? data.perigos.map((perigo, idxPerigo)
         <strong>Tarefa:</strong> ${perigo.tarefa}
       </p>
 
+      ${perigo.foto ? `
+      <div style="text-align:center; margin:10px 0;">
+        <img src="${perigo.foto}" style="max-width:80%; max-height:180px; object-fit:contain; border:1px solid #ddd; border-radius:4px;" />
+      </div>
+      ` : ''}
+
       <div class="hrn-grid">
         <div class="hrn-box hrn-antes">
           <div class="hrn-box-titulo">CENÁRIO ANTES (sem medidas)</div>

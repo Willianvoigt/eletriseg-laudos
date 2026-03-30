@@ -9,6 +9,49 @@ interface StepHRNProps {
 
 export function StepHRN({ data, onUpdate }: StepHRNProps) {
   const [expandedPerigo, setExpandedPerigo] = useState<string | null>(null)
+  const [uploadingFoto, setUploadingFoto] = useState<string | null>(null)
+
+  const handleFotoPerigo = async (perigoId: string, file: File) => {
+    if (!file) return
+    setUploadingFoto(perigoId)
+
+    try {
+      const canvas = document.createElement('canvas')
+      const img = new Image()
+      img.onload = async () => {
+        const maxW = 1200
+        const scale = img.width > maxW ? maxW / img.width : 1
+        canvas.width = img.width * scale
+        canvas.height = img.height * scale
+        const ctx = canvas.getContext('2d')!
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+
+        canvas.toBlob(
+          async (blob) => {
+            if (!blob) { setUploadingFoto(null); return }
+            const formData = new FormData()
+            formData.append('file', blob)
+            try {
+              const res = await fetch('/api/upload', { method: 'POST', body: formData })
+              if (res.ok) {
+                const { url } = await res.json()
+                atualizarPerigo(perigoId, { foto: url })
+              }
+            } catch (err) {
+              console.error('Erro upload foto perigo:', err)
+            }
+            setUploadingFoto(null)
+          },
+          'image/jpeg',
+          0.8
+        )
+      }
+      img.onerror = () => setUploadingFoto(null)
+      img.src = URL.createObjectURL(file)
+    } catch {
+      setUploadingFoto(null)
+    }
+  }
 
   const calcularHRN = (lo: number, fe: number, dph: number, np: number) => lo * fe * dph * np
 
@@ -73,6 +116,38 @@ export function StepHRN({ data, onUpdate }: StepHRNProps) {
                 <div style={{ marginBottom: '1rem' }}>
                   <input type="text" value={perigo.numeroPerigo} onChange={(e) => atualizarPerigo(perigo.id, { numeroPerigo: e.target.value })} placeholder="Número" style={{ width: '100%', padding: '8px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '12px', boxSizing: 'border-box', marginBottom: '0.5rem' }} />
                   <textarea value={perigo.descricaoPerigo} onChange={(e) => atualizarPerigo(perigo.id, { descricaoPerigo: e.target.value })} placeholder="Descrição do perigo" style={{ width: '100%', padding: '8px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '12px', boxSizing: 'border-box', minHeight: '60px', marginBottom: '1rem' }} />
+                </div>
+
+                {/* Foto do perigo */}
+                <div style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#fafafa', borderRadius: '4px', border: '1px solid #eee' }}>
+                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 'bold', marginBottom: '0.5rem' }}>Foto do Perigo</label>
+                  {perigo.foto ? (
+                    <div style={{ position: 'relative' }}>
+                      <img src={perigo.foto} alt="Foto do perigo" style={{ width: '100%', maxHeight: '200px', objectFit: 'contain', borderRadius: '4px', border: '1px solid #ddd' }} />
+                      <button
+                        onClick={() => atualizarPerigo(perigo.id, { foto: '' })}
+                        style={{ position: 'absolute', top: '4px', right: '4px', padding: '4px 8px', backgroundColor: '#dc3545', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '11px' }}
+                      >
+                        Remover
+                      </button>
+                    </div>
+                  ) : (
+                    <div>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0]
+                          if (file) handleFotoPerigo(perigo.id, file)
+                        }}
+                        disabled={uploadingFoto === perigo.id}
+                        style={{ fontSize: '12px' }}
+                      />
+                      {uploadingFoto === perigo.id && (
+                        <p style={{ fontSize: '11px', color: '#666', marginTop: '4px' }}>Enviando foto...</p>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <div style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#f0f7ff', borderRadius: '4px' }}>

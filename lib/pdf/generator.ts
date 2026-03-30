@@ -41,6 +41,7 @@ export interface LaudoData {
     numeroPerigo: string
     tarefa: string
     descricaoPerigo: string
+    foto?: string
     loAntes: number
     feAntes: number
     dphAntes: number
