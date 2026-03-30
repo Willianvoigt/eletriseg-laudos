@@ -20,7 +20,179 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilos para PDF */
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(74, 155, 158, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(74, 155, 158, 0.6); }
+}
+
+@keyframes mesh-move {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes glow-line {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* ===== DARK TECH BACKGROUND ===== */
+.bg-tech {
+  background: linear-gradient(135deg, #0a1a1f 0%, #0d2b30 25%, #0a2025 50%, #061518 75%, #030d0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-tech::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(74, 155, 158, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(74, 155, 158, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(74, 155, 158, 0.04) 0%, transparent 45%);
+  animation: mesh-move 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.bg-tech::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(74, 155, 158, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 155, 158, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: glow-line 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Glowing dots */
+.glow-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(74, 155, 158, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(74, 155, 158, 0.4), 0 0 20px rgba(74, 155, 158, 0.2);
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(74, 155, 158, 0.15);
+  border-radius: 16px;
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== BOTÃO GLOW ===== */
+.btn-glow {
+  position: relative;
+  background: linear-gradient(135deg, #4a9b9e 0%, #3a7d80 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #4a9b9e, #2f6466, #4a9b9e);
+  border-radius: 14px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(74, 155, 158, 0.4);
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
+}
+
+/* ===== ESTILOS PARA PDF ===== */
 @media print {
   body {
     margin: 0;

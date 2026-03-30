@@ -15,39 +15,22 @@ export default function RedefinirSenhaPage() {
 
   useEffect(() => {
     supabase.auth.onAuthStateChange((event) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        // Usuário autenticado temporariamente via link
-      }
+      if (event === 'PASSWORD_RECOVERY') {}
     })
   }, [supabase.auth])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
-
-    if (password.length < 6) {
-      setError('A senha deve ter pelo menos 6 caracteres')
-      return
-    }
-
-    if (password !== confirmPassword) {
-      setError('As senhas não coincidem')
-      return
-    }
-
+    if (password.length < 6) { setError('A senha deve ter pelo menos 6 caracteres'); return }
+    if (password !== confirmPassword) { setError('As senhas não coincidem'); return }
     setLoading(true)
-
     try {
       const { error } = await supabase.auth.updateUser({ password })
-
-      if (error) {
-        setError(error.message)
-        return
-      }
-
+      if (error) { setError(error.message); return }
       setSucesso(true)
       setTimeout(() => router.push('/dashboard'), 3000)
-    } catch (err) {
+    } catch {
       setError('Erro ao redefinir senha')
     } finally {
       setLoading(false)
@@ -55,60 +38,63 @@ export default function RedefinirSenhaPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-sm">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-400 rounded-xl mb-4">
-            <span className="text-white font-bold text-xl">E</span>
+    <div className="min-h-screen bg-tech flex items-center justify-center px-4 relative">
+      <div className="glow-dot" style={{ top: '30%', right: '20%' }} />
+      <div className="glow-dot" style={{ top: '60%', left: '15%' }} />
+
+      <div className="w-full max-w-sm relative z-10">
+        <div className="text-center mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-4 animate-pulse-glow" style={{ background: 'linear-gradient(135deg, #4a9b9e, #3a7d80)' }}>
+            <span className="text-white font-bold text-2xl">E</span>
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Redefinir Senha</h1>
-          <p className="text-sm text-gray-500 mt-1">Escolha sua nova senha</p>
+          <h1 className="text-2xl font-bold text-white">Redefinir Senha</h1>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Escolha sua nova senha</p>
         </div>
 
-        {/* Card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+        <div className="opacity-0 animate-fade-in-up glass-card p-8" style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}>
           {sucesso ? (
-            <div className="p-4 bg-green-50 text-green-700 text-sm rounded-lg border border-green-100 leading-relaxed">
+            <div className="p-4 text-sm rounded-lg leading-relaxed" style={{ background: 'rgba(40, 167, 69, 0.15)', border: '1px solid rgba(40, 167, 69, 0.3)', color: '#6bff8a' }}>
               Senha redefinida com sucesso! Redirecionando...
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Nova Senha</label>
+                <label className="block text-sm font-medium mb-1.5" style={{ color: 'rgba(255,255,255,0.7)' }}>Nova Senha</label>
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Mínimo 6 caracteres"
                   required
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400/20 focus:border-brand-400 transition-colors"
+                  className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-gray-500 transition-all duration-300 focus:outline-none"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(74, 155, 158, 0.2)' }}
+                  onFocus={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.5)'}
+                  onBlur={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.2)'}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Confirmar Senha</label>
+                <label className="block text-sm font-medium mb-1.5" style={{ color: 'rgba(255,255,255,0.7)' }}>Confirmar Senha</label>
                 <input
                   type="password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Repita a senha"
                   required
-                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400/20 focus:border-brand-400 transition-colors"
+                  className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-gray-500 transition-all duration-300 focus:outline-none"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(74, 155, 158, 0.2)' }}
+                  onFocus={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.5)'}
+                  onBlur={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.2)'}
                 />
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-100">
+                <div className="p-3 text-sm rounded-lg" style={{ background: 'rgba(220, 53, 69, 0.15)', border: '1px solid rgba(220, 53, 69, 0.3)', color: '#ff6b7a' }}>
                   {error}
                 </div>
               )}
 
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full py-2.5 bg-brand-400 text-white font-medium rounded-lg hover:bg-brand-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+              <button type="submit" disabled={loading} className="w-full py-2.5 btn-glow text-sm disabled:opacity-50 disabled:cursor-not-allowed">
                 {loading ? 'Redefinindo...' : 'Redefinir Senha'}
               </button>
             </form>
