@@ -290,7 +290,7 @@ export function FormularioLaudo() {
   }
 
   return (
-    <div className="min-h-screen bg-tech">
+    <div className="min-h-screen bg-tech overflow-y-auto">
       {/* Header */}
       <header className="sticky top-0 z-50" style={{ background: 'linear-gradient(135deg, #0a1a1f, #0d2b30)', borderBottom: '1px solid rgba(74, 155, 158, 0.15)' }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -311,7 +311,7 @@ export function FormularioLaudo() {
         </div>
       </header>
 
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="max-w-3xl mx-auto px-4 py-8 pb-16">
       <div className="flex items-center gap-3 mb-8">
         <h1 className="text-2xl font-bold text-white">Novo Laudo NR-12</h1>
         {formData.tipoLaudo && TIPO_LAUDO_MAP[formData.tipoLaudo] && (
