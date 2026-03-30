@@ -98,7 +98,7 @@ body {
 .bg-tech {
   background: linear-gradient(135deg, #0a1a1f 0%, #0d2b30 25%, #0a2025 50%, #061518 75%, #030d0f 100%);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
