@@ -1,17 +1,7 @@
 import { LaudoData } from '../generator'
-import fs from 'fs'
-import path from 'path'
+import { LOGO_BASE64 } from './logo-base64'
 
-// Carregar logo como base64 no momento da importação
-let logoBase64 = ''
-try {
-  const logoPath = path.join(process.cwd(), 'public', 'logo-eletriseg.png')
-  const logoBuffer = fs.readFileSync(logoPath)
-  logoBase64 = logoBuffer.toString('base64')
-} catch {
-  // fallback se não encontrar o arquivo
-  logoBase64 = ''
-}
+const logoBase64 = LOGO_BASE64
 
 export function gerarLaudoHTML(data: LaudoData): string {
   const hoje = new Date()

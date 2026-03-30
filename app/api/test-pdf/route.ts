@@ -1,16 +1,15 @@
 import { NextResponse } from 'next/server'
-import { gerarPDF, type LaudoData } from '@/lib/pdf/generator'
+import { gerarLaudoHTML } from '@/lib/pdf/templates/laudo-html'
+import type { LaudoData } from '@/lib/pdf/generator'
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
 
-    // Validar dados obrigatórios
     if (!body.empresaNome || !body.maquinaNome) {
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 })
     }
 
-    // Preparar dados para o gerador
     const laudoData: LaudoData = {
       empresaNome: body.empresaNome || '',
       empresaCNPJ: body.empresaCNPJ || '',
@@ -32,21 +31,14 @@ export async function POST(request: Request) {
       artNumero: body.artNumero,
     }
 
-    // Gerar PDF
-    const pdfBytes = await gerarPDF(laudoData)
+    // Retornar HTML para preview (PDF é gerado no client agora)
+    const html = gerarLaudoHTML(laudoData)
 
-    // Converter para Buffer
-    const pdfBuffer = Buffer.from(pdfBytes)
-
-    // Retornar PDF como arquivo para download
-    return new NextResponse(pdfBuffer as any, {
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="Laudo_NR12_${body.maquinaNome.replace(/\s+/g, '_')}_${Date.now()}.pdf"`,
-      },
+    return new NextResponse(html, {
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
     })
   } catch (err) {
-    console.error('Erro ao gerar laudo:', err)
-    return NextResponse.json({ error: 'Erro ao gerar PDF', details: String(err) }, { status: 500 })
+    console.error('Erro ao gerar preview:', err)
+    return NextResponse.json({ error: 'Erro ao gerar preview', details: String(err) }, { status: 500 })
   }
 }

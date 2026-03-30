@@ -2,7 +2,6 @@ import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-// Classificação HRN
 function classificarHRN(hrn: number): string {
   if (hrn <= 1) return 'Aceitável'
   if (hrn <= 5) return 'Muito Baixo'
@@ -13,7 +12,6 @@ function classificarHRN(hrn: number): string {
   return 'Extremo'
 }
 
-// POST - Salvar laudo (PDF é gerado no cliente agora)
 export async function POST(request: Request) {
   try {
     const supabase = await createClient()
@@ -29,7 +27,7 @@ export async function POST(request: Request) {
     const maquinaNome = body.maquinaNome || body.nomeMaquina || ''
 
     if (!empresaNome || !maquinaNome) {
-      return NextResponse.json({ error: 'Dados incompletos: empresa e máquina obrigatórias' }, { status: 400 })
+      return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 })
     }
 
     const laudo = await prisma.laudo.create({
@@ -95,46 +93,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ id: laudo.id, status: 'ok' })
   } catch (err) {
-    console.error('Erro ao gerar laudo:', err)
+    console.error('Erro ao salvar laudo:', err)
     return NextResponse.json({ error: 'Erro ao salvar laudo', details: String(err) }, { status: 500 })
-  }
-}
-
-// GET - Listar laudos do usuário
-export async function GET() {
-  try {
-    const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
-    const laudos = await prisma.laudo.findMany({
-      where: { userId: user.id },
-      orderBy: { createdAt: 'desc' },
-      select: {
-        id: true,
-        createdAt: true,
-        status: true,
-        tipoLaudo: true,
-        nomeEmpresa: true,
-        nomeMaquina: true,
-        modelo: true,
-        tipoConclusao: true,
-        pdfUrl: true,
-        _count: {
-          select: {
-            dispositivosSeguranca: true,
-            perigos: true,
-          },
-        },
-      },
-    })
-
-    return NextResponse.json(laudos)
-  } catch (err) {
-    console.error('Erro ao listar laudos:', err)
-    return NextResponse.json({ error: 'Erro ao listar laudos' }, { status: 500 })
   }
 }

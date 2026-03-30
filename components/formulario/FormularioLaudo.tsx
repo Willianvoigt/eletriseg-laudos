@@ -222,7 +222,6 @@ export function FormularioLaudo() {
   const handleSubmit = async () => {
     setSaving(true)
     try {
-      // Mapear dados do formulário para o formato do template
       const laudoData = {
         tipoLaudo: formData.tipoLaudo,
         empresaNome: formData.nomeEmpresa,
@@ -247,28 +246,16 @@ export function FormularioLaudo() {
         artNumero: formData.numeroArt,
       }
 
-      // Gerar e baixar PDF
-      const res = await fetch('/api/laudos', {
+      // 1. Gerar PDF no cliente (browser)
+      const { gerarPDFCliente } = await import('@/lib/pdf/client-generator')
+      await gerarPDFCliente(laudoData as any)
+
+      // 2. Salvar dados no banco (sem gerar PDF no servidor)
+      await fetch('/api/laudos/salvar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(laudoData),
       })
-
-      if (!res.ok) {
-        alert('Erro ao gerar PDF')
-        setSaving(false)
-        return
-      }
-
-      const blob = await res.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `Laudo_NR12_${formData.nomeMaquina.replace(/\s+/g, '_')}_${Date.now()}.pdf`
-      document.body.appendChild(a)
-      a.click()
-      window.URL.revokeObjectURL(url)
-      a.remove()
 
       // Limpar e redirecionar
       localStorage.removeItem('laudo-draft')

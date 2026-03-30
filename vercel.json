@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "app/api/laudos/route.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "app/api/test-pdf/route.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}
