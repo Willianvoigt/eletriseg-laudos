@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-white bg-tech overflow-x-hidden">
+    <main className="min-h-screen text-white overflow-x-hidden">
 
       {/* Navbar */}
       <nav className="sticky top-0 w-full z-50 animate-fade-in" style={{ background: 'rgba(10, 26, 31, 0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(74, 155, 158, 0.1)' }}>
