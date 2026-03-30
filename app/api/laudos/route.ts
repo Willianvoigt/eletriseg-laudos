@@ -107,22 +107,16 @@ export async function GET() {
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {
+      console.warn('GET /api/laudos: Usuário não autenticado')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+
+    console.log(`GET /api/laudos: Buscando laudos para usuário ${user.id}`)
 
     const laudos = await prisma.laudo.findMany({
       where: { userId: user.id },
       orderBy: { createdAt: 'desc' },
-      select: {
-        id: true,
-        createdAt: true,
-        status: true,
-        tipoLaudo: true,
-        nomeEmpresa: true,
-        nomeMaquina: true,
-        modelo: true,
-        tipoConclusao: true,
-        pdfUrl: true,
+      include: {
         _count: {
           select: {
             dispositivosSeguranca: true,
@@ -132,9 +126,29 @@ export async function GET() {
       },
     })
 
-    return NextResponse.json(laudos)
+    console.log(`GET /api/laudos: Encontrados ${laudos.length} laudos`)
+
+    // Mapear para formato do frontend
+    const resultado = laudos.map(laudo => ({
+      id: laudo.id,
+      createdAt: laudo.createdAt.toISOString(),
+      status: laudo.status,
+      tipoLaudo: laudo.tipoLaudo,
+      nomeEmpresa: laudo.nomeEmpresa,
+      nomeMaquina: laudo.nomeMaquina,
+      modelo: laudo.modelo,
+      tipoConclusao: laudo.tipoConclusao,
+      pdfUrl: laudo.pdfUrl,
+      _count: laudo._count,
+    }))
+
+    return NextResponse.json(resultado)
   } catch (err) {
     console.error('Erro ao listar laudos:', err)
-    return NextResponse.json({ error: 'Erro ao listar laudos' }, { status: 500 })
+    const errorMsg = err instanceof Error ? err.message : String(err)
+    return NextResponse.json({
+      error: 'Erro ao listar laudos',
+      details: errorMsg
+    }, { status: 500 })
   }
 }

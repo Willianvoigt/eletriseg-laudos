@@ -18,15 +18,18 @@ export async function POST(request: Request) {
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {
+      console.warn('POST /api/laudos/salvar: Usuário não autenticado')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const body = await request.json()
+    console.log(`POST /api/laudos/salvar: Salvando laudo para usuário ${user.id}`)
 
     const empresaNome = body.empresaNome || body.nomeEmpresa || ''
     const maquinaNome = body.maquinaNome || body.nomeMaquina || ''
 
     if (!empresaNome || !maquinaNome) {
+      console.warn('POST /api/laudos/salvar: Dados incompletos', { empresaNome, maquinaNome })
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 })
     }
 
@@ -91,9 +94,14 @@ export async function POST(request: Request) {
       },
     })
 
+    console.log(`POST /api/laudos/salvar: Laudo criado com sucesso. ID: ${laudo.id}`)
     return NextResponse.json({ id: laudo.id, status: 'ok' })
   } catch (err) {
     console.error('Erro ao salvar laudo:', err)
-    return NextResponse.json({ error: 'Erro ao salvar laudo', details: String(err) }, { status: 500 })
+    const errorMsg = err instanceof Error ? err.message : String(err)
+    return NextResponse.json({
+      error: 'Erro ao salvar laudo',
+      details: errorMsg
+    }, { status: 500 })
   }
 }
