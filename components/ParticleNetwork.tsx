@@ -18,7 +18,7 @@ export function ParticleNetwork() {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d', { alpha: true })
     if (!ctx) return
 
     let animationId: number
@@ -28,16 +28,24 @@ export function ParticleNetwork() {
     const color = { r: 74, g: 155, b: 158 } // brand teal
 
     const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      const dpr = window.devicePixelRatio || 1
+      const rect = canvas.getBoundingClientRect()
+
+      canvas.width = rect.width * dpr
+      canvas.height = rect.height * dpr
+
+      ctx.scale(dpr, dpr)
     }
 
     const createParticles = () => {
       particles = []
+      const width = canvas.width / (window.devicePixelRatio || 1)
+      const height = canvas.height / (window.devicePixelRatio || 1)
+
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
+          x: Math.random() * width,
+          y: Math.random() * height,
           vx: (Math.random() - 0.5) * 0.4,
           vy: (Math.random() - 0.5) * 0.4,
           radius: Math.random() * 2 + 1,
@@ -47,7 +55,10 @@ export function ParticleNetwork() {
     }
 
     const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const width = canvas.width / (window.devicePixelRatio || 1)
+      const height = canvas.height / (window.devicePixelRatio || 1)
+
+      ctx.clearRect(0, 0, width, height)
 
       // Draw connections
       for (let i = 0; i < particles.length; i++) {
@@ -90,13 +101,14 @@ export function ParticleNetwork() {
         p.x += p.vx
         p.y += p.vy
 
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1
+        if (p.x < 0 || p.x > width) p.vx *= -1
+        if (p.y < 0 || p.y > height) p.vy *= -1
       }
 
       animationId = requestAnimationFrame(draw)
     }
 
+    // Initial setup
     resize()
     createParticles()
     draw()
