@@ -7,8 +7,9 @@ interface Particle {
   y: number
   vx: number
   vy: number
-  radius: number
-  opacity: number
+  baseRadius: number
+  baseOpacity: number
+  phase: number
 }
 
 export function ParticleNetwork() {
@@ -23,40 +24,44 @@ export function ParticleNetwork() {
 
     let animationId: number
     let particles: Particle[] = []
-    const maxDistance = 150
-    const particleCount = 60
+    const maxDistance = 200
+    const particleCount = 80
     const color = { r: 74, g: 155, b: 158 } // brand teal
 
     const resize = () => {
       const dpr = window.devicePixelRatio || 1
-      const rect = canvas.getBoundingClientRect()
+      const width = window.innerWidth
+      const height = window.innerHeight
 
-      canvas.width = rect.width * dpr
-      canvas.height = rect.height * dpr
+      canvas.width = width * dpr
+      canvas.height = height * dpr
 
-      ctx.scale(dpr, dpr)
+      // Use setTransform to avoid cumulative scaling
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     }
 
     const createParticles = () => {
       particles = []
-      const width = canvas.width / (window.devicePixelRatio || 1)
-      const height = canvas.height / (window.devicePixelRatio || 1)
+      const width = window.innerWidth
+      const height = window.innerHeight
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
-          radius: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.2,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          baseRadius: Math.random() * 2.5 + 0.8,
+          baseOpacity: Math.random() * 0.35 + 0.15,
+          phase: Math.random() * Math.PI * 2,
         })
       }
     }
 
     const draw = () => {
-      const width = canvas.width / (window.devicePixelRatio || 1)
-      const height = canvas.height / (window.devicePixelRatio || 1)
+      const width = window.innerWidth
+      const height = window.innerHeight
+      const time = Date.now() * 0.001
 
       ctx.clearRect(0, 0, width, height)
 
@@ -68,10 +73,10 @@ export function ParticleNetwork() {
           const dist = Math.sqrt(dx * dx + dy * dy)
 
           if (dist < maxDistance) {
-            const opacity = (1 - dist / maxDistance) * 0.25
+            const opacity = (1 - dist / maxDistance) * 0.3
             ctx.beginPath()
             ctx.strokeStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`
-            ctx.lineWidth = 0.5
+            ctx.lineWidth = 0.8
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
             ctx.stroke()
@@ -79,19 +84,35 @@ export function ParticleNetwork() {
         }
       }
 
-      // Draw particles
+      // Draw particles with pulsing effect
       for (const p of particles) {
+        // Pulsing animation: sine wave from -1 to 1 normalized to 0 to 1
+        const pulse = Math.sin(time * 2 + p.phase) * 0.5 + 0.5
+
+        // Size and opacity pulse
+        const radius = p.baseRadius + pulse * 1.8
+        const opacity = p.baseOpacity + pulse * 0.3
+
+        // Draw core particle
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${p.opacity})`
+        ctx.arc(p.x, p.y, radius, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`
         ctx.fill()
 
-        // Glow
+        // Draw pulsing glow (expands and contracts)
+        const glowRadius = radius * (3 + pulse * 1.5)
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2)
-        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 3)
-        gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, ${p.opacity * 0.3})`)
-        gradient.addColorStop(1, 'rgba(0,0,0,0)')
+        ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2)
+        const gradient = ctx.createRadialGradient(
+          p.x,
+          p.y,
+          0,
+          p.x,
+          p.y,
+          glowRadius
+        )
+        gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity * 0.4})`)
+        gradient.addColorStop(1, 'rgba(74, 155, 158, 0)')
         ctx.fillStyle = gradient
         ctx.fill()
       }
