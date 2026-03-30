@@ -323,7 +323,7 @@ export function FormularioLaudo() {
 
       <StepIndicator currentStep={currentStep} totalSteps={STEP_NAMES.length} stepNames={STEP_NAMES} />
 
-      <div className="dark-card border border-gray-700 p-6 sm:p-8 mb-6">
+      <div className="dark-card border border-gray-700 p-6 sm:p-8 mb-6 max-h-[60vh] overflow-y-auto">
         {renderStep()}
       </div>
 
