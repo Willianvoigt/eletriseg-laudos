@@ -2,15 +2,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-tech text-white">
-      {/* Glowing dots decoration */}
-      <div className="glow-dot" style={{ top: '15%', left: '10%' }} />
-      <div className="glow-dot" style={{ top: '25%', right: '15%' }} />
-      <div className="glow-dot" style={{ top: '60%', left: '20%' }} />
-      <div className="glow-dot" style={{ top: '45%', right: '25%' }} />
-      <div className="glow-dot" style={{ top: '75%', left: '60%' }} />
-      <div className="glow-dot" style={{ top: '35%', left: '45%' }} />
-      <div className="glow-dot" style={{ top: '85%', right: '10%' }} />
+    <main className="min-h-screen text-white">
 
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 animate-fade-in" style={{ background: 'rgba(10, 26, 31, 0.8)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(74, 155, 158, 0.1)' }}>
@@ -61,8 +53,7 @@ export default function Home() {
             </Link>
             <Link
               href="/cadastro"
-              className="px-8 py-3.5 font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.8)' }}
+              className="btn-outline-glow px-8 py-3.5"
             >
               Criar Conta
             </Link>

@@ -25,10 +25,10 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
 
   return (
     <div>
-      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem' }}>Limites da Máquina</h2>
+      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem', color: '#fff' }}>Limites da Máquina</h2>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Uso Pretendido
         </label>
         <textarea
@@ -39,16 +39,18 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             resize: 'vertical',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Modo de Operação
         </label>
         <textarea
@@ -59,18 +61,20 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             resize: 'vertical',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>Tipo de Uso</h3>
+        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem', color: '#fff' }}>Tipo de Uso</h3>
         {TIPOS_USO.map((tipo) => (
-          <label key={tipo} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer' }}>
+          <label key={tipo} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer', color: '#e0e0e0' }}>
             <input
               type="checkbox"
               checked={data.tipoUso.includes(tipo)}
@@ -83,8 +87,8 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>Restrições</h3>
-        <label style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer' }}>
+        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem', color: '#fff' }}>Restrições</h3>
+        <label style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer', color: '#e0e0e0' }}>
           <input
             type="checkbox"
             checked={data.restricaoMotora}
@@ -93,7 +97,7 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
           />
           <span>Restrição Motora</span>
         </label>
-        <label style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer' }}>
+        <label style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer', color: '#e0e0e0' }}>
           <input
             type="checkbox"
             checked={data.restricaoSexo}
@@ -105,9 +109,9 @@ export function StepLimites({ data, onUpdate }: StepLimitesProps) {
       </div>
 
       <div>
-        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem' }}>Treinamentos Necessários</h3>
+        <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '1rem', color: '#fff' }}>Treinamentos Necessários</h3>
         {TREINAMENTOS.map((treinamento) => (
-          <label key={treinamento} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer' }}>
+          <label key={treinamento} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.8rem', cursor: 'pointer', color: '#e0e0e0' }}>
             <input
               type="checkbox"
               checked={data.treinamentos.includes(treinamento)}

@@ -19,10 +19,10 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
 
   return (
     <div>
-      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem' }}>Dados da Empresa</h2>
+      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem', color: '#fff' }}>Dados da Empresa</h2>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Nome da Empresa *
         </label>
         <input
@@ -33,16 +33,18 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             boxSizing: 'border-box',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           CNPJ *
         </label>
         <input
@@ -53,16 +55,18 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             boxSizing: 'border-box',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Endereço *
         </label>
         <input
@@ -73,16 +77,18 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             boxSizing: 'border-box',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Data de Abertura *
         </label>
         <input
@@ -92,16 +98,18 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             boxSizing: 'border-box',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Atividade Econômica (CNAE) *
         </label>
         <input
@@ -112,10 +120,12 @@ export function StepEmpresa({ data, onUpdate }: StepEmpresaProps) {
           style={{
             width: '100%',
             padding: '10px',
-            border: '1px solid #ddd',
+            border: '1px solid #555',
             borderRadius: '4px',
             fontSize: '14px',
             boxSizing: 'border-box',
+            backgroundColor: '#2a2a2a',
+            color: '#e0e0e0',
           }}
         />
       </div>

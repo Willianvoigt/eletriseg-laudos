@@ -79,10 +79,10 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
 
   return (
     <div>
-      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem' }}>Fotos da Máquina</h2>
+      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem', color: '#fff' }}>Fotos da Máquina</h2>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '1rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '1rem', fontWeight: '500', color: '#e0e0e0' }}>
           📷 Foto da Placa de Identificação
         </label>
         <div
@@ -93,10 +93,10 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
             textAlign: 'center',
             cursor: 'pointer',
             transition: 'background-color 0.2s',
-            backgroundColor: data.fotoPlacaMaquina ? '#f0fff4' : 'transparent',
+            backgroundColor: data.fotoPlacaMaquina ? '#1a3a2a' : '#1a1a1a',
           }}
-          onMouseEnter={(e) => !data.fotoPlacaMaquina && (e.currentTarget.style.backgroundColor = '#f0f7ff')}
-          onMouseLeave={(e) => !data.fotoPlacaMaquina && (e.currentTarget.style.backgroundColor = 'transparent')}
+          onMouseEnter={(e) => !data.fotoPlacaMaquina && (e.currentTarget.style.backgroundColor = '#1a2f4f')}
+          onMouseLeave={(e) => !data.fotoPlacaMaquina && (e.currentTarget.style.backgroundColor = '#1a1a1a')}
         >
           <input
             type="file"
@@ -118,12 +118,12 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
                   style={{ maxWidth: '200px', maxHeight: '200px', borderRadius: '4px', marginBottom: '1rem' }}
                 />
                 <p style={{ color: '#28a745', margin: 0, fontWeight: 'bold' }}>✓ Foto enviada</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: '0.5rem 0 0 0' }}>Clique para mudar</p>
+                <p style={{ fontSize: '12px', color: '#aaa', margin: '0.5rem 0 0 0' }}>Clique para mudar</p>
               </div>
             ) : (
               <div>
                 <p style={{ fontSize: '14px', color: '#0066cc' }}>📱 Abra a câmera do celular</p>
-                <p style={{ fontSize: '12px', color: '#666' }}>ou clique para selecionar arquivo</p>
+                <p style={{ fontSize: '12px', color: '#aaa' }}>ou clique para selecionar arquivo</p>
               </div>
             )}
           </label>
@@ -134,7 +134,7 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '1rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '1rem', fontWeight: '500', color: '#e0e0e0' }}>
           📷 Foto de Visão Geral
         </label>
         <div
@@ -145,10 +145,10 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
             textAlign: 'center',
             cursor: 'pointer',
             transition: 'background-color 0.2s',
-            backgroundColor: data.fotoVisaoGeral ? '#f0fff4' : 'transparent',
+            backgroundColor: data.fotoVisaoGeral ? '#1a3a2a' : '#1a1a1a',
           }}
-          onMouseEnter={(e) => !data.fotoVisaoGeral && (e.currentTarget.style.backgroundColor = '#f0f7ff')}
-          onMouseLeave={(e) => !data.fotoVisaoGeral && (e.currentTarget.style.backgroundColor = 'transparent')}
+          onMouseEnter={(e) => !data.fotoVisaoGeral && (e.currentTarget.style.backgroundColor = '#1a2f4f')}
+          onMouseLeave={(e) => !data.fotoVisaoGeral && (e.currentTarget.style.backgroundColor = '#1a1a1a')}
         >
           <input
             type="file"
@@ -170,12 +170,12 @@ export function StepFotos({ data, onUpdate }: StepFotosProps) {
                   style={{ maxWidth: '200px', maxHeight: '200px', borderRadius: '4px', marginBottom: '1rem' }}
                 />
                 <p style={{ color: '#28a745', margin: 0, fontWeight: 'bold' }}>✓ Foto enviada</p>
-                <p style={{ fontSize: '12px', color: '#666', margin: '0.5rem 0 0 0' }}>Clique para mudar</p>
+                <p style={{ fontSize: '12px', color: '#aaa', margin: '0.5rem 0 0 0' }}>Clique para mudar</p>
               </div>
             ) : (
               <div>
                 <p style={{ fontSize: '14px', color: '#0066cc' }}>📱 Abra a câmera do celular</p>
-                <p style={{ fontSize: '12px', color: '#666' }}>ou clique para selecionar arquivo</p>
+                <p style={{ fontSize: '12px', color: '#aaa' }}>ou clique para selecionar arquivo</p>
               </div>
             )}
           </label>

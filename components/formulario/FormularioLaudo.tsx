@@ -290,21 +290,21 @@ export function FormularioLaudo() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-tech">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="sticky top-0 z-50" style={{ background: 'linear-gradient(135deg, #0a1a1f, #0d2b30)', borderBottom: '1px solid rgba(74, 155, 158, 0.15)' }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/dashboard" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-8 h-8 bg-brand-400 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">E</span>
               </div>
-              <span className="text-lg font-bold text-gray-900">EletriSeg</span>
+              <span className="text-lg font-bold text-white">EletriSeg</span>
             </Link>
           </div>
           <Link
             href="/dashboard"
-            className="px-4 py-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+            className="px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-colors"
           >
             ← Voltar ao Dashboard
           </Link>
@@ -313,7 +313,7 @@ export function FormularioLaudo() {
 
     <div className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex items-center gap-3 mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Novo Laudo NR-12</h1>
+        <h1 className="text-2xl font-bold text-white">Novo Laudo NR-12</h1>
         {formData.tipoLaudo && TIPO_LAUDO_MAP[formData.tipoLaudo] && (
           <span className="px-3 py-1 bg-brand-400 text-white text-xs font-medium rounded-full">
             {TIPO_LAUDO_MAP[formData.tipoLaudo]}
@@ -323,7 +323,7 @@ export function FormularioLaudo() {
 
       <StepIndicator currentStep={currentStep} totalSteps={STEP_NAMES.length} stepNames={STEP_NAMES} />
 
-      <div className="bg-white rounded-2xl border border-gray-100 p-6 sm:p-8 mb-6 shadow-sm">
+      <div className="dark-card border border-gray-700 p-6 sm:p-8 mb-6">
         {renderStep()}
       </div>
 
@@ -331,7 +331,7 @@ export function FormularioLaudo() {
         <button
           onClick={handlePrev}
           disabled={currentStep === 1}
-          className="flex-1 py-3 text-sm font-medium rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-gray-100 text-gray-600 hover:bg-gray-200"
+          className="flex-1 py-3 text-sm font-medium rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed bg-gray-700 text-gray-300 hover:bg-gray-600"
         >
           ← Anterior
         </button>
@@ -354,7 +354,7 @@ export function FormularioLaudo() {
         )}
       </div>
 
-      <p className="text-center text-xs text-gray-400 mt-4">
+      <p className="text-center text-xs text-gray-500 mt-4">
         Etapa {currentStep} de {STEP_NAMES.length}
       </p>
     </div>

@@ -80,10 +80,10 @@ export function StepSeguranca({ data, onUpdate }: StepSegurancaProps) {
 
   return (
     <div>
-      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem' }}>Dispositivos de Segurança</h2>
+      <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '1.5rem', color: '#fff' }}>Dispositivos de Segurança</h2>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#e0e0e0' }}>
           Novo Dispositivo
         </label>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
@@ -96,9 +96,11 @@ export function StepSeguranca({ data, onUpdate }: StepSegurancaProps) {
             style={{
               flex: 1,
               padding: '10px',
-              border: '1px solid #ddd',
+              border: '1px solid #555',
               borderRadius: '4px',
               fontSize: '14px',
+              backgroundColor: '#2a2a2a',
+              color: '#e0e0e0',
             }}
           />
           <button
@@ -120,9 +122,9 @@ export function StepSeguranca({ data, onUpdate }: StepSegurancaProps) {
 
       <div>
         {data.dispositivosSeguranca.map((dispositivo: any, idx: number) => (
-          <div key={dispositivo.id} style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: '4px', border: '1px solid #ddd' }}>
+          <div key={dispositivo.id} style={{ marginBottom: '1.5rem', padding: '1rem', backgroundColor: '#2a2a2a', borderRadius: '4px', border: '1px solid #555' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-              <span style={{ fontWeight: '500' }}>
+              <span style={{ fontWeight: '500', color: '#e0e0e0' }}>
                 {idx + 1}. {dispositivo.descricao}
               </span>
               <button
@@ -142,7 +144,7 @@ export function StepSeguranca({ data, onUpdate }: StepSegurancaProps) {
             </div>
 
             <div style={{ marginTop: '0.5rem' }}>
-              <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '12px', color: '#666' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '12px', color: '#aaa' }}>
                 📷 Foto do dispositivo
               </label>
               <input
@@ -163,7 +165,7 @@ export function StepSeguranca({ data, onUpdate }: StepSegurancaProps) {
           </div>
         ))}
         {data.dispositivosSeguranca.length === 0 && (
-          <p style={{ color: '#999', textAlign: 'center', padding: '2rem' }}>Nenhum dispositivo adicionado</p>
+          <p style={{ color: '#888', textAlign: 'center', padding: '2rem' }}>Nenhum dispositivo adicionado</p>
         )}
       </div>
 

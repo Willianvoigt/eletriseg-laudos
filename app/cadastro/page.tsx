@@ -33,9 +33,7 @@ export default function CadastroPage() {
   }
 
   return (
-    <div className="min-h-screen bg-tech flex items-center justify-center px-4 relative">
-      <div className="glow-dot" style={{ top: '20%', left: '15%' }} />
-      <div className="glow-dot" style={{ top: '70%', right: '20%' }} />
+    <div className="min-h-screen flex items-center justify-center px-4 relative">
 
       <div className="w-full max-w-sm relative z-10">
         <div className="text-center mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
@@ -56,10 +54,7 @@ export default function CadastroPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="seu@email.com"
                 required
-                className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-gray-500 transition-all duration-300 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(74, 155, 158, 0.2)' }}
-                onFocus={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.5)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.2)'}
+                className="w-full px-4 py-2.5 text-sm input-dark"
               />
             </div>
 
@@ -72,10 +67,7 @@ export default function CadastroPage() {
                 placeholder="Mínimo 6 caracteres"
                 required
                 minLength={6}
-                className="w-full px-4 py-2.5 rounded-lg text-sm text-white placeholder-gray-500 transition-all duration-300 focus:outline-none"
-                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(74, 155, 158, 0.2)' }}
-                onFocus={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.5)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(74, 155, 158, 0.2)'}
+                className="w-full px-4 py-2.5 text-sm input-dark"
               />
             </div>
 
