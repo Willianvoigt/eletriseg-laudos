@@ -44,6 +44,8 @@ export async function POST(request: Request) {
       .from('Laudo')
       .insert({
         id: crypto.randomUUID(),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
         userId: user.id,
         status: 'CONCLUIDO',
         tipoLaudo: body.tipoLaudo || null,
