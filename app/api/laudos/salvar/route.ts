@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
+import { createClient as createServiceClient } from '@supabase/supabase-js'
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
 
 function classificarHRN(hrn: number): string {
   if (hrn <= 1) return 'Aceitável'
@@ -12,29 +12,36 @@ function classificarHRN(hrn: number): string {
   return 'Extremo'
 }
 
+function getServiceClient() {
+  return createServiceClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  )
+}
+
 export async function POST(request: Request) {
   try {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) {
-      console.warn('POST /api/laudos/salvar: Usuário não autenticado')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const body = await request.json()
-    console.log(`POST /api/laudos/salvar: Salvando laudo para usuário ${user.id}`)
-
     const empresaNome = body.empresaNome || body.nomeEmpresa || ''
     const maquinaNome = body.maquinaNome || body.nomeMaquina || ''
 
     if (!empresaNome || !maquinaNome) {
-      console.warn('POST /api/laudos/salvar: Dados incompletos', { empresaNome, maquinaNome })
       return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 })
     }
 
-    const laudo = await prisma.laudo.create({
-      data: {
+    const db = getServiceClient()
+
+    // 1. Inserir laudo
+    const { data: laudo, error: laudoError } = await db
+      .from('Laudo')
+      .insert({
         userId: user.id,
         status: 'CONCLUIDO',
         tipoLaudo: body.tipoLaudo || null,
@@ -62,46 +69,59 @@ export async function POST(request: Request) {
         fotoPlacaMaquina: body.fotoPlacar || body.fotoPlacaMaquina || null,
         fotoVisaoGeral: body.fotoVisaoGeral || null,
         pdfUrl: null,
-        dispositivosSeguranca: {
-          create: (body.dispositivosSeguranca || []).map((d: any, i: number) => ({
-            ordem: i + 1,
-            descricao: d.descricao || '',
-            fotoUrl: d.foto || null,
-          })),
-        },
-        perigos: {
-          create: (body.perigos || []).map((p: any, i: number) => ({
-            ordem: i + 1,
-            cicloVida: p.cicloVida || '',
-            numeroPerigo: p.numeroPerigo || '',
-            tarefa: p.tarefa || '',
-            descricaoPerigo: p.descricaoPerigo || '',
-            loAntes: parseFloat(p.loAntes) || 0,
-            feAntes: parseFloat(p.feAntes) || 0,
-            dphAntes: parseFloat(p.dphAntes) || 0,
-            npAntes: parseFloat(p.npAntes) || 0,
-            hrnAntes: parseFloat(p.hrnAntes) || 0,
-            classificacaoAntes: classificarHRN(parseFloat(p.hrnAntes) || 0),
-            medidasEngenharia: p.medidasEngenharia || '',
-            loDepois: parseFloat(p.loDepois) || 0,
-            feDepois: parseFloat(p.feDepois) || 0,
-            dphDepois: parseFloat(p.dphDepois) || 0,
-            npDepois: parseFloat(p.npDepois) || 0,
-            hrnDepois: parseFloat(p.hrnDepois) || 0,
-            classificacaoDepois: classificarHRN(parseFloat(p.hrnDepois) || 0),
-          })),
-        },
-      },
-    })
+      })
+      .select()
+      .single()
 
-    console.log(`POST /api/laudos/salvar: Laudo criado com sucesso. ID: ${laudo.id}`)
+    if (laudoError) {
+      console.error('Erro ao inserir laudo:', laudoError)
+      return NextResponse.json({ error: 'Erro ao salvar laudo', details: laudoError.message }, { status: 500 })
+    }
+
+    // 2. Inserir dispositivos de segurança
+    const dispositivos = (body.dispositivosSeguranca || []).map((d: any, i: number) => ({
+      laudoId: laudo.id,
+      ordem: i + 1,
+      descricao: d.descricao || '',
+      fotoUrl: d.foto || null,
+    }))
+
+    if (dispositivos.length > 0) {
+      const { error: dispError } = await db.from('DispositivoSeguranca').insert(dispositivos)
+      if (dispError) console.error('Erro ao inserir dispositivos:', dispError)
+    }
+
+    // 3. Inserir perigos
+    const perigos = (body.perigos || []).map((p: any, i: number) => ({
+      laudoId: laudo.id,
+      ordem: i + 1,
+      cicloVida: p.cicloVida || '',
+      numeroPerigo: p.numeroPerigo || '',
+      tarefa: p.tarefa || '',
+      descricaoPerigo: p.descricaoPerigo || '',
+      loAntes: parseFloat(p.loAntes) || 0,
+      feAntes: parseFloat(p.feAntes) || 0,
+      dphAntes: parseFloat(p.dphAntes) || 0,
+      npAntes: parseFloat(p.npAntes) || 0,
+      hrnAntes: parseFloat(p.hrnAntes) || 0,
+      classificacaoAntes: classificarHRN(parseFloat(p.hrnAntes) || 0),
+      medidasEngenharia: p.medidasEngenharia || '',
+      loDepois: parseFloat(p.loDepois) || 0,
+      feDepois: parseFloat(p.feDepois) || 0,
+      dphDepois: parseFloat(p.dphDepois) || 0,
+      npDepois: parseFloat(p.npDepois) || 0,
+      hrnDepois: parseFloat(p.hrnDepois) || 0,
+      classificacaoDepois: classificarHRN(parseFloat(p.hrnDepois) || 0),
+    }))
+
+    if (perigos.length > 0) {
+      const { error: perigoError } = await db.from('Perigo').insert(perigos)
+      if (perigoError) console.error('Erro ao inserir perigos:', perigoError)
+    }
+
     return NextResponse.json({ id: laudo.id, status: 'ok' })
   } catch (err) {
     console.error('Erro ao salvar laudo:', err)
-    const errorMsg = err instanceof Error ? err.message : String(err)
-    return NextResponse.json({
-      error: 'Erro ao salvar laudo',
-      details: errorMsg
-    }, { status: 500 })
+    return NextResponse.json({ error: 'Erro ao salvar laudo', details: String(err) }, { status: 500 })
   }
 }
