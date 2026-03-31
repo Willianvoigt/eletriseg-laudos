@@ -43,6 +43,7 @@ export async function POST(request: Request) {
     const { data: laudo, error: laudoError } = await db
       .from('Laudo')
       .insert({
+        id: crypto.randomUUID(),
         userId: user.id,
         status: 'CONCLUIDO',
         tipoLaudo: body.tipoLaudo || null,
