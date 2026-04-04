@@ -25,9 +25,6 @@ function parseCSV(text: string): CertificadoData[] {
       empresa: row['empresa'] || '',
       cnpj: row['cnpj'] || '',
       data: row['data'] || '',
-      cargaHoraria: row['cargahoraria'] || row['carga_horaria'] || row['carga'] || '8',
-      livro: row['livro'] || '03',
-      folha: row['folha'] || String(i),
     })
   }
 
@@ -37,7 +34,6 @@ function parseCSV(text: string): CertificadoData[] {
 export default function CertificadosPage() {
   const [participantes, setParticipantes] = useState<CertificadoData[]>([])
   const [gerando, setGerando] = useState(false)
-  const [progresso, setProgresso] = useState(0)
   const [dragging, setDragging] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
@@ -75,26 +71,17 @@ export default function CertificadosPage() {
   const gerarTodos = async () => {
     if (participantes.length === 0) return
     setGerando(true)
-    setProgresso(0)
 
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
-
-    for (let i = 0; i < participantes.length; i++) {
-      setProgresso(i + 1)
-      await gerarCertificadoCliente(participantes[i])
-      if (i < participantes.length - 1) {
-        await new Promise(r => setTimeout(r, 1200))
-      }
-    }
+    await gerarCertificadoCliente(participantes)
 
     setGerando(false)
-    setProgresso(0)
   }
 
   const baixarModeloCSV = () => {
-    const conteudo = `numero,nome,cpf,empresa,cnpj,data,cargaHoraria,livro,folha
-2026170,Jesus David Guzman Gamboa,710.651.852-27,GOLDSERVICE SERVIÇOS,31.640.318/0001-60,26/02/2026,8,03,46
-2026171,Maria Silva Santos,123.456.789-00,EMPRESA TESTE LTDA,12.345.678/0001-99,26/02/2026,8,03,47`
+    const conteudo = `numero,nome,cpf,empresa,cnpj,data
+2026170,Jesus David Guzman Gamboa,710.651.852-27,GOLDSERVICE SERVIÇOS,31.640.318/0001-60,26/02/2026
+2026171,Maria Silva Santos,123.456.789-00,EMPRESA TESTE LTDA,12.345.678/0001-99,26/02/2026`
     const blob = new Blob([conteudo], { type: 'text/csv;charset=utf-8;' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -152,7 +139,7 @@ export default function CertificadosPage() {
           <div className="glass-card p-6">
             <h3 className="font-semibold mb-3 text-sm" style={{ color: '#4a9b9e' }}>FORMATO DO CSV</h3>
             <div className="text-xs font-mono p-3 rounded-lg mb-4 overflow-x-auto" style={{ background: 'rgba(0,0,0,0.3)', color: 'rgba(255,255,255,0.7)', whiteSpace: 'nowrap' }}>
-              numero,nome,cpf,empresa,cnpj,data,cargaHoraria,livro,folha
+              numero,nome,cpf,empresa,cnpj,data
             </div>
             <ul className="space-y-1 text-sm mb-5" style={{ color: 'rgba(255,255,255,0.6)' }}>
               {[
@@ -162,9 +149,6 @@ export default function CertificadosPage() {
                 ['empresa', 'Nome da empresa'],
                 ['cnpj', 'CNPJ da empresa'],
                 ['data', 'Data do treinamento (ex: 26/02/2026)'],
-                ['cargaHoraria', 'Horas do treinamento (padrão: 8)'],
-                ['livro', 'Número do livro (padrão: 03)'],
-                ['folha', 'Número da folha'],
               ].map(([campo, desc]) => (
                 <li key={campo} className="flex gap-2">
                   <span className="font-mono shrink-0" style={{ color: '#4a9b9e' }}>{campo}</span>
@@ -201,7 +185,7 @@ export default function CertificadosPage() {
                   disabled={gerando}
                   className="btn-glow px-5 py-2 text-sm disabled:opacity-50"
                 >
-                  {gerando ? `Gerando ${progresso} de ${participantes.length}...` : `Gerar ${participantes.length} Certificado${participantes.length !== 1 ? 's' : ''}`}
+                  {gerando ? 'Abrindo para impressão...' : `Gerar ${participantes.length} Certificado${participantes.length !== 1 ? 's' : ''}`}
                 </button>
               </div>
             </div>
@@ -210,7 +194,7 @@ export default function CertificadosPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr style={{ borderBottom: '1px solid rgba(74,155,158,0.2)' }}>
-                    {['N°', 'Nome', 'CPF', 'Empresa', 'Data', 'CH', 'Folha'].map(h => (
+                    {['N°', 'Nome', 'CPF', 'Empresa', 'CNPJ', 'Data'].map(h => (
                       <th key={h} className="text-left py-2 px-3 text-xs font-medium" style={{ color: '#4a9b9e' }}>{h}</th>
                     ))}
                   </tr>
@@ -225,9 +209,8 @@ export default function CertificadosPage() {
                       <td className="py-2 px-3 font-medium text-white">{p.nome}</td>
                       <td className="py-2 px-3 font-mono text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.cpf}</td>
                       <td className="py-2 px-3" style={{ color: 'rgba(255,255,255,0.7)' }}>{p.empresa}</td>
+                      <td className="py-2 px-3 text-xs font-mono" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.cnpj}</td>
                       <td className="py-2 px-3 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.data}</td>
-                      <td className="py-2 px-3 text-xs text-center" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.cargaHoraria}h</td>
-                      <td className="py-2 px-3 text-xs font-mono text-center" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.folha}</td>
                     </tr>
                   ))}
                 </tbody>

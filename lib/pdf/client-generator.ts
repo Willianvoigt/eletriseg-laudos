@@ -1,15 +1,16 @@
 'use client'
 
 import { gerarLaudoHTML } from './templates/laudo-html'
-import { gerarCertificadoHTML, type CertificadoData } from './templates/certificado-html'
+import type { CertificadoData } from './templates/certificado-html'
 import type { LaudoData } from './generator'
 
-export async function gerarCertificadoCliente(data: CertificadoData): Promise<void> {
-  const html = gerarCertificadoHTML(data)
+export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise<void> {
+  const { gerarCertificadosHTML } = await import('./templates/certificado-html')
+  const html = gerarCertificadosHTML(lista)
 
   const printWindow = window.open('', '_blank')
   if (!printWindow) {
-    alert('Permita pop-ups para gerar o certificado')
+    alert('Permita pop-ups para gerar os certificados')
     return
   }
 
@@ -21,12 +22,12 @@ export async function gerarCertificadoCliente(data: CertificadoData): Promise<vo
       setTimeout(() => {
         printWindow.print()
         resolve()
-      }, 500)
+      }, 800)
     }
     setTimeout(() => {
       printWindow.print()
       resolve()
-    }, 2000)
+    }, 3000)
   })
 }
 
