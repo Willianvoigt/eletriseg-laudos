@@ -217,8 +217,8 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  {laudo.pdfUrl && (
-                    <div className="flex items-center">
+                  <div className="flex items-center gap-2">
+                    {laudo.pdfUrl && (
                       <a
                         href={laudo.pdfUrl}
                         target="_blank"
@@ -227,8 +227,14 @@ export default function DashboardPage() {
                       >
                         Baixar PDF
                       </a>
-                    </div>
-                  )}
+                    )}
+                    <button
+                      onClick={() => router.push(`/dashboard/laudos/${laudo.id}`)}
+                      className="px-4 py-2 btn-glow text-sm whitespace-nowrap"
+                    >
+                      Ver
+                    </button>
+                  </div>
                 </div>
               )
             })}
