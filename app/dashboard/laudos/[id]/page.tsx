@@ -110,6 +110,10 @@ export default function LaudoDetalhePage() {
   const [gerandoPDF, setGerandoPDF] = useState(false)
   const [excluindo, setExcluindo] = useState(false)
   const [confirmarExclusao, setConfirmarExclusao] = useState(false)
+  const [modalEmail, setModalEmail] = useState(false)
+  const [emailDestino, setEmailDestino] = useState('')
+  const [mensagemEmail, setMensagemEmail] = useState('')
+  const [enviandoEmail, setEnviandoEmail] = useState(false)
 
   useEffect(() => {
     fetch(`/api/laudos/${id}`)
@@ -155,6 +159,30 @@ export default function LaudoDetalhePage() {
       artNumero: laudo.numeroArt || undefined,
     })
     setGerandoPDF(false)
+  }
+
+  const duplicar = () => {
+    router.push(`/dashboard/laudos/novo?edit=${id}&duplicar=1`)
+  }
+
+  const enviarEmail = async () => {
+    if (!emailDestino) return
+    setEnviandoEmail(true)
+    const res = await fetch(`/api/laudos/${id}/email`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ emailDestino, mensagem: mensagemEmail }),
+    })
+    setEnviandoEmail(false)
+    if (res.ok) {
+      alert('E-mail enviado com sucesso!')
+      setModalEmail(false)
+      setEmailDestino('')
+      setMensagemEmail('')
+    } else {
+      const err = await res.json()
+      alert(`Erro: ${err.error}`)
+    }
   }
 
   const excluir = async () => {
@@ -207,21 +235,32 @@ export default function LaudoDetalhePage() {
               <p className="text-xs truncate" style={{ color: 'rgba(255,255,255,0.4)' }}>{laudo.nomeEmpresa}</p>
             </div>
           </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              onClick={gerarPDF}
-              disabled={gerandoPDF}
-              className="px-4 py-2 btn-glow text-sm disabled:opacity-50"
-            >
+          <div className="flex items-center gap-2 shrink-0 flex-wrap">
+            <button onClick={gerarPDF} disabled={gerandoPDF} className="px-4 py-2 btn-glow text-sm disabled:opacity-50">
               {gerandoPDF ? 'Gerando...' : 'Gerar PDF'}
             </button>
-            <button
-              onClick={() => setConfirmarExclusao(true)}
-              className="px-4 py-2 text-sm rounded-lg transition-colors"
+            <button onClick={() => setModalEmail(true)} className="px-4 py-2 text-sm rounded-lg transition-colors"
+              style={{ border: '1px solid rgba(74,155,158,0.3)', color: '#4a9b9e' }}
+              onMouseOver={e => { e.currentTarget.style.background = 'rgba(74,155,158,0.1)' }}
+              onMouseOut={e => { e.currentTarget.style.background = 'transparent' }}>
+              Enviar por E-mail
+            </button>
+            <button onClick={() => router.push(`/dashboard/laudos/novo?edit=${id}`)} className="px-4 py-2 text-sm rounded-lg transition-colors"
+              style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.6)' }}
+              onMouseOver={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
+              onMouseOut={e => { e.currentTarget.style.background = 'transparent' }}>
+              Editar
+            </button>
+            <button onClick={duplicar} className="px-4 py-2 text-sm rounded-lg transition-colors"
+              style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.6)' }}
+              onMouseOver={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
+              onMouseOut={e => { e.currentTarget.style.background = 'transparent' }}>
+              Duplicar
+            </button>
+            <button onClick={() => setConfirmarExclusao(true)} className="px-4 py-2 text-sm rounded-lg transition-colors"
               style={{ color: 'rgba(255,100,100,0.7)', border: '1px solid rgba(255,100,100,0.2)' }}
               onMouseOver={e => { e.currentTarget.style.color = '#ff6b7a'; e.currentTarget.style.background = 'rgba(220,53,69,0.1)' }}
-              onMouseOut={e => { e.currentTarget.style.color = 'rgba(255,100,100,0.7)'; e.currentTarget.style.background = 'transparent' }}
-            >
+              onMouseOut={e => { e.currentTarget.style.color = 'rgba(255,100,100,0.7)'; e.currentTarget.style.background = 'transparent' }}>
               Excluir
             </button>
           </div>
@@ -365,6 +404,53 @@ export default function LaudoDetalhePage() {
         </Section>
 
       </main>
+
+      {/* Modal de e-mail */}
+      {modalEmail && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: 'rgba(0,0,0,0.7)' }}>
+          <div className="dark-card p-6 w-full max-w-md">
+            <h3 className="font-semibold text-white mb-1">Enviar Laudo por E-mail</h3>
+            <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              Serão enviados os dados do laudo de <strong className="text-white">{laudo?.nomeMaquina}</strong>
+            </p>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-xs mb-1.5" style={{ color: 'rgba(255,255,255,0.5)' }}>E-mail do destinatário *</label>
+                <input
+                  type="email"
+                  value={emailDestino}
+                  onChange={e => setEmailDestino(e.target.value)}
+                  placeholder="cliente@empresa.com.br"
+                  className="w-full px-3 py-2 rounded-lg text-sm outline-none"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.85)' }}
+                />
+              </div>
+              <div>
+                <label className="block text-xs mb-1.5" style={{ color: 'rgba(255,255,255,0.5)' }}>Mensagem (opcional)</label>
+                <textarea
+                  value={mensagemEmail}
+                  onChange={e => setMensagemEmail(e.target.value)}
+                  placeholder="Prezado cliente, segue o laudo técnico NR-12..."
+                  rows={3}
+                  className="w-full px-3 py-2 rounded-lg text-sm outline-none resize-none"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.85)' }}
+                />
+              </div>
+            </div>
+            <div className="flex gap-3 mt-5">
+              <button onClick={() => setModalEmail(false)} disabled={enviandoEmail}
+                className="flex-1 py-2.5 text-sm rounded-lg"
+                style={{ border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)' }}>
+                Cancelar
+              </button>
+              <button onClick={enviarEmail} disabled={enviandoEmail || !emailDestino}
+                className="flex-1 py-2.5 text-sm btn-glow disabled:opacity-50">
+                {enviandoEmail ? 'Enviando...' : 'Enviar E-mail'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Modal de confirmação de exclusão */}
       {confirmarExclusao && (

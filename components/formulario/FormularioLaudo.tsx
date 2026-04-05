@@ -110,12 +110,68 @@ export function FormularioLaudo() {
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState<FormData>(INITIAL_DATA)
   const [saving, setSaving] = useState(false)
+  const [loadingEdit, setLoadingEdit] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
+
+  // Modo edição: carrega dados existentes do laudo
+  useEffect(() => {
+    const edit = searchParams.get('edit')
+    if (!edit) return
+    setLoadingEdit(true)
+    fetch(`/api/laudos/${edit}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(laudo => {
+        if (!laudo) return
+        localStorage.removeItem('laudo-draft')
+        setFormData({
+          tipoLaudo: laudo.tipoLaudo || '',
+          nomeEmpresa: laudo.nomeEmpresa || '',
+          cnpj: laudo.cnpj || '',
+          endereco: laudo.endereco || '',
+          dataAbertura: laudo.dataAbertura || '',
+          atividadeEconomica: laudo.atividadeEconomica || '',
+          nomeMaquina: laudo.nomeMaquina || '',
+          modelo: laudo.modelo || '',
+          numeroSerie: laudo.numeroSerie || '',
+          setor: laudo.setor || '',
+          descricaoFuncao: laudo.descricaoFuncao || '',
+          fabricante: laudo.fabricante || '',
+          anoFabricacao: laudo.anoFabricacao || '',
+          potenciaValor: laudo.potenciaValor || '',
+          potenciaUnidade: laudo.potenciaUnidade || 'kW',
+          usoPretendido: laudo.usoPretendido || '',
+          modoOperacao: laudo.modoOperacao || '',
+          fotoPlacaMaquina: laudo.fotoPlacaMaquina || '',
+          fotoVisaoGeral: laudo.fotoVisaoGeral || '',
+          tipoUso: [],
+          restricaoMotora: false,
+          restricaoSexo: false,
+          treinamentos: [],
+          dispositivosSeguranca: (laudo.dispositivosSeguranca || []).map((d: any) => ({
+            id: d.id, descricao: d.descricao, foto: d.fotoUrl || '',
+          })),
+          perigos: (laudo.perigos || []).map((p: any) => ({
+            id: p.id, cicloVida: p.cicloVida, numeroPerigo: p.numeroPerigo,
+            tarefa: p.tarefa, descricaoPerigo: p.descricaoPerigo,
+            loAntes: p.loAntes, feAntes: p.feAntes, dphAntes: p.dphAntes, npAntes: p.npAntes, hrnAntes: p.hrnAntes,
+            loDepois: p.loDepois, feDepois: p.feDepois, dphDepois: p.dphDepois, npDepois: p.npDepois, hrnDepois: p.hrnDepois,
+            medidasEngenharia: p.medidasEngenharia,
+          })),
+          tipoConclusao: laudo.tipoConclusao || 'B',
+          numeroArt: laudo.numeroArt || '',
+          gravidadeLesao: laudo.gravidadeLesao || 'S1',
+          frequencia: laudo.frequencia || 'F1',
+          possibilidadeEvitar: laudo.possibilidadeEvitar || 'P1',
+        })
+      })
+      .finally(() => setLoadingEdit(false))
+  }, [searchParams])
 
   // SEMPRE carregar preset do tipo selecionado (limpa dados antigos)
   useEffect(() => {
     const tipo = searchParams.get('tipo')
+    if (!tipo || searchParams.get('edit')) return
 
     if (tipo && TIPO_LAUDO_MAP[tipo]) {
       const preset = LAUDO_PRESETS[tipo]
@@ -246,14 +302,18 @@ export function FormularioLaudo() {
         artNumero: formData.numeroArt,
       }
 
-      // 1. Gerar PDF no cliente (browser)
+      // 1. Gerar PDF no cliente
       const { gerarPDFCliente } = await import('@/lib/pdf/client-generator')
       await gerarPDFCliente(laudoData as any)
 
-      // 2. Salvar dados no banco (sem gerar PDF no servidor)
-      console.log('Enviando laudo para servidor...', laudoData)
-      const saveResponse = await fetch('/api/laudos/salvar', {
-        method: 'POST',
+      // 2. Salvar ou atualizar no banco
+      const isEdit = !!searchParams.get('edit')
+      const editLaudoId = searchParams.get('edit')
+      const url = isEdit ? `/api/laudos/${editLaudoId}` : '/api/laudos/salvar'
+      const method = isEdit ? 'PATCH' : 'POST'
+
+      const saveResponse = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(laudoData),
       })
@@ -263,13 +323,9 @@ export function FormularioLaudo() {
         throw new Error(`Erro ao salvar: ${errorData.error} - ${errorData.details}`)
       }
 
-      const savedLaudo = await saveResponse.json()
-      console.log('Laudo salvo com sucesso:', savedLaudo)
-
-      // Limpar e redirecionar
       localStorage.removeItem('laudo-draft')
       setSaving(false)
-      router.push(`/dashboard`)
+      router.push('/dashboard')
     } catch (err) {
       console.error('Erro ao gerar/salvar laudo:', err)
       const errorMsg = err instanceof Error ? err.message : String(err)
@@ -323,11 +379,16 @@ export function FormularioLaudo() {
 
     <div className="max-w-3xl mx-auto px-4 py-8 pb-16">
       <div className="flex items-center gap-3 mb-8">
-        <h1 className="text-2xl font-bold text-white">Novo Laudo NR-12</h1>
+        <h1 className="text-2xl font-bold text-white">
+          {searchParams.get('edit') ? 'Editar Laudo NR-12' : 'Novo Laudo NR-12'}
+        </h1>
         {formData.tipoLaudo && TIPO_LAUDO_MAP[formData.tipoLaudo] && (
           <span className="px-3 py-1 bg-brand-400 text-white text-xs font-medium rounded-full">
             {TIPO_LAUDO_MAP[formData.tipoLaudo]}
           </span>
+        )}
+        {loadingEdit && (
+          <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Carregando...</span>
         )}
       </div>
 

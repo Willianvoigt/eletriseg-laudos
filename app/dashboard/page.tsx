@@ -200,7 +200,10 @@ export default function DashboardPage() {
                 : `${laudos.length} ${laudos.length === 1 ? 'laudo gerado' : 'laudos gerados'}`}
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
+            <button onClick={() => router.push('/dashboard/empresas')} className="px-5 py-2.5 btn-outline-glow text-sm">
+              Empresas
+            </button>
             <button onClick={() => router.push('/dashboard/certificados')} className="px-5 py-2.5 btn-outline-glow text-sm">
               Certificados
             </button>
