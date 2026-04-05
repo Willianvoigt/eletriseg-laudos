@@ -377,7 +377,7 @@ export function FormularioLaudo() {
         </div>
       </header>
 
-    <div className="max-w-3xl mx-auto px-4 py-8 pb-16">
+    <div className="max-w-3xl mx-auto px-3 sm:px-4 py-6 pb-16">
       <div className="flex items-center gap-3 mb-8">
         <h1 className="text-2xl font-bold text-white">
           {searchParams.get('edit') ? 'Editar Laudo NR-12' : 'Novo Laudo NR-12'}

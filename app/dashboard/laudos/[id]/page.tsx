@@ -192,42 +192,37 @@ export default function LaudoDetalhePage() {
 
       {/* Header */}
       <header className="sticky top-0 z-50" style={{ background: 'linear-gradient(135deg, #0a1a1f, #0d2b30)', borderBottom: '1px solid rgba(74,155,158,0.15)' }}>
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4 min-w-0">
-            <button
-              onClick={() => router.push('/dashboard')}
-              className="text-sm transition-colors shrink-0"
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-0 sm:h-16 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <button onClick={() => router.push('/dashboard')} className="text-sm transition-colors shrink-0"
               style={{ color: 'rgba(255,255,255,0.5)' }}
               onMouseOver={e => e.currentTarget.style.color = '#4a9b9e'}
-              onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
-            >
+              onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
               ← Voltar
             </button>
-            <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.1)' }} />
+            <div style={{ width: '1px', height: '16px', flexShrink: 0, background: 'rgba(255,255,255,0.1)' }} />
             <div className="min-w-0">
-              <h1 className="text-sm font-semibold text-white truncate">
-                {laudo.nomeMaquina}{laudo.modelo ? ` ${laudo.modelo}` : ''}
-              </h1>
+              <h1 className="text-sm font-semibold text-white truncate">{laudo.nomeMaquina}{laudo.modelo ? ` ${laudo.modelo}` : ''}</h1>
               <p className="text-xs truncate" style={{ color: 'rgba(255,255,255,0.4)' }}>{laudo.nomeEmpresa}</p>
             </div>
           </div>
-          <div className="flex items-center gap-2 shrink-0 flex-wrap">
-            <button onClick={gerarPDF} disabled={gerandoPDF} className="px-4 py-2 btn-glow text-sm disabled:opacity-50">
+          <div className="flex items-center gap-2 sm:ml-auto flex-wrap">
+            <button onClick={gerarPDF} disabled={gerandoPDF} className="px-3 py-1.5 btn-glow text-xs disabled:opacity-50">
               {gerandoPDF ? 'Gerando...' : 'Gerar PDF'}
             </button>
-<button onClick={() => router.push(`/dashboard/laudos/novo?edit=${id}`)} className="px-4 py-2 text-sm rounded-lg transition-colors"
+            <button onClick={() => router.push(`/dashboard/laudos/novo?edit=${id}`)} className="px-3 py-1.5 text-xs rounded-lg transition-colors"
               style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.6)' }}
-              onMouseOver={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
-              onMouseOut={e => { e.currentTarget.style.background = 'transparent' }}>
+              onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
+              onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
               Editar
             </button>
-            <button onClick={duplicar} className="px-4 py-2 text-sm rounded-lg transition-colors"
+            <button onClick={duplicar} className="px-3 py-1.5 text-xs rounded-lg transition-colors"
               style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.6)' }}
-              onMouseOver={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
-              onMouseOut={e => { e.currentTarget.style.background = 'transparent' }}>
+              onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
+              onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
               Duplicar
             </button>
-            <button onClick={() => setConfirmarExclusao(true)} className="px-4 py-2 text-sm rounded-lg transition-colors"
+            <button onClick={() => setConfirmarExclusao(true)} className="px-3 py-1.5 text-xs rounded-lg transition-colors"
               style={{ color: 'rgba(255,100,100,0.7)', border: '1px solid rgba(255,100,100,0.2)' }}
               onMouseOver={e => { e.currentTarget.style.color = '#ff6b7a'; e.currentTarget.style.background = 'rgba(220,53,69,0.1)' }}
               onMouseOut={e => { e.currentTarget.style.color = 'rgba(255,100,100,0.7)'; e.currentTarget.style.background = 'transparent' }}>
@@ -237,7 +232,7 @@ export default function LaudoDetalhePage() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-8">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
 
         {/* Status bar */}
         <div className="flex items-center gap-3 mb-6">
@@ -257,7 +252,7 @@ export default function LaudoDetalhePage() {
 
         {/* Empresa */}
         <Section title="Empresa">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <Field label="Razão Social" value={laudo.nomeEmpresa} />
             <Field label="CNPJ" value={laudo.cnpj} />
             <Field label="Endereço" value={laudo.endereco} />
@@ -268,7 +263,7 @@ export default function LaudoDetalhePage() {
 
         {/* Máquina */}
         <Section title="Máquina / Equipamento">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <Field label="Nome" value={laudo.nomeMaquina} />
             <Field label="Modelo" value={laudo.modelo || undefined} />
             <Field label="Número de Série" value={laudo.numeroSerie || undefined} />
@@ -364,7 +359,7 @@ export default function LaudoDetalhePage() {
 
         {/* Conclusão */}
         <Section title="Conclusão">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <Field label="Tipo de Conclusão" value={laudo.tipoConclusao ? `Tipo ${laudo.tipoConclusao}` : undefined} />
             <Field label="N° ART" value={laudo.numeroArt || undefined} />
             <Field label="Gravidade da Lesão" value={laudo.gravidadeLesao || undefined} />

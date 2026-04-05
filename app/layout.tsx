@@ -5,6 +5,7 @@ import { ParticleNetwork } from "@/components/ParticleNetwork"
 export const metadata: Metadata = {
   title: "EletriSeg - Gerador de Laudos NR-12",
   description: "Automação de laudos técnicos NR-12",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 }
 
 export default function RootLayout({

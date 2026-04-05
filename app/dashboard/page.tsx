@@ -188,10 +188,10 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-8">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
 
         {/* Título + Ações */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-5">
           <div>
             <h1 className="text-2xl font-bold text-white mb-1">Meus Laudos</h1>
             <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
