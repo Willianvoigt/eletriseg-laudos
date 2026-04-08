@@ -99,61 +99,70 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     @page {
       size: A4;
-      margin: 12mm 15mm 18mm 15mm;
+      margin: 0;
     }
 
     body {
       font-family: 'Arial', sans-serif;
-      font-size: 10px;
-      line-height: 1.5;
+      font-size: 11pt;
+      line-height: 1.25;
       color: #000;
-      background: white;
+      background: #ccc;
     }
 
     /* ===== PÁGINA ===== */
     .page {
       page-break-after: always;
-      width: 100%;
-      min-height: 260mm;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 22mm 28mm 28mm 28mm;
+      box-sizing: border-box;
       position: relative;
-      padding: 0;
+      background: white;
+      margin: 0 auto 8mm auto;
       overflow: hidden;
     }
     .page:last-child {
       page-break-after: avoid;
     }
 
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
     /* ===== HEADER (páginas internas) ===== */
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 9px;
-      padding: 5px 0;
+      text-align: center;
+      padding: 3pt 0 4pt;
     }
     .header-left {
       font-weight: bold;
+      font-size: 12pt;
       text-transform: uppercase;
+      display: block;
     }
     .header-right {
-      font-weight: bold;
+      font-weight: normal;
+      font-size: 10pt;
+      display: block;
     }
     .header-line {
-      border-bottom: 2px solid #000;
-      margin-bottom: 15px;
+      border-bottom: 1pt solid #000;
+      margin-bottom: 14pt;
     }
 
     /* ===== FOOTER ===== */
     .footer {
       position: absolute;
       bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: 8px;
+      left: 28mm;
+      right: 28mm;
+      font-size: 8pt;
     }
     .footer-line {
-      border-top: 2px solid #000;
-      margin-bottom: 8px;
+      border-top: 1pt solid #000;
+      margin-bottom: 5pt;
     }
     .footer-content {
       display: flex;
@@ -162,10 +171,12 @@ export function gerarLaudoHTML(data: LaudoData): string {
     }
     .footer-left {
       flex: 1;
+      line-height: 1.4;
     }
     .footer-center {
       flex: 1;
       text-align: center;
+      line-height: 1.4;
     }
     .footer-right {
       flex: 1;
@@ -173,14 +184,14 @@ export function gerarLaudoHTML(data: LaudoData): string {
       font-weight: bold;
     }
     .footer-logo {
-      margin-bottom: 4px;
+      margin-bottom: 3pt;
     }
     .footer-logo img {
-      width: 150px;
+      width: 130pt;
       height: auto;
     }
     .footer-logo .logo-text {
-      font-size: 14px;
+      font-size: 12pt;
     }
 
     /* ===== CAPA ===== */
@@ -189,21 +200,30 @@ export function gerarLaudoHTML(data: LaudoData): string {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 20px 0;
-      min-height: 260mm;
+      padding: 0;
+      min-height: 247mm;
       justify-content: space-between;
     }
     .capa-top {
       width: 100%;
     }
     .capa-header-line {
-      border-bottom: 2px solid #000;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      font-size: 9px;
+      border-bottom: 1pt solid #000;
+      padding-bottom: 8pt;
+      margin-bottom: 10pt;
+      text-align: center;
+    }
+    .capa-header-line .capa-h1 {
+      font-size: 12pt;
       font-weight: bold;
       text-transform: uppercase;
-      text-align: center;
+      display: block;
+    }
+    .capa-header-line .capa-h2 {
+      font-size: 10pt;
+      font-weight: normal;
+      display: block;
+      margin-top: 2pt;
     }
     .capa-body {
       flex: 1;
@@ -211,40 +231,40 @@ export function gerarLaudoHTML(data: LaudoData): string {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px 40px;
+      padding: 15pt 30pt;
     }
     .capa-logo {
-      margin-bottom: 30px;
+      margin-bottom: 25pt;
     }
     .capa-logo img {
-      width: 180px;
+      width: 150pt;
       height: auto;
     }
     .capa-titulo-laudo {
-      font-size: 14px;
+      font-size: 13pt;
       font-weight: bold;
-      margin-bottom: 30px;
-      line-height: 1.6;
+      margin-bottom: 25pt;
+      line-height: 1.4;
     }
     .capa-nr12 {
-      font-size: 100px;
+      font-size: 72pt;
       font-weight: bold;
-      letter-spacing: 15px;
+      letter-spacing: 12pt;
       color: #000;
-      margin: 20px 0;
+      margin: 15pt 0;
     }
     .capa-empresa {
-      font-size: 14px;
+      font-size: 13pt;
       font-weight: bold;
-      margin: 30px 0 10px;
+      margin: 20pt 0 10pt;
       text-transform: uppercase;
     }
     .capa-revisoes {
-      border: 1px solid #000;
+      border: 1pt solid #000;
       width: 100%;
-      max-width: 420px;
-      margin: 30px auto 0;
-      font-size: 8px;
+      max-width: 340pt;
+      margin: 20pt auto 0;
+      font-size: 8pt;
     }
     .capa-revisoes table {
       width: 100%;
@@ -252,8 +272,8 @@ export function gerarLaudoHTML(data: LaudoData): string {
     }
     .capa-revisoes th,
     .capa-revisoes td {
-      border: 1px solid #000;
-      padding: 4px 6px;
+      border: 1pt solid #000;
+      padding: 3pt 5pt;
       text-align: center;
     }
     .capa-revisoes th {
@@ -263,25 +283,25 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     /* ===== CONTEÚDO ===== */
     .content {
-      padding-bottom: 25mm;
+      padding-bottom: 16mm;
       overflow: hidden;
       max-width: 100%;
     }
 
     /* ===== SUMÁRIO ===== */
     .sumario-titulo {
-      font-size: 16px;
+      font-size: 14pt;
       font-weight: bold;
       text-align: center;
-      margin: 30px 0 25px;
+      margin: 20pt 0 18pt;
     }
     .sumario-item {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10px;
-      margin: 6px 0;
-      line-height: 1.6;
+      font-size: 11pt;
+      margin: 4pt 0;
+      line-height: 1.3;
     }
     .sumario-item-text {
       flex: 1;
@@ -290,76 +310,78 @@ export function gerarLaudoHTML(data: LaudoData): string {
       flex: 1;
       border-bottom: 1px dotted #999;
       margin: 0 5px;
-      min-width: 30px;
+      min-width: 20px;
     }
     .sumario-item-page {
       min-width: 20px;
       text-align: right;
     }
     .sumario-sub {
-      padding-left: 20px;
+      padding-left: 20pt;
     }
 
     /* ===== SEÇÕES ===== */
     .secao {
-      margin-bottom: 20px;
+      margin-bottom: 14pt;
     }
     .secao-titulo {
-      font-size: 12px;
+      font-size: 13pt;
       font-weight: bold;
-      margin: 20px 0 12px;
+      margin: 18pt 0 10pt;
+      text-transform: uppercase;
     }
     .secao-subtitulo {
-      font-size: 11px;
+      font-size: 11pt;
       font-weight: bold;
-      margin: 15px 0 10px;
+      margin: 12pt 0 8pt;
     }
     .secao-texto {
-      font-size: 10px;
+      font-size: 11pt;
       text-align: justify;
-      margin-bottom: 10px;
-      line-height: 1.6;
+      margin-bottom: 8pt;
+      line-height: 1.4;
+      text-indent: 1.5em;
     }
     .secao-lista {
-      margin: 10px 0 10px 30px;
-      font-size: 10px;
-      line-height: 1.8;
+      margin: 6pt 0 6pt 20pt;
+      font-size: 11pt;
+      line-height: 1.4;
     }
 
     /* ===== CAMPOS (label: valor) ===== */
     .campo {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 10px;
-      margin: 8px 0;
-      font-size: 10px;
+      display: block;
+      margin: 4pt 0;
+      font-size: 11pt;
+      line-height: 1.35;
     }
     .campo-label {
       font-weight: bold;
+      display: inline;
     }
     .campo-valor {
-      border-bottom: 1px solid #000;
-      padding-bottom: 2px;
+      display: inline;
+      padding-left: 3pt;
     }
 
     /* ===== TABELAS ===== */
     .tabela {
-      width: 98%;
+      width: 100%;
       border-collapse: collapse;
-      margin: 8px auto;
-      font-size: 7.5px;
+      margin: 8pt auto;
+      font-size: 8pt;
     }
     .tabela th {
       background: #1e3a8a;
       color: white;
-      border: 1px solid #000;
-      padding: 4px 3px;
+      border: 1pt solid #000;
+      padding: 4pt 3pt;
       font-weight: bold;
       text-align: center;
     }
     .tabela td {
-      border: 1px solid #000;
-      padding: 3px 3px;
+      border: 1pt solid #000;
+      padding: 3pt;
       text-align: center;
     }
     .tabela tbody tr:nth-child(even) {
@@ -368,61 +390,39 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     /* ===== TABELAS HRN REFERÊNCIA ===== */
     .tabela-hrn-ref {
-      width: 98%;
+      width: 100%;
       border-collapse: collapse;
-      margin: 6px auto;
-      font-size: 7.5px;
+      margin: 8pt auto;
+      font-size: 9.5pt;
       page-break-inside: avoid;
     }
     .tabela-hrn-ref th,
     .tabela-hrn-ref td {
-      border: 1px solid #000;
-      padding: 3px 5px;
+      border: 1pt solid #999;
+      padding: 4pt 8pt;
     }
     .tabela-hrn-ref th {
-      background: #e0e0e0;
+      background: #92d050;
       font-weight: bold;
+      text-align: center;
+    }
+    .tabela-hrn-ref td {
+      line-height: 1.3;
     }
 
     /* ===== DISPOSITIVOS / ITENS COM FOTO ===== */
-    .dispositivo-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 10px;
-      margin: 10px 0;
-      page-break-inside: avoid;
-      border: 1px solid #ddd;
-      padding: 8px;
-      max-width: 100%;
-      overflow: hidden;
-    }
-    .dispositivo-foto {
-      text-align: center;
-    }
-    .dispositivo-foto img {
-      max-width: 150px;
-      max-height: 120px;
-      border: 1px solid #999;
-      object-fit: cover;
-    }
-    .dispositivo-foto .foto-legenda {
-      font-size: 8px;
-      font-weight: bold;
-      margin-top: 5px;
-      text-align: center;
-    }
     .dispositivo-descricao {
-      font-size: 10px;
+      font-size: 10pt;
       text-align: justify;
-      line-height: 1.6;
+      line-height: 1.4;
     }
 
     /* ===== FOTOS GRID ===== */
     .foto-grid {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      margin: 15px 0;
+      gap: 15pt;
+      margin: 12pt 0;
     }
     .foto-container {
       text-align: center;
@@ -430,130 +430,132 @@ export function gerarLaudoHTML(data: LaudoData): string {
     }
     .foto-container img {
       max-width: 100%;
-      max-height: 280px;
-      border: 1px solid #999;
+      max-height: 260pt;
+      border: 1pt solid #999;
       object-fit: contain;
     }
     .foto-legenda {
-      font-size: 9px;
+      font-size: 9pt;
       font-weight: bold;
-      margin-top: 5px;
+      margin-top: 5pt;
     }
 
     /* ===== HRN ANÁLISE DETALHADA ===== */
     .hrn-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin: 8px 0;
+      gap: 8pt;
+      margin: 8pt 0;
       page-break-inside: avoid;
       max-width: 100%;
       overflow: hidden;
     }
     .hrn-box {
-      border: 1px solid #999;
-      padding: 8px;
-      font-size: 7.5px;
+      border: 1pt solid #999;
+      padding: 6pt;
+      font-size: 8pt;
       page-break-inside: avoid;
       overflow: hidden;
       min-width: 0;
     }
     .hrn-box-titulo {
       font-weight: bold;
-      font-size: 8px;
-      margin-bottom: 6px;
-      padding: 4px;
+      font-size: 8.5pt;
+      margin-bottom: 5pt;
+      padding: 3pt;
       text-align: center;
     }
     .hrn-antes .hrn-box-titulo {
       background: #fff3e0;
-      border-left: 3px solid #ff9800;
+      border-left: 3pt solid #ff9800;
     }
     .hrn-depois .hrn-box-titulo {
       background: #e8f5e9;
-      border-left: 3px solid #4caf50;
+      border-left: 3pt solid #4caf50;
     }
     .hrn-parametros {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 4px;
-      margin: 4px 0;
+      gap: 3pt;
+      margin: 4pt 0;
     }
     .hrn-param {
       text-align: center;
-      padding: 3px 2px;
-      border: 1px solid #ddd;
+      padding: 3pt 2pt;
+      border: 1pt solid #ddd;
       background: #fafafa;
     }
     .hrn-param-label {
-      font-size: 6.5px;
+      font-size: 7pt;
       font-weight: bold;
-      color: #666;
+      color: #555;
     }
     .hrn-param-valor {
-      font-size: 9px;
+      font-size: 9pt;
       font-weight: bold;
     }
     .hrn-resultado {
       text-align: center;
       font-weight: bold;
-      margin-top: 4px;
-      padding: 4px;
-      font-size: 8px;
+      margin-top: 4pt;
+      padding: 4pt;
+      font-size: 8.5pt;
     }
 
     /* ===== MEDIDAS DE ENGENHARIA ===== */
     .medidas-box {
       background: #f5f5f5;
-      border-left: 3px solid #1e3a8a;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 10px;
-      line-height: 1.5;
+      border-left: 3pt solid #1e3a8a;
+      padding: 8pt 10pt;
+      margin: 8pt 0;
+      font-size: 10pt;
+      line-height: 1.4;
       page-break-inside: avoid;
     }
 
     /* ===== CONCLUSÃO ===== */
     .conclusao-box {
-      border: 2px solid #000;
-      padding: 20px;
-      margin: 20px 0;
-      font-size: 10px;
+      border: 1.5pt solid #000;
+      padding: 15pt;
+      margin: 15pt 0;
+      font-size: 11pt;
+      line-height: 1.4;
       page-break-inside: avoid;
     }
 
     /* ===== ASSINATURA ===== */
     .assinatura-bloco {
       text-align: center;
-      margin: 50px auto 0;
-      max-width: 300px;
+      margin: 40pt auto 0;
+      max-width: 220pt;
     }
     .assinatura-linha {
-      border-bottom: 1px solid #000;
-      margin-bottom: 8px;
-      padding-bottom: 5px;
+      border-bottom: 1pt solid #000;
+      margin-bottom: 6pt;
+      padding-bottom: 4pt;
     }
     .assinatura-nome {
       font-weight: bold;
-      font-size: 11px;
+      font-size: 11pt;
     }
     .assinatura-cargo {
-      font-size: 9px;
+      font-size: 9pt;
     }
 
     /* ===== CATEGORIA NBR ===== */
     .categoria-box {
       background: #f9f9f9;
-      border: 1px solid #999;
-      padding: 15px;
-      margin: 15px 0;
-      font-size: 10px;
+      border: 1pt solid #999;
+      padding: 12pt;
+      margin: 12pt 0;
+      font-size: 11pt;
+      line-height: 1.4;
       page-break-inside: avoid;
     }
 
     /* ===== LOGO FALLBACK ===== */
     .logo-text {
-      font-size: 24px;
+      font-size: 18pt;
       font-weight: bold;
     }
     .logo-eletri { color: #505050; }
@@ -572,8 +574,8 @@ export function gerarLaudoHTML(data: LaudoData): string {
   <div class="capa">
     <div class="capa-top">
       <div class="capa-header-line">
-        LAUDO TÉCNICO NR12 – ${data.empresaNome || 'EMPRESA'}<br>
-        Máquina ${maquinaHeader}
+        <span class="capa-h1">LAUDO TÉCNICO NR12 – ${data.empresaNome || 'EMPRESA'}</span>
+        <span class="capa-h2">Máquina ${maquinaHeader}</span>
       </div>
     </div>
 
@@ -799,13 +801,15 @@ export function gerarLaudoHTML(data: LaudoData): string {
       <div class="secao-titulo">5 APRECIAÇÃO DE RISCOS E CONFORMIDADES</div>
       <div class="secao-subtitulo">5.1 Equipamento: ${data.maquinaNome || 'N/A'}</div>
 
+      <div style="font-weight: bold; font-size: 11px; text-transform: uppercase; margin: 12px 0 8px;">IDENTIFICAÇÃO DA EMPRESA</div>
+
       <div class="campo"><div class="campo-label">Empresa:</div><div class="campo-valor">${data.empresaNome || ''}</div></div>
       <div class="campo"><div class="campo-label">CNPJ:</div><div class="campo-valor">${data.empresaCNPJ || ''}</div></div>
       <div class="campo"><div class="campo-label">Endereço:</div><div class="campo-valor">${data.empresaEndereco || ''}</div></div>
       <div class="campo"><div class="campo-label">Data Abertura:</div><div class="campo-valor">${data.empresaDataAbertura || ''}</div></div>
       <div class="campo"><div class="campo-label">CNAE:</div><div class="campo-valor">${data.empresaCNAE || ''}</div></div>
 
-      <div style="margin-top: 20px;"></div>
+      <div style="font-weight: bold; font-size: 11px; text-transform: uppercase; margin: 20px 0 8px;">IDENTIFICAÇÃO DO EQUIPAMENTO</div>
 
       <div class="campo"><div class="campo-label">Máquina:</div><div class="campo-valor">${data.maquinaNome || ''}</div></div>
       <div class="campo"><div class="campo-label">Modelo:</div><div class="campo-valor">${data.maquinaModelo || ''}</div></div>
@@ -898,17 +902,26 @@ ${data.dispositivosSeguranca && data.dispositivosSeguranca.length > 0 ? (() => {
       ${isPrimeira ? '<div class="secao-subtitulo">5.1.1 Sistemas de segurança atuais</div>' : '<div class="secao-subtitulo">5.1.1 Sistemas de segurança atuais (continuação)</div>'}
 
       ${grupo.map((disp, idx) => `
-        <div class="dispositivo-item">
-          <div class="dispositivo-foto">
-            ${disp.foto
-              ? `<img src="${disp.foto}" alt="Dispositivo ${i + idx + 1}"><div class="foto-legenda">ILUSTRAÇÃO</div>`
-              : '<div style="width:150px;height:100px;border:1px dashed #999;display:flex;align-items:center;justify-content:center;color:#999;font-size:8px;">Sem foto</div>'}
-          </div>
-          <div class="dispositivo-descricao">
-            <strong>DESCRIÇÃO</strong><br><br>
-            ${disp.descricao}
-          </div>
-        </div>
+        <table style="width:100%; border-collapse: collapse; border: 1px solid #999; page-break-inside: avoid; margin: 10px 0;">
+          <thead>
+            <tr>
+              <th style="width:170px; border: 1px solid #999; padding: 5px; text-align: center; background: #f0f0f0; font-size: 9px;">ILUSTRAÇÃO</th>
+              <th style="border: 1px solid #999; padding: 5px; text-align: center; background: #f0f0f0; font-size: 9px;">DESCRIÇÃO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #999; padding: 8px; text-align: center; vertical-align: middle; width: 170px;">
+                ${disp.foto
+                  ? `<img src="${disp.foto}" alt="Dispositivo ${i + idx + 1}" style="max-width: 150px; max-height: 120px; border: 1px solid #999; object-fit: cover;">`
+                  : '<div style="width:150px;height:100px;border:1px dashed #999;display:inline-flex;align-items:center;justify-content:center;color:#999;font-size:8px;">Sem foto</div>'}
+              </td>
+              <td style="border: 1px solid #999; padding: 8px; font-size: 9.5px; text-align: justify; line-height: 1.65; vertical-align: top;">
+                ${disp.descricao}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       `).join('')}
     </div>
   </div>
