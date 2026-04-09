@@ -18,16 +18,15 @@ export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise
   printWindow.document.close()
 
   await new Promise<void>((resolve) => {
-    printWindow.onload = () => {
-      setTimeout(() => {
-        printWindow.print()
-        resolve()
-      }, 800)
-    }
-    setTimeout(() => {
+    let printed = false
+    const doPrint = () => {
+      if (printed) return
+      printed = true
       printWindow.print()
       resolve()
-    }, 3000)
+    }
+    printWindow.onload = () => setTimeout(doPrint, 600)
+    setTimeout(doPrint, 3000)
   })
 }
 

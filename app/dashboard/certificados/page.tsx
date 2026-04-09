@@ -91,6 +91,11 @@ export default function CertificadosPage() {
     if (file) processarArquivo(file)
   }
 
+  const gerarIndividual = async (p: CertificadoData) => {
+    const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
+    await gerarCertificadoCliente([p])
+  }
+
   const gerarTodos = async () => {
     if (participantes.length === 0) return
     setGerando(true)
@@ -261,7 +266,7 @@ export default function CertificadosPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr style={{ borderBottom: '1px solid rgba(74,155,158,0.2)' }}>
-                    {['N°', 'Nome', 'CPF', 'Empresa', 'CNPJ', 'Data'].map(h => (
+                    {['N°', 'Nome', 'CPF', 'Empresa', 'CNPJ', 'Data', ''].map(h => (
                       <th key={h} className="text-left py-2 px-3 text-xs font-medium" style={{ color: '#4a9b9e' }}>{h}</th>
                     ))}
                   </tr>
@@ -278,6 +283,17 @@ export default function CertificadosPage() {
                       <td className="py-2 px-3" style={{ color: 'rgba(255,255,255,0.7)' }}>{p.empresa}</td>
                       <td className="py-2 px-3 text-xs font-mono" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.cnpj}</td>
                       <td className="py-2 px-3 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.data}</td>
+                      <td className="py-2 px-3">
+                        <button
+                          onClick={() => gerarIndividual(p)}
+                          className="text-xs px-3 py-1 rounded transition-colors"
+                          style={{ color: '#4a9b9e', border: '1px solid rgba(74,155,158,0.4)' }}
+                          onMouseOver={e => e.currentTarget.style.background = 'rgba(74,155,158,0.1)'}
+                          onMouseOut={e => e.currentTarget.style.background = 'transparent'}
+                        >
+                          Imprimir
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
