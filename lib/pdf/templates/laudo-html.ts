@@ -391,7 +391,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       width: 100%;
       border-collapse: collapse;
       margin: 8pt auto;
-      font-size: 9.5pt;
+      font-size: 10.5pt;
       page-break-inside: avoid;
     }
     .tabela-hrn-ref th,
@@ -410,7 +410,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     /* ===== DISPOSITIVOS / ITENS COM FOTO ===== */
     .dispositivo-descricao {
-      font-size: 10pt;
+      font-size: 10.5pt;
       text-align: justify;
       line-height: 1.4;
     }
@@ -506,7 +506,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       border-left: 3pt solid #1e3a8a;
       padding: 8pt 10pt;
       margin: 8pt 0;
-      font-size: 10pt;
+      font-size: 10.5pt;
       line-height: 1.4;
       page-break-inside: avoid;
     }
@@ -799,7 +799,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       <div class="secao-titulo">5 APRECIAÇÃO DE RISCOS E CONFORMIDADES</div>
       <div class="secao-subtitulo">5.1 Equipamento: ${data.maquinaNome || 'N/A'}</div>
 
-      <div style="font-weight: bold; font-size: 11px; text-transform: uppercase; margin: 12px 0 8px;">IDENTIFICAÇÃO DA EMPRESA</div>
+      <div style="font-weight: bold; font-size: 11pt; text-transform: uppercase; margin: 10pt 0 6pt;">IDENTIFICAÇÃO DA EMPRESA</div>
 
       <div class="campo"><div class="campo-label">Empresa:</div><div class="campo-valor">${data.empresaNome || ''}</div></div>
       <div class="campo"><div class="campo-label">CNPJ:</div><div class="campo-valor">${data.empresaCNPJ || ''}</div></div>
@@ -807,7 +807,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       <div class="campo"><div class="campo-label">Data Abertura:</div><div class="campo-valor">${data.empresaDataAbertura || ''}</div></div>
       <div class="campo"><div class="campo-label">CNAE:</div><div class="campo-valor">${data.empresaCNAE || ''}</div></div>
 
-      <div style="font-weight: bold; font-size: 11px; text-transform: uppercase; margin: 20px 0 8px;">IDENTIFICAÇÃO DO EQUIPAMENTO</div>
+      <div style="font-weight: bold; font-size: 11pt; text-transform: uppercase; margin: 18pt 0 6pt;">IDENTIFICAÇÃO DO EQUIPAMENTO</div>
 
       <div class="campo"><div class="campo-label">Máquina:</div><div class="campo-valor">${data.maquinaNome || ''}</div></div>
       <div class="campo"><div class="campo-label">Modelo:</div><div class="campo-valor">${data.maquinaModelo || ''}</div></div>
@@ -817,7 +817,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       <div class="campo"><div class="campo-label">Setor:</div><div class="campo-valor">${data.maquinaSetor || ''}</div></div>
       <div style="margin-top: 12px;">
         <div class="campo-label" style="margin-bottom: 4px;">Descrição Geral / Função:</div>
-        <div style="font-size: 9px; line-height: 1.5; text-align: justify; white-space: pre-line;">${data.maquinaDescricao || ''}</div>
+        <div style="font-size: 10.5pt; line-height: 1.4; text-align: justify; white-space: pre-line;">${data.maquinaDescricao || ''}</div>
       </div>
     </div>
   </div>
@@ -831,7 +831,7 @@ ${data.usoPretendido || data.modoOperacao ? `
   <div class="content">
     <div class="secao">
       <div class="secao-subtitulo">Limites da Máquina</div>
-      <table class="tabela-info" style="width:98%; border-collapse: collapse; font-size: 7.5px; margin-top: 6px;">
+      <table class="tabela-info" style="width:100%; border-collapse: collapse; font-size: 10pt; margin-top: 8pt;">
         <tbody>
           ${data.usoPretendido ? `
           <tr>
@@ -866,7 +866,7 @@ ${data.fotoPlacar || data.fotoVisaoGeral ? `
 
       ${data.fotoPlacar ? `
       <div style="margin-bottom: 20px;">
-        <div style="font-size: 10px; font-weight: bold; margin-bottom: 8px;">Fotografia da Placa da Máquina</div>
+        <div style="font-size: 10.5pt; font-weight: bold; margin-bottom: 6pt;">Fotografia da Placa da Máquina</div>
         <div style="text-align: center;">
           <img src="${data.fotoPlacar}" alt="Placa de Identificação" style="max-width: 100%; max-height: 280px; border: 1px solid #999; object-fit: contain;">
         </div>
@@ -874,7 +874,7 @@ ${data.fotoPlacar || data.fotoVisaoGeral ? `
 
       ${data.fotoVisaoGeral ? `
       <div>
-        <div style="font-size: 10px; font-weight: bold; margin-bottom: 8px;">Figura 01: ${maquinaHeader} – Visão Geral</div>
+        <div style="font-size: 10.5pt; font-weight: bold; margin-bottom: 6pt;">Figura 01: ${maquinaHeader} – Visão Geral</div>
         <div style="text-align: center;">
           <img src="${data.fotoVisaoGeral}" alt="Visão Geral" style="max-width: 100%; max-height: 280px; border: 1px solid #999; object-fit: contain;">
         </div>
@@ -903,8 +903,8 @@ ${data.dispositivosSeguranca && data.dispositivosSeguranca.length > 0 ? (() => {
         <table style="width:100%; border-collapse: collapse; border: 1px solid #999; page-break-inside: avoid; margin: 10px 0;">
           <thead>
             <tr>
-              <th style="width:170px; border: 1px solid #999; padding: 5px; text-align: center; background: #f0f0f0; font-size: 9px;">ILUSTRAÇÃO</th>
-              <th style="border: 1px solid #999; padding: 5px; text-align: center; background: #f0f0f0; font-size: 9px;">DESCRIÇÃO</th>
+              <th style="width:150pt; border: 1pt solid #999; padding: 5pt; text-align: center; background: #f0f0f0; font-size: 9pt;">ILUSTRAÇÃO</th>
+              <th style="border: 1pt solid #999; padding: 5pt; text-align: center; background: #f0f0f0; font-size: 9pt;">DESCRIÇÃO</th>
             </tr>
           </thead>
           <tbody>
@@ -912,9 +912,9 @@ ${data.dispositivosSeguranca && data.dispositivosSeguranca.length > 0 ? (() => {
               <td style="border: 1px solid #999; padding: 8px; text-align: center; vertical-align: middle; width: 170px;">
                 ${disp.foto
                   ? `<img src="${disp.foto}" alt="Dispositivo ${i + idx + 1}" style="max-width: 150px; max-height: 120px; border: 1px solid #999; object-fit: cover;">`
-                  : '<div style="width:150px;height:100px;border:1px dashed #999;display:inline-flex;align-items:center;justify-content:center;color:#999;font-size:8px;">Sem foto</div>'}
+                  : '<div style="width:120pt;height:80pt;border:1pt dashed #999;display:inline-flex;align-items:center;justify-content:center;color:#999;font-size:8pt;">Sem foto</div>'}
               </td>
-              <td style="border: 1px solid #999; padding: 8px; font-size: 9.5px; text-align: justify; line-height: 1.65; vertical-align: top;">
+              <td style="border: 1pt solid #999; padding: 8pt; font-size: 10.5pt; text-align: justify; line-height: 1.4; vertical-align: top;">
                 ${disp.descricao}
               </td>
             </tr>
@@ -1052,7 +1052,7 @@ ${data.perigos && data.perigos.length > 0 ? data.perigos.map((perigo, idxPerigo)
         <p><strong>Gravidade da lesão:</strong> S2 – Lesão Grave, irreversível ou morte.</p>
         <p><strong>Frequência e/ou duração da exposição ao perigo:</strong> F2 – Frequente até contínuo.</p>
         <p><strong>Possibilidade de se evitar o perigo:</strong> P1 – Sob determinadas condições.</p>
-        <p style="margin-top: 15px; font-weight: bold; font-size: 11px;">CONCLUSÃO: CATEGORIA DE PROTEÇÃO REQUERIDA – 3.</p>
+        <p style="margin-top: 12pt; font-weight: bold; font-size: 11pt;">CONCLUSÃO: CATEGORIA DE PROTEÇÃO REQUERIDA – 3.</p>
       </div>
     </div>
 
