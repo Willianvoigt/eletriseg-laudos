@@ -115,12 +115,12 @@ export function gerarLaudoHTML(data: LaudoData): string {
       page-break-after: always;
       width: 210mm;
       min-height: 297mm;
-      padding: 22mm 28mm 28mm 28mm;
+      padding: 22mm 28mm 20mm 28mm;
       box-sizing: border-box;
-      position: relative;
       background: white;
       margin: 0 auto 8mm auto;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     .page:last-child {
       page-break-after: avoid;
@@ -154,11 +154,9 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     /* ===== FOOTER ===== */
     .footer {
-      position: absolute;
-      bottom: 0;
-      left: 28mm;
-      right: 28mm;
       font-size: 8pt;
+      flex-shrink: 0;
+      margin-top: auto;
     }
     .footer-line {
       border-top: 1pt solid #000;
@@ -187,7 +185,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       margin-bottom: 3pt;
     }
     .footer-logo img {
-      width: 130pt;
+      width: 80pt;
       height: auto;
     }
     .footer-logo .logo-text {
@@ -201,7 +199,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
       align-items: center;
       text-align: center;
       padding: 0;
-      min-height: 247mm;
+      flex: 1;
       justify-content: space-between;
     }
     .capa-top {
@@ -283,7 +281,7 @@ export function gerarLaudoHTML(data: LaudoData): string {
 
     /* ===== CONTEÚDO ===== */
     .content {
-      padding-bottom: 16mm;
+      flex: 1;
       overflow: hidden;
       max-width: 100%;
     }
