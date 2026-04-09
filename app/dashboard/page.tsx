@@ -60,6 +60,11 @@ export default function DashboardPage() {
   const [filtroTipo, setFiltroTipo] = useState('TODOS')
   const [filtroMes, setFiltroMes] = useState('')
 
+  const [selectionMode, setSelectionMode] = useState(false)
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
+  const [showBulkDeleteModal, setShowBulkDeleteModal] = useState(false)
+  const [deletingBulk, setDeletingBulk] = useState(false)
+
   const router = useRouter()
   const supabase = createClient()
 
@@ -151,6 +156,47 @@ export default function DashboardPage() {
     setFiltroMes('')
   }
 
+  const toggleSelectionMode = () => {
+    setSelectionMode(prev => !prev)
+    setSelectedIds(new Set())
+  }
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === laudosFiltrados.length) {
+      setSelectedIds(new Set())
+    } else {
+      setSelectedIds(new Set(laudosFiltrados.map(l => l.id)))
+    }
+  }
+
+  const handleBulkDelete = async () => {
+    setDeletingBulk(true)
+    try {
+      await Promise.all(
+        Array.from(selectedIds).map(id =>
+          fetch(`/api/laudos/${id}`, { method: 'DELETE' })
+        )
+      )
+      setLaudos(prev => prev.filter(l => !selectedIds.has(l.id)))
+      setSelectedIds(new Set())
+      setSelectionMode(false)
+      setShowBulkDeleteModal(false)
+    } catch (err) {
+      console.error('Erro ao excluir laudos:', err)
+    } finally {
+      setDeletingBulk(false)
+    }
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -201,6 +247,19 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex gap-3 flex-wrap">
+            {laudos.length > 0 && (
+              <button
+                onClick={toggleSelectionMode}
+                className="px-5 py-2.5 text-sm rounded-lg transition-all"
+                style={{
+                  background: selectionMode ? 'rgba(220,53,69,0.15)' : 'rgba(255,255,255,0.05)',
+                  border: `1px solid ${selectionMode ? 'rgba(220,53,69,0.4)' : 'rgba(255,255,255,0.12)'}`,
+                  color: selectionMode ? '#ff6b7a' : 'rgba(255,255,255,0.6)',
+                }}
+              >
+                {selectionMode ? 'Cancelar' : 'Selecionar'}
+              </button>
+            )}
             <button onClick={() => router.push('/dashboard/empresas')} className="px-5 py-2.5 btn-outline-glow text-sm">
               Empresas
             </button>
@@ -321,50 +380,149 @@ export default function DashboardPage() {
           </div>
         ) : (
           <div className="space-y-3">
+            {/* Barra de seleção em massa */}
+            {selectionMode && (
+              <div className="flex items-center justify-between px-4 py-3 rounded-xl"
+                style={{ background: 'rgba(74,155,158,0.08)', border: '1px solid rgba(74,155,158,0.2)' }}>
+                <label className="flex items-center gap-3 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={laudosFiltrados.length > 0 && selectedIds.size === laudosFiltrados.length}
+                    ref={el => { if (el) el.indeterminate = selectedIds.size > 0 && selectedIds.size < laudosFiltrados.length }}
+                    onChange={toggleSelectAll}
+                    className="w-4 h-4 rounded cursor-pointer accent-teal-400"
+                  />
+                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                    {selectedIds.size === 0
+                      ? 'Selecionar todos'
+                      : `${selectedIds.size} ${selectedIds.size === 1 ? 'laudo selecionado' : 'laudos selecionados'}`}
+                  </span>
+                </label>
+                {selectedIds.size > 0 && (
+                  <button
+                    onClick={() => setShowBulkDeleteModal(true)}
+                    className="px-4 py-1.5 text-sm rounded-lg font-medium transition-all"
+                    style={{ background: 'rgba(220,53,69,0.2)', border: '1px solid rgba(220,53,69,0.4)', color: '#ff6b7a' }}
+                  >
+                    Excluir {selectedIds.size} {selectedIds.size === 1 ? 'laudo' : 'laudos'}
+                  </button>
+                )}
+              </div>
+            )}
+
             {laudosFiltrados.map(laudo => {
               const statusInfo = STATUS_STYLES[laudo.status] || STATUS_STYLES.CONCLUIDO
               const tipoLabel = laudo.tipoLaudo ? TIPO_LABELS[laudo.tipoLaudo] || laudo.tipoLaudo : '—'
+              const isSelected = selectedIds.has(laudo.id)
 
               return (
-                <div key={laudo.id} className="card-glow-border p-5 flex flex-col sm:flex-row justify-between gap-4">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2.5 mb-2 flex-wrap">
-                      <h3 className="font-semibold text-white truncate">
-                        {laudo.nomeMaquina}{laudo.modelo ? ` ${laudo.modelo}` : ''}
-                      </h3>
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusInfo.classes}`}>
-                        {statusInfo.label}
-                      </span>
-                      {laudo.tipoConclusao && (
-                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${laudo.tipoConclusao === 'A' ? 'badge-success' : 'badge-warning'}`}>
-                          Tipo {laudo.tipoConclusao}
+                <div
+                  key={laudo.id}
+                  className="card-glow-border p-5 flex flex-col sm:flex-row justify-between gap-4 transition-all"
+                  style={isSelected ? { borderColor: 'rgba(220,53,69,0.4)', background: 'rgba(220,53,69,0.05)' } : {}}
+                  onClick={selectionMode ? () => toggleSelect(laudo.id) : undefined}
+                >
+                  <div className="flex gap-3 flex-1 min-w-0">
+                    {/* Checkbox de seleção */}
+                    {selectionMode && (
+                      <div className="flex items-center flex-shrink-0 pt-0.5">
+                        <input
+                          type="checkbox"
+                          checked={isSelected}
+                          onChange={() => toggleSelect(laudo.id)}
+                          onClick={e => e.stopPropagation()}
+                          className="w-4 h-4 rounded cursor-pointer accent-red-400"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2.5 mb-2 flex-wrap">
+                        <h3 className="font-semibold text-white truncate">
+                          {laudo.nomeMaquina}{laudo.modelo ? ` ${laudo.modelo}` : ''}
+                        </h3>
+                        <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusInfo.classes}`}>
+                          {statusInfo.label}
                         </span>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-3 text-xs flex-wrap" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                      <span>{laudo.nomeEmpresa}</span>
-                      <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
-                      <span>{tipoLabel}</span>
-                      <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
-                      <span>{laudo._count.dispositivosSeguranca} disp. | {laudo._count.perigos} perigos</span>
-                      <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
-                      <span>{formatDate(laudo.createdAt)}</span>
+                        {laudo.tipoConclusao && (
+                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${laudo.tipoConclusao === 'A' ? 'badge-success' : 'badge-warning'}`}>
+                            Tipo {laudo.tipoConclusao}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3 text-xs flex-wrap" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                        <span>{laudo.nomeEmpresa}</span>
+                        <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
+                        <span>{tipoLabel}</span>
+                        <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
+                        <span>{laudo._count.dispositivosSeguranca} disp. | {laudo._count.perigos} perigos</span>
+                        <span className="w-1 h-1 rounded-full" style={{ background: 'rgba(74,155,158,0.3)' }}></span>
+                        <span>{formatDate(laudo.createdAt)}</span>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    {laudo.pdfUrl && (
-                      <a href={laudo.pdfUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 btn-outline-glow text-sm whitespace-nowrap">
-                        Baixar PDF
-                      </a>
-                    )}
-                    <button onClick={() => router.push(`/dashboard/laudos/${laudo.id}`)} className="px-4 py-2 btn-glow text-sm whitespace-nowrap">
-                      Ver
-                    </button>
-                  </div>
+                  {!selectionMode && (
+                    <div className="flex items-center gap-2">
+                      {laudo.pdfUrl && (
+                        <a href={laudo.pdfUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 btn-outline-glow text-sm whitespace-nowrap">
+                          Baixar PDF
+                        </a>
+                      )}
+                      <button onClick={() => router.push(`/dashboard/laudos/${laudo.id}`)} className="px-4 py-2 btn-glow text-sm whitespace-nowrap">
+                        Ver
+                      </button>
+                    </div>
+                  )}
                 </div>
               )
             })}
+          </div>
+        )}
+
+        {/* Modal de confirmação de exclusão em massa */}
+        {showBulkDeleteModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}>
+            <div className="rounded-2xl p-6 w-full max-w-sm shadow-2xl"
+              style={{ background: '#0d2b30', border: '1px solid rgba(220,53,69,0.3)' }}>
+              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                style={{ background: 'rgba(220,53,69,0.15)' }}>
+                <svg className="w-6 h-6" style={{ color: '#ff6b7a' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-white text-center mb-2">Excluir laudos</h3>
+              <p className="text-sm text-center mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                Tem certeza que deseja excluir{' '}
+                <span className="font-semibold" style={{ color: '#ff6b7a' }}>
+                  {selectedIds.size} {selectedIds.size === 1 ? 'laudo' : 'laudos'}
+                </span>
+                ? Esta ação não pode ser desfeita.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowBulkDeleteModal(false)}
+                  disabled={deletingBulk}
+                  className="flex-1 px-4 py-2.5 text-sm rounded-xl font-medium transition-all"
+                  style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)' }}
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={handleBulkDelete}
+                  disabled={deletingBulk}
+                  className="flex-1 px-4 py-2.5 text-sm rounded-xl font-medium transition-all flex items-center justify-center gap-2"
+                  style={{ background: 'rgba(220,53,69,0.25)', border: '1px solid rgba(220,53,69,0.5)', color: '#ff6b7a' }}
+                >
+                  {deletingBulk ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#ff6b7a', borderTopColor: 'transparent' }} />
+                      Excluindo...
+                    </>
+                  ) : 'Excluir'}
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </main>
