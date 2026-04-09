@@ -21,12 +21,12 @@ async function preencherJanela(win: Window, html: string): Promise<void> {
   })
 }
 
-export async function gerarCertificadoCliente(lista: CertificadoData[], janelas: Window[]): Promise<void> {
+export async function gerarCertificadoCliente(lista: CertificadoData[], janelas: Window[], htmlPreGerado?: string): Promise<void> {
   if (lista.length === 0) return
   const { gerarCertificadoHTML } = await import('./templates/certificado-html')
 
   for (let i = 0; i < lista.length; i++) {
-    const html = gerarCertificadoHTML(lista[i])
+    const html = htmlPreGerado ?? gerarCertificadoHTML(lista[i])
     const win = janelas[i]
     if (!win) continue
     await preencherJanela(win, html)

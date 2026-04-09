@@ -103,17 +103,22 @@ export default function CertificadosPage() {
     if (participantes.length === 0) return
     setGerando(true)
 
-    // Abrir TODAS as janelas sincronamente antes de qualquer await
-    const wins = participantes.map(() => window.open('', '_blank'))
-    if (wins.some(w => !w)) {
-      alert('Permita pop-ups para gerar os certificados')
-      wins.forEach(w => w?.close())
-      setGerando(false)
-      return
-    }
-
+    // Pré-carregar o módulo sem abrir janelas ainda
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
-    await gerarCertificadoCliente(participantes, wins as Window[])
+    const { gerarCertificadoHTML } = await import('@/lib/pdf/templates/certificado-html')
+
+    // Gerar cada certificado: abrir janela + preencher em sequência
+    for (const p of participantes) {
+      const win = window.open('', '_blank')
+      if (!win) {
+        alert('Permita pop-ups para gerar os certificados')
+        setGerando(false)
+        return
+      }
+      const html = gerarCertificadoHTML(p)
+      await gerarCertificadoCliente([p], [win], html)
+      await new Promise(r => setTimeout(r, 300))
+    }
 
     // Salvar no histórico agrupado por empresa
     const porEmpresa = participantes.reduce((acc, p) => {
