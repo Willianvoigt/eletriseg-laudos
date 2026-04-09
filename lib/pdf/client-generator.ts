@@ -10,54 +10,50 @@ export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise
   const html2pdf = (await import('html2pdf.js')).default as any
 
   for (const participante of lista) {
-    const html = gerarCertificadoHTML(participante)
+    const htmlStr = gerarCertificadoHTML(participante)
 
-    // Usar iframe para carregar o HTML completo com estilos corretos
-    const iframe = document.createElement('iframe')
-    iframe.style.position = 'fixed'
-    iframe.style.top = '-9999px'
-    iframe.style.left = '-9999px'
-    iframe.style.width = '297mm'
-    iframe.style.height = '210mm'
-    iframe.style.border = 'none'
-    document.body.appendChild(iframe)
+    // Parsear o HTML para extrair estilos e o elemento do certificado
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(htmlStr, 'text/html')
 
-    const blob = new Blob([html], { type: 'text/html' })
-    const blobUrl = URL.createObjectURL(blob)
-    iframe.src = blobUrl
-
-    await new Promise<void>(r => {
-      iframe.onload = () => setTimeout(r, 500)
-      setTimeout(r, 3000)
+    // Injetar os estilos temporariamente no documento atual
+    const addedStyles: HTMLStyleElement[] = []
+    doc.querySelectorAll('style').forEach(s => {
+      const style = document.createElement('style')
+      style.textContent = s.textContent
+      document.head.appendChild(style)
+      addedStyles.push(style)
     })
 
-    const element = iframe.contentDocument?.querySelector('.certificado') as HTMLElement | null
-
-    if (element) {
-      const nomeArquivo = `certificado-${participante.nome.replace(/\s+/g, '-').toLowerCase()}.pdf`
-
-      await html2pdf()
-        .set({
-          margin: 0,
-          filename: nomeArquivo,
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: {
-            scale: 2,
-            useCORS: true,
-            logging: false,
-            width: 1122,
-            height: 794,
-          },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
-        })
-        .from(element)
-        .save()
+    const certEl = doc.querySelector('.certificado') as HTMLElement | null
+    if (!certEl) {
+      addedStyles.forEach(s => document.head.removeChild(s))
+      continue
     }
 
-    document.body.removeChild(iframe)
-    URL.revokeObjectURL(blobUrl)
+    // Container escondido no DOM atual para html2canvas conseguir renderizar
+    const container = document.createElement('div')
+    container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:297mm;height:210mm;overflow:hidden;'
+    container.appendChild(certEl)
+    document.body.appendChild(container)
 
-    await new Promise(r => setTimeout(r, 500))
+    const nomeArquivo = `certificado-${participante.nome.replace(/\s+/g, '-').toLowerCase()}.pdf`
+
+    await html2pdf()
+      .set({
+        margin: 0,
+        filename: nomeArquivo,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
+      })
+      .from(certEl)
+      .save()
+
+    document.body.removeChild(container)
+    addedStyles.forEach(s => document.head.removeChild(s))
+
+    await new Promise(r => setTimeout(r, 400))
   }
 }
 
