@@ -5,29 +5,40 @@ import type { CertificadoData } from './templates/certificado-html'
 import type { LaudoData } from './generator'
 
 export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise<void> {
-  const { gerarCertificadosHTML } = await import('./templates/certificado-html')
-  const html = gerarCertificadosHTML(lista)
+  const { gerarCertificadoHTML } = await import('./templates/certificado-html')
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const html2pdf = (await import('html2pdf.js')).default as any
 
-  const printWindow = window.open('', '_blank')
-  if (!printWindow) {
-    alert('Permita pop-ups para gerar os certificados')
-    return
+  for (const participante of lista) {
+    const html = gerarCertificadoHTML(participante)
+
+    const container = document.createElement('div')
+    container.style.position = 'fixed'
+    container.style.top = '-9999px'
+    container.style.left = '-9999px'
+    container.innerHTML = html
+    document.body.appendChild(container)
+
+    const element = container.querySelector('.certificado') || container
+
+    const nomeArquivo = `certificado-${participante.nome.replace(/\s+/g, '-').toLowerCase()}.pdf`
+
+    await html2pdf()
+      .set({
+        margin: 0,
+        filename: nomeArquivo,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
+      })
+      .from(element)
+      .save()
+
+    document.body.removeChild(container)
+
+    // Pequeno delay entre downloads para não sobrecarregar o browser
+    await new Promise(r => setTimeout(r, 400))
   }
-
-  printWindow.document.write(html)
-  printWindow.document.close()
-
-  await new Promise<void>((resolve) => {
-    let printed = false
-    const doPrint = () => {
-      if (printed) return
-      printed = true
-      printWindow.print()
-      resolve()
-    }
-    printWindow.onload = () => setTimeout(doPrint, 600)
-    setTimeout(doPrint, 3000)
-  })
 }
 
 export async function gerarPDFCliente(data: LaudoData): Promise<void> {
