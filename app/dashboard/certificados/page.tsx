@@ -46,7 +46,7 @@ function formatDate(iso: string) {
 
 export default function CertificadosPage() {
   const [participantes, setParticipantes] = useState<CertificadoData[]>([])
-  const [gerando, setGerando] = useState(false)
+  const [imprimindoIdx, setImprimindoIdx] = useState<number | null>(null)
   const [dragging, setDragging] = useState(false)
   const [historico, setHistorico] = useState<HistoricoItem[]>([])
   const [loadingHistorico, setLoadingHistorico] = useState(true)
@@ -91,66 +91,30 @@ export default function CertificadosPage() {
     if (file) processarArquivo(file)
   }
 
-  const gerarIndividual = async (p: CertificadoData) => {
+  const gerarIndividual = async (p: CertificadoData, idx: number) => {
+    setImprimindoIdx(idx)
     // Abrir janela ANTES de qualquer await (exigência do browser)
     const win = window.open('', '_blank')
-    if (!win) { alert('Permita pop-ups para gerar os certificados'); return }
+    if (!win) { alert('Permita pop-ups para gerar os certificados'); setImprimindoIdx(null); return }
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
     await gerarCertificadoCliente([p], [win])
-  }
 
-  const gerarTodos = async () => {
-    if (participantes.length === 0) return
-    setGerando(true)
-
-    // Pré-carregar o módulo sem abrir janelas ainda
-    const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
-    const { gerarCertificadoHTML } = await import('@/lib/pdf/templates/certificado-html')
-
-    // Gerar cada certificado: abrir janela + preencher em sequência
-    for (const p of participantes) {
-      const win = window.open('', '_blank')
-      if (!win) {
-        alert('Permita pop-ups para gerar os certificados')
-        setGerando(false)
-        return
-      }
-      const html = gerarCertificadoHTML(p)
-      await gerarCertificadoCliente([p], [win], html)
-      await new Promise(r => setTimeout(r, 300))
-    }
-
-    // Salvar no histórico agrupado por empresa
-    const porEmpresa = participantes.reduce((acc, p) => {
-      const key = p.empresa || ''
-      if (!acc[key]) acc[key] = []
-      acc[key].push(p)
-      return acc
-    }, {} as Record<string, CertificadoData[]>)
-
+    // Salvar no histórico
     try {
-      const novosItens: HistoricoItem[] = []
-      for (const [empresa, lista] of Object.entries(porEmpresa)) {
-        const res = await fetch('/api/certificados', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ empresa, quantidade: lista.length, participantes: lista }),
-        })
-        if (res.ok) {
-          novosItens.push(await res.json())
-        } else {
-          const err = await res.json()
-          console.error('Erro ao salvar histórico:', err)
-        }
-      }
-      if (novosItens.length > 0) {
-        setHistorico(prev => [...novosItens.reverse(), ...prev])
+      const res = await fetch('/api/certificados', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ empresa: p.empresa || '', quantidade: 1, participantes: [p] }),
+      })
+      if (res.ok) {
+        const novo = await res.json()
+        setHistorico(prev => [novo, ...prev])
       }
     } catch (e) {
       console.error('Erro ao salvar histórico:', e)
     }
 
-    setGerando(false)
+    setImprimindoIdx(null)
   }
 
   const excluirHistorico = async (id: string) => {
@@ -259,24 +223,15 @@ export default function CertificadosPage() {
                 <h2 className="font-semibold text-white">{participantes.length} participante{participantes.length !== 1 ? 's' : ''} encontrado{participantes.length !== 1 ? 's' : ''}</h2>
                 <p className="text-sm mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>Verifique os dados antes de gerar</p>
               </div>
-              <div className="flex gap-3">
-                <button
-                  onClick={() => { setParticipantes([]); if (fileRef.current) fileRef.current.value = '' }}
-                  className="px-4 py-2 text-sm rounded-lg transition-colors"
-                  style={{ color: 'rgba(255,255,255,0.4)', border: '1px solid rgba(255,255,255,0.1)' }}
-                  onMouseOver={e => e.currentTarget.style.color = '#ff6b7a'}
-                  onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
-                >
-                  Limpar
-                </button>
-                <button
-                  onClick={gerarTodos}
-                  disabled={gerando}
-                  className="btn-glow px-5 py-2 text-sm disabled:opacity-50"
-                >
-                  {gerando ? 'Abrindo para impressão...' : `Gerar ${participantes.length} Certificado${participantes.length !== 1 ? 's' : ''}`}
-                </button>
-              </div>
+              <button
+                onClick={() => { setParticipantes([]); if (fileRef.current) fileRef.current.value = '' }}
+                className="px-4 py-2 text-sm rounded-lg transition-colors"
+                style={{ color: 'rgba(255,255,255,0.4)', border: '1px solid rgba(255,255,255,0.1)' }}
+                onMouseOver={e => e.currentTarget.style.color = '#ff6b7a'}
+                onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
+              >
+                Limpar
+              </button>
             </div>
 
             <div className="overflow-x-auto">
@@ -302,13 +257,14 @@ export default function CertificadosPage() {
                       <td className="py-2 px-3 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>{p.data}</td>
                       <td className="py-2 px-3">
                         <button
-                          onClick={() => gerarIndividual(p)}
-                          className="text-xs px-3 py-1 rounded transition-colors"
+                          onClick={() => gerarIndividual(p, i)}
+                          disabled={imprimindoIdx === i}
+                          className="text-xs px-3 py-1 rounded transition-colors disabled:opacity-50"
                           style={{ color: '#4a9b9e', border: '1px solid rgba(74,155,158,0.4)' }}
-                          onMouseOver={e => e.currentTarget.style.background = 'rgba(74,155,158,0.1)'}
+                          onMouseOver={e => { if (imprimindoIdx !== i) e.currentTarget.style.background = 'rgba(74,155,158,0.1)' }}
                           onMouseOut={e => e.currentTarget.style.background = 'transparent'}
                         >
-                          Imprimir
+                          {imprimindoIdx === i ? '...' : 'Imprimir'}
                         </button>
                       </td>
                     </tr>
