@@ -109,9 +109,13 @@ export default function CertificadosPage() {
       if (res.ok) {
         const novoItem = await res.json()
         setHistorico(prev => [novoItem, ...prev])
+      } else {
+        const err = await res.json()
+        console.error('Erro ao salvar histórico:', err)
+        alert('Erro ao salvar histórico: ' + (err.error || res.status))
       }
-    } catch {
-      // histórico falhou silenciosamente
+    } catch (e) {
+      console.error('Erro ao salvar histórico:', e)
     }
 
     setGerando(false)
