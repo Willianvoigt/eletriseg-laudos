@@ -1,8 +1,16 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import type { CertificadoData } from '@/lib/pdf/templates/certificado-html'
+
+interface HistoricoItem {
+  id: string
+  empresa: string
+  quantidade: number
+  participantes: CertificadoData[]
+  createdAt: string
+}
 
 function parseCSV(text: string): CertificadoData[] {
   const lines = text.trim().split('\n')
@@ -31,12 +39,27 @@ function parseCSV(text: string): CertificadoData[] {
   return results
 }
 
+function formatDate(iso: string) {
+  const d = new Date(iso)
+  return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+}
+
 export default function CertificadosPage() {
   const [participantes, setParticipantes] = useState<CertificadoData[]>([])
   const [gerando, setGerando] = useState(false)
   const [dragging, setDragging] = useState(false)
+  const [historico, setHistorico] = useState<HistoricoItem[]>([])
+  const [loadingHistorico, setLoadingHistorico] = useState(true)
+  const [deletingId, setDeletingId] = useState<string | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
+
+  useEffect(() => {
+    fetch('/api/certificados')
+      .then(r => r.json())
+      .then(data => { if (Array.isArray(data)) setHistorico(data) })
+      .finally(() => setLoadingHistorico(false))
+  }, [])
 
   const processarArquivo = (file: File) => {
     if (!file.name.endsWith('.csv')) {
@@ -75,7 +98,37 @@ export default function CertificadosPage() {
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
     await gerarCertificadoCliente(participantes)
 
+    // Salvar no histórico
+    const empresa = participantes[0]?.empresa || ''
+    try {
+      const res = await fetch('/api/certificados', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ empresa, quantidade: participantes.length, participantes }),
+      })
+      if (res.ok) {
+        const novoItem = await res.json()
+        setHistorico(prev => [novoItem, ...prev])
+      }
+    } catch {
+      // histórico falhou silenciosamente
+    }
+
     setGerando(false)
+  }
+
+  const excluirHistorico = async (id: string) => {
+    setDeletingId(id)
+    try {
+      await fetch('/api/certificados', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      })
+      setHistorico(prev => prev.filter(h => h.id !== id))
+    } finally {
+      setDeletingId(null)
+    }
   }
 
   const baixarModeloCSV = () => {
@@ -221,12 +274,64 @@ export default function CertificadosPage() {
 
         {/* Estado vazio */}
         {participantes.length === 0 && (
-          <div className="dark-card p-12 text-center">
+          <div className="dark-card p-12 text-center mb-8">
             <p className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
               Importe um arquivo CSV para visualizar os participantes e gerar os certificados
             </p>
           </div>
         )}
+
+        {/* Histórico */}
+        <div>
+          <h2 className="font-semibold text-white mb-4">Histórico de Certificados</h2>
+
+          {loadingHistorico ? (
+            <div className="dark-card p-8 text-center">
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>Carregando histórico...</p>
+            </div>
+          ) : historico.length === 0 ? (
+            <div className="dark-card p-8 text-center">
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>Nenhum certificado gerado ainda</p>
+            </div>
+          ) : (
+            <div className="dark-card overflow-hidden">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr style={{ borderBottom: '1px solid rgba(74,155,158,0.2)' }}>
+                    {['Empresa', 'Qtd.', 'Data de geração', ''].map(h => (
+                      <th key={h} className="text-left py-3 px-4 text-xs font-medium" style={{ color: '#4a9b9e' }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {historico.map(item => (
+                    <tr key={item.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}
+                      onMouseOver={e => e.currentTarget.style.background = 'rgba(74,155,158,0.05)'}
+                      onMouseOut={e => e.currentTarget.style.background = 'transparent'}
+                    >
+                      <td className="py-3 px-4 font-medium text-white">{item.empresa || '—'}</td>
+                      <td className="py-3 px-4" style={{ color: 'rgba(255,255,255,0.6)' }}>{item.quantidade}</td>
+                      <td className="py-3 px-4 text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>{formatDate(item.createdAt)}</td>
+                      <td className="py-3 px-4 text-right">
+                        <button
+                          onClick={() => excluirHistorico(item.id)}
+                          disabled={deletingId === item.id}
+                          className="text-xs px-3 py-1 rounded transition-colors disabled:opacity-50"
+                          style={{ color: 'rgba(255,255,255,0.3)', border: '1px solid rgba(255,255,255,0.1)' }}
+                          onMouseOver={e => { if (deletingId !== item.id) e.currentTarget.style.color = '#ff6b7a' }}
+                          onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.3)'}
+                        >
+                          {deletingId === item.id ? '...' : 'Excluir'}
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
       </main>
     </div>
   )
