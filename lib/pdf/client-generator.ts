@@ -12,32 +12,52 @@ export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise
   for (const participante of lista) {
     const html = gerarCertificadoHTML(participante)
 
-    const container = document.createElement('div')
-    container.style.position = 'fixed'
-    container.style.top = '-9999px'
-    container.style.left = '-9999px'
-    container.innerHTML = html
-    document.body.appendChild(container)
+    // Usar iframe para carregar o HTML completo com estilos corretos
+    const iframe = document.createElement('iframe')
+    iframe.style.position = 'fixed'
+    iframe.style.top = '-9999px'
+    iframe.style.left = '-9999px'
+    iframe.style.width = '297mm'
+    iframe.style.height = '210mm'
+    iframe.style.border = 'none'
+    document.body.appendChild(iframe)
 
-    const element = container.querySelector('.certificado') || container
+    const blob = new Blob([html], { type: 'text/html' })
+    const blobUrl = URL.createObjectURL(blob)
+    iframe.src = blobUrl
 
-    const nomeArquivo = `certificado-${participante.nome.replace(/\s+/g, '-').toLowerCase()}.pdf`
+    await new Promise<void>(r => {
+      iframe.onload = () => setTimeout(r, 500)
+      setTimeout(r, 3000)
+    })
 
-    await html2pdf()
-      .set({
-        margin: 0,
-        filename: nomeArquivo,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, logging: false },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
-      })
-      .from(element)
-      .save()
+    const element = iframe.contentDocument?.querySelector('.certificado') as HTMLElement | null
 
-    document.body.removeChild(container)
+    if (element) {
+      const nomeArquivo = `certificado-${participante.nome.replace(/\s+/g, '-').toLowerCase()}.pdf`
 
-    // Pequeno delay entre downloads para não sobrecarregar o browser
-    await new Promise(r => setTimeout(r, 400))
+      await html2pdf()
+        .set({
+          margin: 0,
+          filename: nomeArquivo,
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            width: 1122,
+            height: 794,
+          },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
+        })
+        .from(element)
+        .save()
+    }
+
+    document.body.removeChild(iframe)
+    URL.revokeObjectURL(blobUrl)
+
+    await new Promise(r => setTimeout(r, 500))
   }
 }
 
