@@ -92,16 +92,28 @@ export default function CertificadosPage() {
   }
 
   const gerarIndividual = async (p: CertificadoData) => {
+    // Abrir janela ANTES de qualquer await (exigência do browser)
+    const win = window.open('', '_blank')
+    if (!win) { alert('Permita pop-ups para gerar os certificados'); return }
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
-    await gerarCertificadoCliente([p])
+    await gerarCertificadoCliente([p], [win])
   }
 
   const gerarTodos = async () => {
     if (participantes.length === 0) return
     setGerando(true)
 
+    // Abrir TODAS as janelas sincronamente antes de qualquer await
+    const wins = participantes.map(() => window.open('', '_blank'))
+    if (wins.some(w => !w)) {
+      alert('Permita pop-ups para gerar os certificados')
+      wins.forEach(w => w?.close())
+      setGerando(false)
+      return
+    }
+
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
-    await gerarCertificadoCliente(participantes)
+    await gerarCertificadoCliente(participantes, wins as Window[])
 
     // Salvar no histórico agrupado por empresa
     const porEmpresa = participantes.reduce((acc, p) => {

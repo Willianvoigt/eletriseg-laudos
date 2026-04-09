@@ -4,12 +4,7 @@ import { gerarLaudoHTML } from './templates/laudo-html'
 import type { CertificadoData } from './templates/certificado-html'
 import type { LaudoData } from './generator'
 
-async function abrirJanelaComHTML(html: string): Promise<void> {
-  const win = window.open('', '_blank')
-  if (!win) {
-    alert('Permita pop-ups para gerar os certificados')
-    return
-  }
+async function preencherJanela(win: Window, html: string): Promise<void> {
   win.document.write(html)
   win.document.close()
 
@@ -26,14 +21,15 @@ async function abrirJanelaComHTML(html: string): Promise<void> {
   })
 }
 
-export async function gerarCertificadoCliente(lista: CertificadoData[]): Promise<void> {
+export async function gerarCertificadoCliente(lista: CertificadoData[], janelas: Window[]): Promise<void> {
   if (lista.length === 0) return
   const { gerarCertificadoHTML } = await import('./templates/certificado-html')
 
-  for (const participante of lista) {
-    const html = gerarCertificadoHTML(participante)
-    await abrirJanelaComHTML(html)
-    // Pequena pausa entre janelas
+  for (let i = 0; i < lista.length; i++) {
+    const html = gerarCertificadoHTML(lista[i])
+    const win = janelas[i]
+    if (!win) continue
+    await preencherJanela(win, html)
     await new Promise(r => setTimeout(r, 300))
   }
 }
