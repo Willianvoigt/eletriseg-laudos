@@ -98,21 +98,31 @@ export default function CertificadosPage() {
     const { gerarCertificadoCliente } = await import('@/lib/pdf/client-generator')
     await gerarCertificadoCliente(participantes)
 
-    // Salvar no histórico
-    const empresa = participantes[0]?.empresa || ''
+    // Salvar no histórico agrupado por empresa
+    const porEmpresa = participantes.reduce((acc, p) => {
+      const key = p.empresa || ''
+      if (!acc[key]) acc[key] = []
+      acc[key].push(p)
+      return acc
+    }, {} as Record<string, CertificadoData[]>)
+
     try {
-      const res = await fetch('/api/certificados', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ empresa, quantidade: participantes.length, participantes }),
-      })
-      if (res.ok) {
-        const novoItem = await res.json()
-        setHistorico(prev => [novoItem, ...prev])
-      } else {
-        const err = await res.json()
-        console.error('Erro ao salvar histórico:', err)
-        alert('Erro ao salvar histórico: ' + (err.error || res.status))
+      const novosItens: HistoricoItem[] = []
+      for (const [empresa, lista] of Object.entries(porEmpresa)) {
+        const res = await fetch('/api/certificados', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ empresa, quantidade: lista.length, participantes: lista }),
+        })
+        if (res.ok) {
+          novosItens.push(await res.json())
+        } else {
+          const err = await res.json()
+          console.error('Erro ao salvar histórico:', err)
+        }
+      }
+      if (novosItens.length > 0) {
+        setHistorico(prev => [...novosItens.reverse(), ...prev])
       }
     } catch (e) {
       console.error('Erro ao salvar histórico:', e)
